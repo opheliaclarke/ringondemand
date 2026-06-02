@@ -22,6 +22,7 @@ A single **shared negative keyword list**, built once, applied to all 8 city cam
 | Kept out | Why |
 |----------|-----|
 | `supply` (bare) | Meaningful in real intent — **"water supply line repair"**, "supply line leak". Only the shopping sense is blocked (`supplies`, `supplier`, `supplyhouse`, `"pex supply"`). |
+| `cost`, `price`, `pricing` (bare) | We **bid on high-ticket "…cost" keywords** — "whole house repipe cost", "slab leak repair cost", "copper repipe cost", "trenchless sewer line replacement cost". Those are $8k–15k buyers. Only junk-price *phrases* are blocked (`"average cost"`, `"how much does"`, `"price list"`, `"cost calculator"`). |
 | `hire` | "hire a plumber" = high intent. |
 | `affordable` | We bid "affordable plumber" (Garden Grove). |
 | `best` | We bid "best plumber near me". |
@@ -276,11 +277,6 @@ monster
 snagajob
 craigslist
 1099
-cost
-costs
-price
-prices
-pricing
 calculator
 cheap
 cheapest
