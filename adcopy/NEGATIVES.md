@@ -1,118 +1,109 @@
-# Negative Keywords — `Plumbing_Master_Negs` (shared across all 8 campaigns)
+# Negative Keywords — `Plumbing_Master_Negs` (ONE shared list, all 8 campaigns)
 
-One **shared negative keyword list**, built once, applied to every city campaign. ~300 negatives — and this is a **living list**: add to it every week from the Search Terms report. Google allows up to 10,000 per list, so there's plenty of room to grow.
+A single **shared negative keyword list**, built once, applied to all 8 city campaigns. This is the starting foundation (~370 negatives) — it's a **living list**, so keep appending from the weekly Search Terms report (Google allows 10,000 per list).
+
+**Strategy:** this is a **pay-per-call** campaign — we only get paid on *qualified 60s+ calls*. So we ruthlessly block research, DIY, jobs, shopping, "free/cheap" tire-kickers, other trades, and entertainment. A "free estimate" searcher is an info call that rarely converts — blocked on purpose.
 
 ## How to add it (Google Ads)
 1. **Tools → Shared library → Negative keyword lists → +** → name it `Plumbing_Master_Negs`.
-2. Paste **Block A as PHRASE**, **Block B as BROAD** (the two paste blocks at the bottom).
-3. Add the **Competitor block** (PHRASE) once you've confirmed it.
-4. **Apply to campaigns →** tick all 8.
-5. Re-check Search Terms weekly → append new junk here.
+2. Into that one list, paste **Block A as PHRASE** and **Block B as BROAD** (both blocks below — same list, mixed match types is fine).
+3. **Apply to campaigns →** tick all 8. Done.
+4. Weekly: open Search Terms → add any new junk here.
 
 ## How negative match types work (read first)
-- **PHRASE** `"do it yourself"` → blocks queries containing that exact phrase, in order. Best for all multi-word junk — precise, zero collateral.
+- **PHRASE** `"do it yourself"` → blocks queries containing that exact phrase, in order. Best for multi-word junk — zero collateral.
 - **BROAD** `free` (single word) → blocks ANY query containing that word.
-- **Multi-word negatives can't hurt us** — they only fire on queries that literally contain those words, and none of our keywords do.
-- **The only risk is a single common word that also appears in a query we want** — that's word choice, not match type. Those are quarantined in the "DO NOT block" table below.
-- ⚠️ **Negatives do NOT match plurals, variants, or misspellings.** So both forms are listed (`cost`/`costs`, `job`/`jobs`, `part`/`parts`). Keep that habit when you add more.
-
-> **Geo / neighbor-city negatives stay PER-CAMPAIGN** (each city's neighbors differ — e.g. Garden Grove blocks `"buena park"`). They can't live in the shared list. See the bottom.
+- A negative can only block a query that **literally contains** the negative's word(s). Multi-word negatives never touch our keywords.
+- ⚠️ **Negatives do NOT match plurals / variants / misspellings.** Both forms are listed (`cost`/`costs`, `job`/`jobs`). Keep that habit.
+- **No geo negatives needed** — each campaign already targets its own zips/radius, and competitor-name searches (e.g. "marvelous plumbing buena park") are caught by the competitor entries below. If one neighbor city ever keeps showing up, just drop it into this same list as a phrase.
 
 ---
 
-## ⛔ DO NOT block these (guardrails — they'd kill real customers or our own keywords)
+## ⛔ DO NOT block these (they ARE intent / in our copy)
 | Kept out | Why |
 |----------|-----|
-| `free` | Blocks **"free estimate plumber"** — a real lead. |
-| `test` | Blocks **"backflow test / testing"** — a real service (Santa Barbara). |
-| `certification` (single) | Blocks **"backflow certification"** customers. Job-sense blocked only as phrases. |
-| `supply` (single) | Blocks **"water supply line repair"**. Kept `"plumbing supply"` / `"supply house"` as phrases. |
-| `union` (single) | Blocks **Union St / Union City**. Kept `"plumbers union"` / `"union job"` as phrases. |
-| `grant` (single) | Blocks street/area names. Kept `grants` (funding sense). |
-| `best` | We bid **"best plumber near me"**. |
-| `affordable` | We bid **"affordable plumber"** (Garden Grove angle). |
-| `commercial` | We bid **commercial plumber** (Local ad group). |
-| `lead` | **"lead pipe replacement"** is a real job (old homes). Only `leads` (marketing) is blocked. |
-| `heater` | We bid **water heater**. (`heating` IS blocked — different word, safe.) |
-| `hire`, `licensed`, `near me`, `same day`, `emergency`, `open now`, `24 hour`, `repair`, `install`, `replacement`, `service`, `faucet`, `valve`, `pipe`, `fixture`, `slab`, `leak`, `drain`, `sewer`, `repipe`, `softener`, `tankless` | Core to our keywords/copy. |
+| `hire` | "hire a plumber" = high intent. |
+| `affordable` | We bid "affordable plumber" (Garden Grove angle). |
+| `best` | We bid "best plumber near me". |
+| `commercial` | We bid "commercial plumber" (Local ad group). |
+| `lead` (singular) | "lead pipe replacement" = real job (old homes). Only `leads` (marketing) is blocked. |
+| `heater` | We bid "water heater". (`heating` IS blocked — different word.) |
+| `licensed`, `near me`, `same day`, `emergency`, `open now`, `24 hour`, `repair`, `install`, `replacement`, `service` | Core to our keywords. |
+| `faucet`, `valve`, `pipe`, `fixture`, `slab`, `leak`, `drain`, `sewer`, `repipe`, `softener`, `tankless`, `water heater`, `water line` | Real services we sell. |
 | any **city name** | Geo-targeting handles location; names allowed in ad text. |
+
+> **Now blocked on purpose** (not intent for pay-per-call): `free` · `test` · `supply` · `union` · `grant` · `certification`. Verified none appear in our keyword files.
 
 ---
 
-## BLOCK A — add as PHRASE match
+## BLOCK A — PHRASE match
 
 ### Questions / how-to / informational
-`how to` · `how do` · `how do i` · `how do you` · `how can` · `how can i` · `how much` · `how much does` · `how much is` · `how many` · `how often` · `how long` · `how to fix` · `how to unclog` · `how to install` · `how to replace` · `how to repair` · `how to clear` · `what is` · `what are` · `what does` · `what causes` · `what size` · `why is` · `why does` · `why is my` · `when to` · `where to` · `can a` · `can i` · `can a handyman` · `should i` · `do i need` · `difference between` · `step by step`
+`how to` · `how do` · `how do i` · `how do you` · `how can` · `how can i` · `how much` · `how much does` · `how much is` · `how many` · `how often` · `how long` · `how to fix` · `how to unclog` · `how to install` · `how to replace` · `how to repair` · `how to clear` · `what is` · `what are` · `what does` · `what causes` · `what size` · `why is` · `why does` · `why is my` · `when to` · `where to` · `can a` · `can i` · `can a handyman` · `should i` · `do i need` · `difference between` · `step by step` · `pros and cons` · `is it worth` · `do plumbers` · `how does a` · `what to do when`
 
-### DIY / temporary fixes
-`do it yourself` · `do-it-yourself` · `by myself` · `on my own` · `home remedy` · `home remedies` · `homemade` · `baking soda` · `boiling water` · `drain snake` · `snake rental` · `rent a snake` · `temporary fix`
+### DIY / temporary fixes / products
+`do it yourself` · `do-it-yourself` · `by myself` · `on my own` · `home remedy` · `home remedies` · `homemade` · `baking soda` · `boiling water` · `vinegar and baking soda` · `drain snake` · `snake rental` · `rent a snake` · `temporary fix` · `fix it myself` · `stop a leak` · `teflon tape` · `thread tape` · `plumbers epoxy` · `leak tape` · `wd 40` · `liquid plumber` · `liquid plumr` · `plumbers putty` · `plumbers tape` · `flex seal`
 
-### Education / careers / "start a business"
-`license exam` · `how to become` · `become a plumber` · `trade school` · `continuing education` · `plumbing school` · `plumbing certification` · `plumber certification` · `get certified` · `certification course` · `plumbers union` · `union job` · `business for sale` · `start a plumbing business` · `odd jobs` · `low income` · `financial help`
+### Careers / education / "start a business"
+`license exam` · `how to become` · `become a plumber` · `trade school` · `continuing education` · `plumbing school` · `plumbing classes` · `get certified` · `exam prep` · `practice test` · `study guide` · `plumbing code` · `code book` · `now hiring` · `help wanted` · `join our team` · `we are hiring` · `owner operator` · `plumber helper` · `subcontractor wanted` · `odd jobs` · `business for sale` · `start a plumbing business` · `low income` · `financial help`
 
 ### Prices / shopping / retail
-`average cost` · `average price` · `price list` · `cost calculator` · `estimate calculator` · `low cost` · `for sale` · `order online` · `best brand` · `home warranty` · `home depot` · `lowe's` · `harbor freight` · `ace hardware` · `true value` · `sam's club` · `tractor supply` · `supply house` · `plumbing supply` · `liquid plumber` · `liquid plumr` · `plumbers putty` · `plumbers tape` · `flex seal`
+`average cost` · `average price` · `price list` · `cost calculator` · `estimate calculator` · `low cost` · `no cost` · `for sale` · `order online` · `best brand` · `home warranty` · `home depot` · `lowe's` · `harbor freight` · `ace hardware` · `true value` · `sam's club` · `tractor supply` · `northern tool` · `faucet direct` · `pex supply` · `build com` · `floor and decor` · `habitat restore`
 
 ### Other trades / not our service
 `air conditioning` · `air conditioner` · `ac repair` · `ac unit` · `mini split` · `electric repair` · `pest control` · `appliance repair` · `home improvement` · `this old house`
 
+### Directories / marketing junk
+`home advisor` · `yellow pages` · `business listing` · `lead generation` · `buy leads` · `plumber directory` · `list of plumbers` · `google ads`
+
 ### Games / entertainment / homonyms
-`hot rod` · `plumber game` · `super mario` · `where's my water` · `plumber crack` · `plumbers crack`
+`hot rod` · `plumber game` · `super mario` · `where's my water` · `plumber crack` · `plumbers crack` · `plumber jokes` · `plumber movie` · `plumber wallpaper` · `plumber meme`
 
 ### Misc info
-`history of` · `who invented` · `angie's list`
+`history of` · `who invented` · `angie's list` · `near me free`
+
+### Competitor brands (already leaking — keep appending)
+`aaa service plumbing` · `marvelous plumbing` · `roto rooter` · `roto-rooter` · `mr rooter` · `mr. rooter` · `benjamin franklin plumbing` · `rescue rooter` · `mike diamond` · `michael and son` · `bill howe` · `servpro`
+*(`hot rod plumbing` already covered by `hot rod` above.)*
 
 ---
 
-## BLOCK B — add as BROAD match (single words, scrubbed safe)
+## BLOCK B — BROAD match (single words, scrubbed safe)
+
+### Now-blocked junk (your call — not pay-per-call intent)
+`free` · `test` · `supply` · `union` · `grant` · `certification`
 
 ### Info / learning
-`vs` · `versus` · `meaning` · `definition` · `define` · `explained` · `explain` · `guide` · `guides` · `tip` · `tips` · `idea` · `ideas` · `advice` · `tutorial` · `tutorials` · `steps` · `instructions` · `manual` · `diagram` · `diagrams` · `schematic` · `learn` · `learning` · `diy` · `myself` · `yourself` · `hack` · `hacks` · `trick` · `tricks` · `symptoms` · `causes` · `signs`
+`vs` · `versus` · `meaning` · `definition` · `define` · `explained` · `explain` · `guide` · `guides` · `tip` · `tips` · `idea` · `ideas` · `advice` · `tutorial` · `tutorials` · `steps` · `instructions` · `manual` · `diagram` · `diagrams` · `blueprint` · `blueprints` · `schematic` · `learn` · `learning` · `diy` · `myself` · `yourself` · `hack` · `hacks` · `trick` · `tricks` · `symptoms` · `causes` · `signs`
 
-### DIY tools
-`auger` · `plunger` · `drano`
+### DIY tools / products
+`auger` · `plunger` · `drano` · `vinegar` · `wd40` · `liquidplumber`
 
 ### Jobs / education
-`job` · `jobs` · `hiring` · `career` · `careers` · `salary` · `wage` · `wages` · `apprentice` · `apprenticeship` · `journeyman` · `resume` · `intern` · `internship` · `recruiter` · `recruitment` · `employment` · `employer` · `vacancy` · `school` · `schools` · `college` · `classes` · `training` · `licensing` · `exam`
+`job` · `jobs` · `hiring` · `career` · `careers` · `salary` · `wage` · `wages` · `apprentice` · `apprenticeship` · `journeyman` · `resume` · `intern` · `internship` · `recruiter` · `recruitment` · `employment` · `employer` · `vacancy` · `school` · `schools` · `college` · `classes` · `training` · `licensing` · `exam` · `indeed` · `ziprecruiter` · `glassdoor` · `monster` · `snagajob` · `craigslist` · `1099`
 
 ### Prices / discounts / funding
-`cost` · `costs` · `price` · `prices` · `pricing` · `calculator` · `cheap` · `cheapest` · `discount` · `discounts` · `coupon` · `coupons` · `promo` · `deal` · `deals` · `grants` · `subsidy` · `charity` · `voucher` · `government`
+`cost` · `costs` · `price` · `prices` · `pricing` · `calculator` · `cheap` · `cheapest` · `discount` · `discounts` · `coupon` · `coupons` · `promo` · `deal` · `deals` · `grants` · `subsidy` · `charity` · `voucher` · `government` · `freebie` · `complimentary`
 
 ### Retail / parts / brands
-`rental` · `tools` · `homedepot` · `lowes` · `menards` · `walmart` · `costco` · `amazon` · `ebay` · `wayfair` · `ferguson` · `supplyhouse` · `supplier` · `parts` · `part` · `wholesale` · `distributor` · `store` · `stores` · `shop` · `buy` · `purchase` · `brand` · `brands` · `model` · `models` · `spec` · `specs` · `specification` · `specifications` · `manufacturer` · `warranty`
+`rental` · `tools` · `homedepot` · `lowes` · `menards` · `walmart` · `costco` · `amazon` · `ebay` · `wayfair` · `ferguson` · `supplyhouse` · `supplier` · `grainger` · `parts` · `part` · `wholesale` · `distributor` · `store` · `stores` · `shop` · `buy` · `purchase` · `brand` · `brands` · `model` · `models` · `spec` · `specs` · `specification` · `specifications` · `manufacturer` · `warranty`
 
 ### Reviews / research / reputation
-`review` · `reviews` · `rated` · `rating` · `ratings` · `complaint` · `complaints` · `scam` · `scams` · `ripoff` · `lawsuit` · `bbb` · `yelp` · `angi` · `thumbtack` · `nextdoor` · `reddit` · `quora` · `forum` · `forums` · `wiki` · `wikipedia` · `wikihow` · `ehow` · `instructables` · `blog` · `blogs` · `pdf` · `youtube` · `video` · `videos` · `image` · `images` · `picture` · `pictures` · `photo` · `photos`
+`review` · `reviews` · `rated` · `rating` · `ratings` · `complaint` · `complaints` · `scam` · `scams` · `ripoff` · `lawsuit` · `bbb` · `yelp` · `angi` · `thumbtack` · `nextdoor` · `houzz` · `homeadvisor` · `porch` · `bark` · `reddit` · `quora` · `forum` · `forums` · `wiki` · `wikipedia` · `wikihow` · `ehow` · `instructables` · `blog` · `blogs` · `pdf` · `youtube` · `video` · `videos` · `image` · `images` · `picture` · `pictures` · `photo` · `photos` · `pinterest` · `tiktok`
 
 ### Other trades
-`hvac` · `heating` · `furnace` · `electrician` · `electrical` · `roofing` · `roofer` · `landscaping` · `landscaper` · `locksmith` · `handyman` · `handyperson`
+`hvac` · `heating` · `furnace` · `electrician` · `electrical` · `roofing` · `roofer` · `landscaping` · `landscaper` · `locksmith` · `handyman` · `handyperson` · `carpenter`
 
 ### Apps / games / entertainment
-`software` · `app` · `apps` · `game` · `games` · `simulator` · `mario` · `roblox` · `minecraft` · `symbol` · `drawing` · `cartoon` · `clipart` · `costume` · `meme` · `song` · `movie` · `film` · `lyrics` · `joke` · `halloween`
+`software` · `app` · `apps` · `game` · `games` · `simulator` · `mario` · `roblox` · `minecraft` · `symbol` · `drawing` · `cartoon` · `clipart` · `costume` · `meme` · `song` · `movie` · `film` · `lyrics` · `joke` · `halloween` · `emoji` · `gif` · `wallpaper`
 
-### B2B / marketing junk
-`franchise` · `leads` · `marketing` · `seo`
-
----
-
-## Competitor brands (add as PHRASE — recommended)
-Stops you paying for people hunting a *specific competitor*. The first three already leaked into your Search Terms report.
-`aaa service plumbing` · `marvelous plumbing` · `hot rod plumbing` · `roto rooter` · `roto-rooter` · `mr rooter` · `mr. rooter` · `benjamin franklin plumbing` · `rescue rooter` · `mike diamond` · `michael and son` · `bill howe` · `servpro`
+### B2B / marketing
+`franchise` · `leads` · `marketing` · `seo` · `advertising`
 
 ---
 
-## ⚠️ Optional — confirm before adding (some clients DO these jobs)
-Add only if the client does **not** offer them:
+## ⚠️ Optional — confirm before adding (only if client does NOT do these jobs)
 `remodel` · `remodeling` · `renovation` · `pool` · `septic` · `well drilling` · `new construction`
-
----
-
-## 🗺️ Geo negatives — keep PER-CAMPAIGN (not shareable)
-In **each** campaign, add neighboring cities you don't service as **phrase** negatives so out-of-area searches (like `"marvelous plumbing buena park"`, which leaked into Garden Grove) don't trigger. Starters:
-- **Garden Grove** → `"buena park"` · `"anaheim"` · `"santa ana"` · `"westminster"` · `"stanton"`
-- **Torrance** → `"long beach"` · `"carson"` · `"gardena"` · `"redondo beach"` · `"lomita"`
-- **Fullerton** → `"anaheim"` · `"brea"` · `"placentia"` · `"la habra"` · `"buena park"`
-- (repeat for the rest — only neighbors you don't cover.)
 
 ---
 
@@ -153,6 +144,11 @@ should i
 do i need
 difference between
 step by step
+pros and cons
+is it worth
+do plumbers
+how does a
+what to do when
 do it yourself
 do-it-yourself
 by myself
@@ -162,25 +158,46 @@ home remedies
 homemade
 baking soda
 boiling water
+vinegar and baking soda
 drain snake
 snake rental
 rent a snake
 temporary fix
+fix it myself
+stop a leak
+teflon tape
+thread tape
+plumbers epoxy
+leak tape
+wd 40
+liquid plumber
+liquid plumr
+plumbers putty
+plumbers tape
+flex seal
 license exam
 how to become
 become a plumber
 trade school
 continuing education
 plumbing school
-plumbing certification
-plumber certification
+plumbing classes
 get certified
-certification course
-plumbers union
-union job
+exam prep
+practice test
+study guide
+plumbing code
+code book
+now hiring
+help wanted
+join our team
+we are hiring
+owner operator
+plumber helper
+subcontractor wanted
+odd jobs
 business for sale
 start a plumbing business
-odd jobs
 low income
 financial help
 average cost
@@ -189,6 +206,7 @@ price list
 cost calculator
 estimate calculator
 low cost
+no cost
 for sale
 order online
 best brand
@@ -200,13 +218,12 @@ ace hardware
 true value
 sam's club
 tractor supply
-supply house
-plumbing supply
-liquid plumber
-liquid plumr
-plumbers putty
-plumbers tape
-flex seal
+northern tool
+faucet direct
+pex supply
+build com
+floor and decor
+habitat restore
 air conditioning
 air conditioner
 ac repair
@@ -217,19 +234,50 @@ pest control
 appliance repair
 home improvement
 this old house
+home advisor
+yellow pages
+business listing
+lead generation
+buy leads
+plumber directory
+list of plumbers
+google ads
 hot rod
 plumber game
 super mario
 where's my water
 plumber crack
 plumbers crack
+plumber jokes
+plumber movie
+plumber wallpaper
+plumber meme
 history of
 who invented
 angie's list
+near me free
+aaa service plumbing
+marvelous plumbing
+roto rooter
+roto-rooter
+mr rooter
+mr. rooter
+benjamin franklin plumbing
+rescue rooter
+mike diamond
+michael and son
+bill howe
+servpro
 ```
 
 ## 📋 PASTE BLOCK B — BROAD match
 ```
+free
+test
+supply
+union
+grant
+certification
 vs
 versus
 meaning
@@ -251,6 +299,8 @@ instructions
 manual
 diagram
 diagrams
+blueprint
+blueprints
 schematic
 learn
 learning
@@ -267,6 +317,9 @@ signs
 auger
 plunger
 drano
+vinegar
+wd40
+liquidplumber
 job
 jobs
 hiring
@@ -293,6 +346,13 @@ classes
 training
 licensing
 exam
+indeed
+ziprecruiter
+glassdoor
+monster
+snagajob
+craigslist
+1099
 cost
 costs
 price
@@ -313,6 +373,8 @@ subsidy
 charity
 voucher
 government
+freebie
+complimentary
 rental
 tools
 homedepot
@@ -326,6 +388,7 @@ wayfair
 ferguson
 supplyhouse
 supplier
+grainger
 parts
 part
 wholesale
@@ -361,6 +424,10 @@ yelp
 angi
 thumbtack
 nextdoor
+houzz
+homeadvisor
+porch
+bark
 reddit
 quora
 forum
@@ -382,6 +449,8 @@ picture
 pictures
 photo
 photos
+pinterest
+tiktok
 hvac
 heating
 furnace
@@ -394,6 +463,7 @@ landscaper
 locksmith
 handyman
 handyperson
+carpenter
 software
 app
 apps
@@ -415,25 +485,12 @@ film
 lyrics
 joke
 halloween
+emoji
+gif
+wallpaper
 franchise
 leads
 marketing
 seo
-```
-
-## 📋 PASTE BLOCK C — Competitors (PHRASE)
-```
-aaa service plumbing
-marvelous plumbing
-hot rod plumbing
-roto rooter
-roto-rooter
-mr rooter
-mr. rooter
-benjamin franklin plumbing
-rescue rooter
-mike diamond
-michael and son
-bill howe
-servpro
+advertising
 ```
