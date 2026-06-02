@@ -12,6 +12,7 @@ Team working repo for the plumbing pay-per-call campaigns (8 cities). **Each cit
 | [README](adcopy/README.md) | Campaign overview, the 8 cities, non-negotiable rules |
 | [SETUP](adcopy/SETUP.md) | Geo targeting, conversion tracking, negatives, per-city setup |
 | [BIDS](adcopy/BIDS.md) | Max-CPC plan: basic bid + per-city high-intent call-drivers |
+| [NEGATIVES](adcopy/NEGATIVES.md) | **Shared negative-keyword list (~200) — attach to all 8 campaigns** |
 | [cities/](adcopy/cities) | Per-city keyword → ad-group mapping + RSA copy (8 files) |
 
 ### `site/` — the landing pages
