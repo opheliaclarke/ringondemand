@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ring On Demand — Per-City Keyword Research (8 cities)</title>
+<style>
+  :root { --bg:#0f1115; --card:#1a1d24; --line:#2a2f3a; --ink:#eef1f6; --mut:#9aa4b2; --grn:#2ecc71; --org:#ff9f43; --blu:#4aa3ff; --red:#ff6b6b; --gold:#ffd479; --cold:#5ec8ff; }
+  * { box-sizing:border-box; }
+  body { margin:0 auto; max-width:960px; background:var(--bg); color:var(--ink); font:18px/1.6 -apple-system,Segoe UI,Roboto,Arial,sans-serif; padding:22px; }
+  h1 { font-size:30px; margin:0 0 4px; }
+  h2 { font-size:23px; margin:30px 0 8px; padding-bottom:6px; border-bottom:2px solid var(--line); }
+  h3 { font-size:20px; margin:0 0 2px; }
+  .sub { color:var(--mut); margin:0 0 16px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:18px 20px; margin:16px 0; }
+  .nav { position:sticky; top:0; background:rgba(15,17,21,.96); backdrop-filter:blur(4px); padding:10px 0; margin:0 0 6px; border-bottom:1px solid var(--line); z-index:5; display:flex; flex-wrap:wrap; gap:6px; }
+  .nav a { font-size:14px; font-weight:700; text-decoration:none; color:var(--blu); background:rgba(74,163,255,.10); padding:5px 10px; border-radius:7px; }
+  .nav a.cold { color:var(--cold); background:rgba(94,200,255,.10); }
+  pre { background:#0b0d11; border:1px solid var(--line); border-radius:8px; padding:14px; overflow:auto; font:14.5px/1.7 ui-monospace,Menlo,Consolas,monospace; color:#dbe2ec; margin:0; white-space:pre-wrap; }
+  .row { display:flex; justify-content:space-between; align-items:center; gap:12px; margin:12px 0 6px; }
+  button { background:var(--grn); color:#04210f; border:0; border-radius:8px; padding:8px 15px; font-size:14px; font-weight:700; cursor:pointer; white-space:nowrap; }
+  button:active { transform:translateY(1px); }
+  button.done { background:var(--blu); color:#04162b; }
+  .why { background:rgba(74,163,255,.08); border-left:4px solid var(--blu); padding:14px 18px; border-radius:8px; margin:10px 0; }
+  .why b { color:var(--blu); }
+  .flag { background:rgba(255,107,107,.10); border-left:4px solid var(--red); padding:14px 18px; border-radius:8px; margin:10px 0; }
+  .flag b { color:var(--red); }
+  .note { color:var(--mut); font-size:14px; margin-top:6px; }
+  code { background:#0b0d11; padding:2px 7px; border-radius:5px; color:var(--gold); font-size:14px; }
+  .pill { display:inline-block; font-size:12px; font-weight:700; padding:2px 9px; border-radius:20px; margin-left:8px; vertical-align:middle; }
+  .p-hot { background:rgba(255,159,67,.15); color:var(--org); }
+  .p-cold { background:rgba(94,200,255,.15); color:var(--cold); }
+  .keep { color:var(--grn); font-weight:700; }
+  .rem { color:var(--red); font-weight:700; }
+  table { width:100%; border-collapse:collapse; margin-top:6px; font-size:14.5px; }
+  th,td { text-align:left; padding:7px 8px; border-bottom:1px solid var(--line); vertical-align:top; }
+  th { color:var(--mut); font-size:12px; text-transform:uppercase; letter-spacing:.04em; }
+  td.cpc { color:var(--gold); font-weight:700; white-space:nowrap; }
+  .analysis { color:#cdd6e2; font-size:15.5px; }
+</style>
+</head>
+<body>
+  <h1>Ring On Demand — Per-City Keyword Research</h1>
+  <p class="sub">8 cities · deep local-demand analysis · high call-intent long-tail · NO city names in keywords (geo-targeting handles location)</p>
+
+  <div class="nav">
+    <a href="#answer">▲ Verdict</a>
+    <a href="#core">Universal Core</a>
+    <a href="#torrance">Torrance</a>
+    <a href="#fullerton">Fullerton</a>
+    <a href="#aurora" class="cold">Aurora ❄</a>
+    <a href="#missionviejo">Mission Viejo</a>
+    <a href="#westcovina">West Covina</a>
+    <a href="#pasadena">Pasadena</a>
+    <a href="#santabarbara">Santa Barbara</a>
+    <a href="#gardengrove">Garden Grove</a>
+  </div>
+
+  <h2 id="answer">Do the current keywords make sense? — Verdict</h2>
+  <div class="why">
+    <b>Yes — as a shared CORE — but three fixes, plus Aurora is a different animal.</b>
+    <ol style="margin:10px 0 0">
+      <li>The geo-clean core (emergency, water heater, drains, sewer, leaks, repipe, plumber-near-me) fits <b>all 8</b>. Paste it everywhere.</li>
+      <li><b>The cheap long-tail list was too generic.</b> Each city gets its own ADD list below, tuned to real local demand (slab + repipe + hard water inland; freeze + sump in Aurora).</li>
+      <li><b>Three keywords to KILL in all 7 SoCal cities:</b> <span class="rem">sump pump</span>, <span class="rem">well pump</span>, <span class="rem">frozen pipe / pipe insulation</span> — no basements, municipal water, no freeze. Pure wasted spend.</li>
+    </ol>
+  </div>
+  <div class="flag">
+    <b>🚩 Site-copy bug on every domain:</b> all 8 sites advertise <code>sump pump</code> + <code>basement flooding</code> (template leftover). True ONLY for Aurora CO. In the 7 SoCal cities it mismatches reality — swap that copy for <b>slab leak / repipe</b> language so ads, keywords, and landing page all line up (Quality Score + trust).
+  </div>
+
+  <h2 id="core">Universal Core — paste in EVERY city</h2>
+  <div class="card">
+    <div class="row"><h3>Core keywords (all 8 cities)</h3><button onclick="cp(this,'core')">Copy core</button></div>
+    <pre id="core">[emergency plumber near me]
+"24 hour emergency plumber"
+"24 hour plumber near me"
+"same day plumber near me"
+"after hours plumber near me"
+"emergency plumber open now"
+"emergency plumbing service near me"
+[water heater repair near me]
+"water heater replacement near me"
+"water heater installation near me"
+"leaking water heater repair"
+"tankless water heater installation"
+[drain cleaning near me]
+"clogged drain plumber near me"
+"emergency drain cleaning near me"
+[sewer line repair near me]
+"sewer backup plumber near me"
+"hydro jetting service near me"
+[burst pipe repair near me]
+"water leak repair plumber near me"
+"pipe repair plumber near me"
+"toilet repair plumber near me"
+"faucet repair near me"
+"garbage disposal repair near me"
+"gas line repair near me"
+"gas leak repair near me"
+[plumber near me]
+"plumbing company near me"
+"licensed plumber near me"
+"residential plumber near me"
+"plumbing repair near me"</pre>
+    <p class="note">31 core terms. Then add the city-specific list below + that city's REMOVE list.</p>
+  </div>
+
+  <!-- ============ TORRANCE ============ -->
+  <h2 id="torrance">Torrance, CA <span class="pill p-hot">coastal slab + hard water</span></h2>
+  <div class="card">
+    <p class="analysis"><b>Demand:</b> 1950s–70s slab-foundation South Bay homes → <b>slab leaks</b> are the #1 crisis (seismic shift + coastal-soil corrosion + aging copper/galvanized). Very hard water (~7–15+ GPG) corrodes galvanized lines → steady <b>repipe</b> + water-heater scale failures. High income (~$116K) → homeowners buy big-ticket repipe/trenchless, not band-aids. Mild coast → zero freeze/sump demand.</p>
+    <p><span class="keep">KEEP:</span> slab leak, repipe/galvanized, water heater + tankless + flush, sewer/trenchless/camera, hydro jetting, water softener/filtration, PRV, gas line.<br>
+    <span class="rem">REMOVE:</span> sump pump, well pump, frozen pipe/insulation. Deprioritize: recirc pump, booster, bidet, ice-maker line.</p>
+    <div class="row"><b>ADD — Torrance long-tail</b><button onclick="cp(this,'kwtor')">Copy</button></div>
+    <pre id="kwtor">[slab leak repair]
+[slab leak detection]
+"slab leak under house"
+"water leak under slab"
+[repipe specialist]
+"galvanized pipe replacement"
+"whole house repipe cost"
+[tankless water heater installation]
+"water heater replacement same day"
+[main sewer line repair]
+"trenchless sewer line replacement"
+"hydro jetting sewer line"
+"sewer camera inspection"
+[gas line repair]
+"gas leak detection"
+[burst pipe repair]
+"whole house water softener installation"</pre>
+    <table>
+      <tr><th>Bid-up first</th><th>Max CPC</th></tr>
+      <tr><td>[slab leak repair]</td><td class="cpc">$30</td></tr>
+      <tr><td>"emergency plumber open now"</td><td class="cpc">$28</td></tr>
+      <tr><td>[burst pipe repair]</td><td class="cpc">$28</td></tr>
+      <tr><td>[main sewer line repair]</td><td class="cpc">$26</td></tr>
+      <tr><td>"water heater replacement same day"</td><td class="cpc">$24</td></tr>
+    </table>
+  </div>
+
+  <!-- ============ FULLERTON ============ -->
+  <h2 id="fullerton">Fullerton, CA <span class="pill p-hot">old homes + very hard water</span></h2>
+  <div class="card">
+    <p class="analysis"><b>Demand:</b> ~46% post-WWII homes + pre-1939 downtown bungalows on original galvanized + clay/cast-iron sewers. Top jobs: slab leaks, galvanized corrosion → rusty water/low pressure → <b>whole-home repipe</b>, and root-intruded clay sewer laterals (camera + hydro jetting + trenchless). "Very Hard" water (14–25 gpg) → scale failures + water softener demand. Comfortable OC owners buy full replacements.</p>
+    <p><span class="keep">KEEP:</span> slab leak, repipe (copper/pex), sewer repair/replace/trenchless/camera, water heater + tankless, water softener/filtration, PRV, hydro jetting.<br>
+    <span class="rem">REMOVE:</span> frozen pipe/insulation, well pump, pressure booster. Deprioritize: bidet, ice-maker/fridge line, dishwasher hookup.</p>
+    <div class="row"><b>ADD — Fullerton long-tail</b><button onclick="cp(this,'kwful')">Copy</button></div>
+    <pre id="kwful">[slab leak repair]
+[slab leak detection]
+"whole house repipe cost"
+[galvanized pipe replacement]
+"copper repipe"
+"pex repipe"
+[low water pressure plumber]
+"rusty water from pipes"
+"cast iron sewer pipe replacement"
+"clay sewer line replacement"
+"trenchless sewer replacement"
+"sewer camera inspection"
+"water heater replacement same day"
+[tankless water heater installation]
+"whole house water softener installation"
+"pressure regulator replacement"
+"hydro jetting sewer line"
+"main water line leak repair"</pre>
+    <table>
+      <tr><th>Bid-up first</th><th>Max CPC</th></tr>
+      <tr><td>[emergency slab leak repair]</td><td class="cpc">$30</td></tr>
+      <tr><td>[burst pipe repair emergency]</td><td class="cpc">$28</td></tr>
+      <tr><td>[sewer line backup repair]</td><td class="cpc">$28</td></tr>
+      <tr><td>[emergency water heater replacement]</td><td class="cpc">$26</td></tr>
+      <tr><td>[main water line leak repair]</td><td class="cpc">$24</td></tr>
+    </table>
+  </div>
+
+  <!-- ============ AURORA ============ -->
+  <h2 id="aurora">Aurora, COLORADO <span class="pill p-cold">❄ cold climate + basements + 13.4 GPG</span></h2>
+  <div class="card">
+    <div class="flag"><b>The outlier.</b> Cold Front Range market — keyword logic is the OPPOSITE of the SoCal cities. Freeze + sump + hard water lead; <span class="rem">slab leak is WEAK here</span> (basements/crawlspace, not slab-on-grade).</div>
+    <p class="analysis"><b>Demand:</b> Brutal freeze-thaw → <b>frozen pipes, burst pipes, frozen hose bibs</b> every winter. Basements over bentonite clay → <b>sump pumps</b> + basement-line backups (spring melt). Very hard water ~13.4 GPG (3× US avg) cuts water-heater life to ~8 yrs → constant water heater replace/flush + softeners.</p>
+    <p><span class="keep">KEEP (Aurora-only):</span> frozen pipe, sump pump, hose bib, water heater flush/sediment, water softener, pipe insulation, burst pipe, sewer backup. Plus the universal core.<br>
+    <span class="rem">REMOVE:</span> slab leak repair/detection (weak), well pump (city water). Deprioritize: bidet, ice-maker line, booster.</p>
+    <div class="row"><b>ADD — Aurora CO long-tail</b><button onclick="cp(this,'kwaur')">Copy</button></div>
+    <pre id="kwaur">"frozen pipe repair"
+"burst pipe repair emergency"
+[frozen pipe thawing service]
+"frozen hose bib repair"
+[outdoor faucet frozen burst]
+"sump pump repair"
+[sump pump replacement basement]
+"sump pump battery backup install"
+[basement drain backup]
+"basement floor drain cleaning"
+"water heater sediment flush"
+[no hot water heater repair]
+"water heater replacement hard water"
+[whole house water softener installation]
+"hard water scale removal plumbing"
+"pipe insulation winterization"
+[sewer line backup repair]
+[main water line leak repair]</pre>
+    <table>
+      <tr><th>Bid-up first</th><th>Max CPC</th></tr>
+      <tr><td>"burst pipe repair emergency"</td><td class="cpc">$30</td></tr>
+      <tr><td>"frozen pipe repair"</td><td class="cpc">$28</td></tr>
+      <tr><td>[sewer line backup repair]</td><td class="cpc">$27</td></tr>
+      <tr><td>[no hot water heater repair]</td><td class="cpc">$26</td></tr>
+      <tr><td>"sump pump repair"</td><td class="cpc">$24</td></tr>
+    </table>
+  </div>
+
+  <!-- ============ MISSION VIEJO ============ -->
+  <h2 id="missionviejo">Mission Viejo, CA <span class="pill p-hot">affluent · 70s–80s slab · 16–18 gpg</span></h2>
+  <div class="card">
+    <p class="analysis"><b>Demand:</b> Master-planned, built 1968–1980 → 45–55 yr-old soft-copper-under-slab + pockets of failure-prone polybutylene. <b>Slab leaks, pinhole leaks, full repipes</b> dominate. Aggressive very-hard water (16–18 gpg) → corrosion + scaling. Affluent base pays premium → <b>tankless conversions, whole-house filtration, RO, softeners</b> over cheap patches.</p>
+    <p><span class="keep">KEEP:</span> slab leak, repipe (copper/pex), pinhole/poly-b, tankless conversion, whole-house filtration/RO/softener, sewer/camera, water heater.<br>
+    <span class="rem">REMOVE:</span> sump pump, basement flooding, wells. Deprioritize: bidet, ice-maker, hose bib, laundry valve.</p>
+    <div class="row"><b>ADD — Mission Viejo long-tail</b><button onclick="cp(this,'kwmv')">Copy</button></div>
+    <pre id="kwmv">[slab leak repair near me]
+[slab leak detection near me]
+[copper repipe cost]
+[whole house repipe near me]
+[pex repiping near me]
+[pinhole leak copper pipe repair]
+[polybutylene pipe replacement]
+[tankless water heater installation near me]
+[convert to tankless water heater]
+[whole house water filtration system installation]
+[water softener installation near me]
+[reverse osmosis system installation near me]
+[under slab water leak repair]
+[hard water plumbing repair]
+[gas line installation for tankless water heater]
+[pressure regulator replacement near me]
+[sewer line camera inspection near me]</pre>
+    <table>
+      <tr><th>Bid-up first</th><th>Max CPC</th></tr>
+      <tr><td>[slab leak repair near me]</td><td class="cpc">$30</td></tr>
+      <tr><td>[burst pipe repair near me]</td><td class="cpc">$28</td></tr>
+      <tr><td>[emergency plumber near me]</td><td class="cpc">$28</td></tr>
+      <tr><td>[water heater leaking]</td><td class="cpc">$26</td></tr>
+      <tr><td>[sewer line backup repair]</td><td class="cpc">$24</td></tr>
+    </table>
+  </div>
+
+  <!-- ============ WEST COVINA ============ -->
+  <h2 id="westcovina">West Covina, CA <span class="pill p-hot">SGV hardest water · slab tracts</span></h2>
+  <div class="card">
+    <p class="analysis"><b>Demand:</b> 16–18 gpg — among the hardest water in the San Gabriel Valley → water heaters die early, big softener/filtration demand. 1950s–70s slab tract homes on galvanized → <b>slab leaks, leak detection, whole-home repipe</b> are crisis-grade. Clay-soil swing + heavy tree canopy → root intrusion → sewer repair/hydro jetting/trenchless. Hot inland + multi-gen/rentals → steady drain + tankless calls.</p>
+    <p><span class="keep">KEEP:</span> slab leak, repipe/galvanized, water heater + tankless + flush, water softener, sewer/root/camera/trenchless, hydro jetting.<br>
+    <span class="rem">REMOVE:</span> sump pump, basement flooding, wells. Deprioritize: bidet, ice-maker, dishwasher, laundry/washer valve, hose bib, booster.</p>
+    <div class="row"><b>ADD — West Covina long-tail</b><button onclick="cp(this,'kwwc')">Copy</button></div>
+    <pre id="kwwc">"slab leak detection"
+"slab leak repair cost"
+[slab leak plumber near me]
+"emergency slab leak repair"
+"whole house repipe"
+[galvanized pipe replacement]
+"copper repipe cost"
+"sewer line root removal"
+"tree root in sewer line"
+[clay sewer line repair]
+"sewer camera inspection"
+"trenchless sewer replacement"
+"water heater replacement same day"
+"tankless water heater installation"
+"water heater sediment flush"
+[whole house water softener installation]
+"hard water plumbing repair"
+[low water pressure galvanized pipes]</pre>
+    <table>
+      <tr><th>Bid-up first</th><th>Max CPC</th></tr>
+      <tr><td>"slab leak repair"</td><td class="cpc">$30</td></tr>
+      <tr><td>[emergency plumber near me]</td><td class="cpc">$28</td></tr>
+      <tr><td>[burst pipe repair]</td><td class="cpc">$28</td></tr>
+      <tr><td>"sewer line backup"</td><td class="cpc">$26</td></tr>
+      <tr><td>"water heater replacement same day"</td><td class="cpc">$24</td></tr>
+    </table>
+  </div>
+
+  <!-- ============ PASADENA ============ -->
+  <h2 id="pasadena">Pasadena, CA <span class="pill p-hot">historic homes · repipe + sewer kings</span></h2>
+  <div class="card">
+    <p class="analysis"><b>Demand:</b> Early-1900s Craftsman/Victorian stock (Bungalow Heaven, Historic Highlands) on original galvanized + clay/cast-iron. Highest-ticket demand = <b>whole-house repipe</b> (galvanized→copper/PEX) + <b>cast-iron/clay sewer replacement</b> + trenchless — worsened by mature oak/pepper/jacaranda roots (camera + root clearing). Hard water → scaling + water-heater failure. Affluent, historic-conscious owners pay premium for careful licensed work.</p>
+    <p><span class="keep">KEEP:</span> repipe (lead hard here), cast-iron/clay sewer replace, trenchless, sewer camera/root, water heater + flush, leak detection, PRV, gas line.<br>
+    <span class="rem">REMOVE:</span> sump pump/basement flooding, well pump. Deprioritize: bidet, ice-maker, dishwasher, RO/softener, recirc, booster. (Slab leak only for newer Linda Vista pockets.)</p>
+    <div class="row"><b>ADD — Pasadena long-tail</b><button onclick="cp(this,'kwpas')">Copy</button></div>
+    <pre id="kwpas">"whole house repipe cost"
+[galvanized pipe replacement]
+"galvanized to copper repipe"
+[repipe old house]
+"old house plumbing repipe"
+"copper repipe specialist"
+[pex repipe]
+"cast iron sewer line replacement"
+[sewer line replacement]
+"trenchless sewer line replacement cost"
+"sewer camera inspection"
+[tree root in sewer line]
+"sewer line root removal"
+"sewer line backup main"
+"rusty water from pipes fix"
+[low water pressure whole house]
+"main water line replacement"
+[water heater flush hard water]</pre>
+    <table>
+      <tr><th>Bid-up first</th><th>Max CPC</th></tr>
+      <tr><td>[emergency plumber near me]</td><td class="cpc">$28</td></tr>
+      <tr><td>[burst pipe repair]</td><td class="cpc">$28</td></tr>
+      <tr><td>[sewer line backup]</td><td class="cpc">$27</td></tr>
+      <tr><td>[slab leak repair]</td><td class="cpc">$26</td></tr>
+      <tr><td>[water heater leaking]</td><td class="cpc">$26</td></tr>
+    </table>
+    <p class="note">High-ticket runners-up to push if budget allows: <code>[trenchless sewer repair]</code>, <code>[whole house repipe]</code>.</p>
+  </div>
+
+  <!-- ============ SANTA BARBARA ============ -->
+  <h2 id="santabarbara">Santa Barbara, CA <span class="pill p-hot">affluent coast · hardest water in US</span></h2>
+  <div class="card">
+    <p class="analysis"><b>Demand:</b> Among the hardest water in the nation → <b>whole-house filtration, softeners, tankless</b> with scale protection = high-ticket recurring demand (Montecito, Hope Ranch money). Old Spanish/historic stock on galvanized + slab on shifting soils → repipe + slab leak + sewer. Drought/conservation culture → recirc pumps, RO, low-flow. Salt air corrodes outdoor fixtures; outlying hillside properties run on <b>wells</b>.</p>
+    <p><span class="keep">KEEP:</span> whole-house filtration/softener/RO, tankless, repipe, slab leak, sewer/trenchless/camera, recirc pump, PRV, well pump (outlying), gas line.<br>
+    <span class="rem">REMOVE:</span> sump pump, pressure booster. Deprioritize: dishwasher/ice-maker. Ignore site template leftovers (basement flooding, grease trap).</p>
+    <div class="row"><b>ADD — Santa Barbara long-tail</b><button onclick="cp(this,'kwsb')">Copy</button></div>
+    <pre id="kwsb">"whole house water filtration installation"
+"water softener installation"
+[hard water plumber]
+"tankless water heater installation"
+[tankless water heater repair]
+"whole house repipe galvanized pipe"
+"galvanized pipe replacement"
+"slab leak detection and repair"
+[slab leak repair cost]
+"hot water recirculation pump installation"
+"reverse osmosis system installation"
+[under sink reverse osmosis installation]
+"trenchless sewer line replacement"
+[sewer camera inspection]
+"pressure regulator replacement"
+[well pump repair]
+[gas line installation for stove]
+"emergency burst pipe repair"</pre>
+    <table>
+      <tr><th>Bid-up first</th><th>Max CPC</th></tr>
+      <tr><td>[emergency plumber near me]</td><td class="cpc">$28</td></tr>
+      <tr><td>[burst pipe repair]</td><td class="cpc">$28</td></tr>
+      <tr><td>[slab leak repair]</td><td class="cpc">$27</td></tr>
+      <tr><td>[sewer line backup]</td><td class="cpc">$26</td></tr>
+      <tr><td>[water heater leaking]</td><td class="cpc">$24</td></tr>
+    </table>
+  </div>
+
+  <!-- ============ GARDEN GROVE ============ -->
+  <h2 id="gardengrove">Garden Grove, CA <span class="pill p-hot">high-volume bread-and-butter</span></h2>
+  <div class="card">
+    <p class="analysis"><b>Demand:</b> Wall-to-wall 1950s–60s slab ranch tracts → <b>slab leaks</b> + galvanized failure → <b>repipe</b>, plus clay sewer laterals with root intrusion (hydro jetting/camera). OC hard water (~13 gpg) → short-lived water heaters + clogged fixtures. Heavy renter + multi-gen/ADU occupancy → huge VOLUME of cheap urgent jobs: clogged drains, garbage disposals, leaking heaters, running toilets. Market rewards <b>same-day / volume</b> over premium. Phone on site: <code>(714) 790-1741</code>.</p>
+    <p><span class="keep">KEEP:</span> all core bread-and-butter (drain/clog/water heater/disposal/toilet/leak), slab leak, repipe, sewer/root/hydro jetting, water softener.<br>
+    <span class="rem">REMOVE:</span> sump pump/basement flooding, wells. Deprioritize: bidet, ice-maker, dishwasher, booster, grease trap. Cap trenchless (high CPC) — let hydro jetting carry sewer volume.</p>
+    <div class="row"><b>ADD — Garden Grove long-tail</b><button onclick="cp(this,'kwgg')">Copy</button></div>
+    <pre id="kwgg">"same day water heater replacement"
+"leaking water heater repair"
+[40 gallon water heater install]
+"hard water heater replacement"
+"garbage disposal replacement near me"
+"clogged kitchen sink drain"
+"emergency drain cleaning near me"
+"running toilet repair"
+"shower valve replacement"
+"main sewer line clog"
+"sewer line root removal"
+"hydro jetting sewer line"
+"clay sewer pipe replacement"
+"slab leak detection and repair"
+[galvanized pipe replacement]
+"whole house repipe cost"
+[water softener installation]
+"gas line for stove installation"</pre>
+    <table>
+      <tr><th>Bid-up first</th><th>Max CPC</th></tr>
+      <tr><td>"slab leak repair"</td><td class="cpc">$30</td></tr>
+      <tr><td>"burst pipe repair near me"</td><td class="cpc">$28</td></tr>
+      <tr><td>"main sewer line backup"</td><td class="cpc">$27</td></tr>
+      <tr><td>"emergency water heater replacement"</td><td class="cpc">$26</td></tr>
+      <tr><td>"24 hour emergency plumber near me"</td><td class="cpc">$24</td></tr>
+    </table>
+  </div>
+
+  <h2>How to use per city</h2>
+  <div class="card">
+    <pre>1. Paste the Universal Core (31) into all 3 ad groups.
+2. Add that city's ADD list (tuned to local demand).
+3. Apply that city's REMOVE list as the things you DON'T add.
+4. Bid up that city's top-5 crisis terms ($24-30) to buy first calls.
+5. Fix the site copy: drop "sump pump / basement flooding" on the
+   7 SoCal sites -> use "slab leak / repipe". Keep it ONLY on Aurora.</pre>
+  </div>
+
+<script>
+function cp(btn, id){
+  const t = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(t).then(()=>{
+    const o = btn.textContent; btn.textContent='✓ Copied'; btn.classList.add('done');
+    setTimeout(()=>{ btn.textContent=o; btn.classList.remove('done'); }, 1500);
+  });
+}
+</script>
+</body>
+</html>

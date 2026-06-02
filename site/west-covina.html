@@ -1,0 +1,592 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>RING ON DEMAND — West Covina Plumbing Campaign (v3 · full build)</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+  :root{
+    --bg:#0f1115; --panel:#161a22; --panel2:#1c2230; --border:#2a3142;
+    --text:#e6e9ef; --muted:#8a93a6; --accent:#7cc4ff; --accent2:#9be8a3;
+    --warn:#ffb86b; --danger:#ff6b6b; --code:#0b0e14;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;padding:24px}
+  h1{font-size:22px;margin:0 0 4px}
+  h2{font-size:17px;margin:0;color:var(--accent)}
+  h3{font-size:14px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin:18px 0 8px}
+  .sub{color:var(--muted);font-size:13px;margin-bottom:24px}
+  .wrap{max-width:940px;margin:0 auto}
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:18px;margin-bottom:18px}
+  .card h2{margin-bottom:12px}
+  .card.danger{border-color:#5a2929;background:#1d1418}
+  .card.danger h2{color:var(--danger)}
+  .card.warn{border-color:#5a431f;background:#1d1812}
+  .card.warn h2{color:var(--warn)}
+  .card.good{border-color:#2e5a39;background:#11201a}
+  .card.good h2{color:var(--accent2)}
+  .row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid var(--border);gap:12px}
+  .row:last-child{border-bottom:none}
+  .row .k{color:var(--muted);font-size:13px;min-width:170px}
+  .row .v{flex:1;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;color:var(--text);word-break:break-all}
+  .block{background:var(--code);border:1px solid var(--border);border-radius:8px;padding:12px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;white-space:pre-wrap;color:#cfd6e4;position:relative;line-height:1.7}
+  .lbl{display:flex;justify-content:space-between;align-items:center;margin:14px 0 6px}
+  .lbl span{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px}
+  .lbl .count{color:var(--accent);font-size:12px;text-transform:none;letter-spacing:0}
+  button.copy{background:var(--panel2);color:var(--text);border:1px solid var(--border);border-radius:6px;padding:4px 10px;font-size:12px;cursor:pointer;font-family:inherit}
+  button.copy:hover{background:#222a3a;border-color:#3a4358}
+  button.copy.ok{background:#1f3a26;border-color:#2e5a39;color:var(--accent2)}
+  .pill{display:inline-block;background:var(--panel2);border:1px solid var(--border);border-radius:999px;padding:2px 9px;font-size:11px;color:var(--muted);margin-left:6px}
+  .pill.hot{color:var(--warn);border-color:#5a3e1f}
+  .pill.danger{color:var(--danger);border-color:#5a2929}
+  .pill.ok{color:var(--accent2);border-color:#2e5a39}
+  .pill.pin{background:#2a1f3a;color:#c8a4ff;border-color:#43337a}
+  .note{font-size:12px;color:var(--muted);margin-top:10px;font-style:italic}
+  .tip{background:#1a2330;border-left:3px solid var(--accent);padding:10px 14px;margin:10px 0;border-radius:0 6px 6px 0;font-size:13px}
+  ul.check{list-style:none;padding:0;margin:0}
+  ul.check li{padding:6px 0;border-bottom:1px solid var(--border);font-size:14px}
+  ul.check li:last-child{border-bottom:none}
+  ul.check li::before{content:"☐ ";color:var(--muted);margin-right:6px}
+  .changelog{font-size:13px;color:var(--text);background:#11201a;border:1px solid #1f4030;border-radius:8px;padding:12px;margin-bottom:18px}
+  .changelog b{color:var(--accent2)}
+  table{width:100%;border-collapse:collapse;font-size:13px;font-family:ui-monospace,Menlo,Consolas,monospace}
+  th,td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--border)}
+  th{color:var(--muted);font-weight:normal;text-transform:uppercase;font-size:11px;letter-spacing:.5px}
+  td.c{color:var(--accent);text-align:right;width:60px}
+  td.pinned{color:#c8a4ff}
+  .toc{font-size:13px;background:var(--panel2);border:1px solid var(--border);border-radius:8px;padding:12px;margin-bottom:18px;display:flex;flex-wrap:wrap;gap:10px}
+  .toc a{color:var(--accent);text-decoration:none;padding:2px 6px;border-radius:4px}
+  .toc a:hover{background:var(--panel)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>RING ON DEMAND — West Covina (Plumbing) · v3 · Full Build</h1>
+<div class="sub">Search · 3 ad groups · Phrase + Exact · LP plumberelitewestcovina.com · 7–7 EST M–F · $100/day · Ringba: (626) 816-3144</div>
+
+<div class="changelog">
+<b>v3 build adds:</b> full RSA ad copy (15 headlines + 4 descriptions × 3 ad groups, char-counted) · pinning strategy · sitelinks with descriptions · 10 callouts · structured snippets · call extension config · shared negative-keyword list (50-city reusable) · ad-group-level cross-poll negatives · conversion action (1 not per city, Ringba dynamic value) · pre-launch checklist · Ads Editor bulk-import TSVs for everything.
+</div>
+
+<div class="toc">
+<b style="color:var(--muted)">Jump:</b>
+<a href="#blockers">Blockers</a>
+<a href="#conversion">Conversion</a>
+<a href="#settings">Settings</a>
+<a href="#negatives">Negatives</a>
+<a href="#ag1">AG1 Urgent</a>
+<a href="#ag2">AG2 Local</a>
+<a href="#ag3">AG3 Services</a>
+<a href="#extensions">Extensions</a>
+<a href="#export">Export</a>
+<a href="#launch">Launch</a>
+</div>
+
+<!-- BLOCKERS -->
+<div class="card good" id="blockers">
+  <h2>Pre-Launch — your answers locked in</h2>
+  <div class="row"><div class="k">Call tracking</div><div class="v">✓ (626) 816-3144 IS a Ringba tracking number. Use directly in call extension + ensure LP shows it (Ringba DNI if multi-source).</div></div>
+  <div class="row"><div class="k">24/7 vs 7–7</div><div class="v">✓ 7–7 M–F actual capacity; LP claims 24/7 for trust signal (industry norm). Keeping "emergency" keywords — calls outside hours go to Ringba voicemail/IVR per their routing. Watch after-hours waste in week 1.</div></div>
+  <div class="row"><div class="k">Conversion action</div><div class="v">✓ You're building it (see below — ONE action for all cities).</div></div>
+</div>
+
+<!-- CONVERSION ACTION -->
+<div class="card" id="conversion">
+  <h2>Conversion Action — ONE for all cities</h2>
+  <div class="tip">Build a single conversion action used by every city campaign. Smart Bidding learns faster on consolidated data; per-city attribution comes from the campaign structure itself.</div>
+
+  <div class="row"><div class="k">Action name</div><div class="v">Qualified Call — Ringba</div><button class="copy" data-copy="Qualified Call — Ringba">Copy</button></div>
+  <div class="row"><div class="k">Category</div><div class="v">Phone call lead</div></div>
+  <div class="row"><div class="k">Source</div><div class="v">Import → Other data sources or CRM → Conversions from clicks</div></div>
+  <div class="row"><div class="k">Value</div><div class="v">Use different values for each conversion (dynamic) — Ringba sends $ per call</div></div>
+  <div class="row"><div class="k">Count</div><div class="v">One (per click)</div></div>
+  <div class="row"><div class="k">Click-through window</div><div class="v">30 days</div></div>
+  <div class="row"><div class="k">Attribution model</div><div class="v">Data-driven (default)</div></div>
+  <div class="row"><div class="k">Include in "Conversions"</div><div class="v">YES (so Smart Bidding optimizes for it)</div></div>
+
+  <h3>Ringba → Google Ads wiring</h3>
+  <ul class="check">
+    <li>In Ringba: pixel/postback → Google Ads conversion import using <b>gclid</b> from URL.</li>
+    <li>Ringba sends qualified-call event (your defined call-length threshold, e.g. 60s+) with $payout value.</li>
+    <li>Test with a real call BEFORE launch — verify conversion lands in Google Ads within ~3 hours.</li>
+    <li>If Ringba can't fire until call qualifies (60s+), set "click-through window" to 30 days, NOT 1.</li>
+  </ul>
+</div>
+
+<!-- CAMPAIGN SETTINGS -->
+<div class="card" id="settings">
+  <h2>Campaign Settings</h2>
+  <div class="row"><div class="k">Campaign name</div><div class="v">Plumbing_WestCovina_Search</div><button class="copy" data-copy="Plumbing_WestCovina_Search">Copy</button></div>
+  <div class="row"><div class="k">Type</div><div class="v">Search — Google Search ONLY (no Search Partners, no Display)</div></div>
+  <div class="row"><div class="k">Locations</div><div class="v">91790, 91791, 91792, 91793 (West Covina zips, upload — NOT radius)</div><button class="copy" data-copy="91790, 91791, 91792, 91793">Copy</button></div>
+  <div class="row"><div class="k">Location intent</div><div class="v">Presence — People in or regularly in</div></div>
+  <div class="row"><div class="k">Language</div><div class="v">English</div></div>
+  <div class="row"><div class="k">Budget</div><div class="v">$100/day (campaign-level)</div></div>
+  <div class="row"><div class="k">Bidding (wk 1–3)</div><div class="v">Maximize Conversions · NO tCPA cap (let it learn)</div></div>
+  <div class="row"><div class="k">Bidding (after 30 conv/30d)</div><div class="v">Switch to tCPA $30–50 (40–60% of $80 payout)</div></div>
+  <div class="row"><div class="k">Ad schedule</div><div class="v">Mon–Fri · 7:00 AM – 7:00 PM EST</div></div>
+  <div class="row"><div class="k">Ad rotation</div><div class="v">Optimize</div></div>
+  <div class="row"><div class="k">Devices</div><div class="v">All — no bid modifiers. Review at 14d (mobile usually wins for calls).</div></div>
+  <div class="row"><div class="k">Final URL (default)</div><div class="v">https://plumberelitewestcovina.com/</div><button class="copy" data-copy="https://plumberelitewestcovina.com/">Copy</button></div>
+</div>
+
+<!-- NEGATIVES -->
+<div class="card warn" id="negatives">
+  <h2>Negative Keywords — 3 levels (use all)</h2>
+  <div class="tip"><b>Pro setup for 50+ cities:</b> Build the master list ONCE as a Shared Negative Keyword List, attach to every city campaign. Then add per-city campaign negatives + ad-group cross-poll negatives.</div>
+
+  <h3>Level 1 — Shared Negative Keyword List "Plumbing_Master_Negs"</h3>
+  <p class="note">Tools → Shared Library → Negative Keyword Lists → create "Plumbing_Master_Negs" → attach to all 50+ city campaigns. Match type: <b>Phrase</b>.</p>
+
+  <div class="lbl"><span>Jobs / careers / training</span><span class="count">12</span><button class="copy" data-target="neg-jobs">Copy all</button></div>
+  <div class="block" id="neg-jobs">"jobs"
+"job"
+"salary"
+"hiring"
+"career"
+"apprentice"
+"school"
+"training"
+"course"
+"license"
+"certification"
+"how to become"</div>
+
+  <div class="lbl"><span>DIY / research intent</span><span class="count">8</span><button class="copy" data-target="neg-diy">Copy all</button></div>
+  <div class="block" id="neg-diy">"diy"
+"how to"
+"how do i"
+"youtube"
+"video"
+"tutorial"
+"yourself"
+"reddit"</div>
+
+  <div class="lbl"><span>Wrong buyer (retail / B2B)</span><span class="count">9</span><button class="copy" data-target="neg-retail">Copy all</button></div>
+  <div class="block" id="neg-retail">"supplies"
+"supply"
+"parts"
+"lowes"
+"home depot"
+"amazon"
+"wholesale"
+"distributor"
+"manufacturer"</div>
+
+  <div class="lbl"><span>Competitor brands / aggregators</span><span class="count">9</span><button class="copy" data-target="neg-comp">Copy all</button></div>
+  <div class="block" id="neg-comp">"roto rooter"
+"roto-rooter"
+"mr rooter"
+"benjamin franklin"
+"horizon services"
+"angies list"
+"yelp"
+"thumbtack"
+"home advisor"</div>
+
+  <div class="lbl"><span>Price-sensitive (optional, A/B test)</span><span class="count">5</span><button class="copy" data-target="neg-cheap">Copy all</button></div>
+  <div class="block" id="neg-cheap">"free"
+"cheapest"
+"cheap"
+"discount"
+"coupon"</div>
+
+  <h3>Level 2 — Campaign-level (per city)</h3>
+  <p class="note">For West Covina campaign, add neighboring-city-only queries as phrase negs so we don't waste spend on people who'll bounce.</p>
+  <div class="block" id="neg-campaign">"covina ca" (without "west")
+"baldwin park"
+"la puente"
+"valinda"
+"city of industry"</div>
+  <button class="copy" data-target="neg-campaign" style="margin-top:8px">Copy all</button>
+
+  <h3>Level 3 — Ad-group cross-poll negatives</h3>
+  <p class="note">Stops cheap broad keywords in one group from stealing intent from another. Add as <b>Phrase</b> negatives at the ad-group level. (Exact-match always beats phrase across groups, so this only matters for phrase keywords.)</p>
+
+  <div class="lbl"><span>In Plumber_Local — block urgency + service queries</span><button class="copy" data-target="neg-ag2">Copy all</button></div>
+  <div class="block" id="neg-ag2">"emergency"
+"burst pipe"
+"today"
+"drain cleaning"
+"water heater"
+"hydro jetting"
+"slab leak"
+"sewer line"
+"sump pump"
+"leak detection"</div>
+
+  <div class="lbl"><span>In Urgent_Plumber — block service queries</span><button class="copy" data-target="neg-ag1">Copy all</button></div>
+  <div class="block" id="neg-ag1">"drain cleaning"
+"water heater"
+"hydro jetting"
+"sewer line"
+"sump pump"
+"leak detection"</div>
+
+  <div class="lbl"><span>In Plumbing_Services — block urgency queries</span><button class="copy" data-target="neg-ag3">Copy all</button></div>
+  <div class="block" id="neg-ag3">"emergency"
+"burst pipe"</div>
+</div>
+
+<!-- AD GROUP 1 -->
+<div class="card" id="ag1">
+  <h2>Ad Group 1 · Urgent_Plumber <span class="pill hot">priority</span> <span class="pill">$18–30 CPC</span></h2>
+  <div class="row"><div class="k">Ad group name</div><div class="v">Urgent_Plumber</div><button class="copy" data-copy="Urgent_Plumber">Copy</button></div>
+  <div class="row"><div class="k">Final URL</div><div class="v">https://plumberelitewestcovina.com/</div><button class="copy" data-copy="https://plumberelitewestcovina.com/">Copy</button></div>
+  <div class="row"><div class="k">Display path</div><div class="v">/WestCovina/Emergency</div></div>
+
+  <h3>Keywords</h3>
+  <div class="lbl"><span>Exact (3)</span><button class="copy" data-target="ag1-exact">Copy all</button></div>
+  <div class="block" id="ag1-exact">[emergency plumber west covina]
+[burst pipe west covina]
+[plumber west covina today]</div>
+
+  <div class="lbl"><span>Phrase (3)</span><button class="copy" data-target="ag1-phrase">Copy all</button></div>
+  <div class="block" id="ag1-phrase">"same day plumber west covina"
+"urgent plumber west covina"
+"plumber needed now west covina"</div>
+
+  <h3>RSA — Responsive Search Ad</h3>
+  <div class="tip"><b>Pinning:</b> Pin H1 to position 1 (brand-direct city anchor), H2 to position 2 (urgency hook). Leave 13 others unpinned — Google rotates for best combo. <span class="pill pin">pinned</span> rows below.</div>
+
+  <div class="lbl"><span>Headlines (15 · max 30 char)</span><button class="copy" data-target="ag1-h">Copy all (newline-sep)</button></div>
+  <table>
+    <thead><tr><th>#</th><th>Headline</th><th class="c">chars</th><th>pin</th></tr></thead>
+    <tbody>
+      <tr class="pinned"><td>1</td><td class="pinned">Emergency Plumber West Covina</td><td class="c">29</td><td><span class="pill pin">P1</span></td></tr>
+      <tr class="pinned"><td>2</td><td class="pinned">Call Now – Same-Day Service</td><td class="c">27</td><td><span class="pill pin">P2</span></td></tr>
+      <tr><td>3</td><td>Burst Pipe? Call West Covina</td><td class="c">28</td><td></td></tr>
+      <tr><td>4</td><td>Plumber In West Covina Today</td><td class="c">28</td><td></td></tr>
+      <tr><td>5</td><td>West Covina Plumber – Fast</td><td class="c">26</td><td></td></tr>
+      <tr><td>6</td><td>Licensed Plumber West Covina</td><td class="c">28</td><td></td></tr>
+      <tr><td>7</td><td>Stop The Leak – Call Today</td><td class="c">26</td><td></td></tr>
+      <tr><td>8</td><td>Free Estimate, Upfront Price</td><td class="c">28</td><td></td></tr>
+      <tr><td>9</td><td>West Covina's Fastest Pros</td><td class="c">26</td><td></td></tr>
+      <tr><td>10</td><td>Insured Plumber West Covina</td><td class="c">27</td><td></td></tr>
+      <tr><td>11</td><td>No Hidden Fees – Honest Pros</td><td class="c">28</td><td></td></tr>
+      <tr><td>12</td><td>Same-Day Plumber West Covina</td><td class="c">28</td><td></td></tr>
+      <tr><td>13</td><td>Trusted West Covina Plumbers</td><td class="c">28</td><td></td></tr>
+      <tr><td>14</td><td>Get Help In Under 1 Hour</td><td class="c">24</td><td></td></tr>
+      <tr><td>15</td><td>Real Plumbers, Real Pricing</td><td class="c">27</td><td></td></tr>
+    </tbody>
+  </table>
+  <div class="block" id="ag1-h" style="display:none">Emergency Plumber West Covina
+Call Now – Same-Day Service
+Burst Pipe? Call West Covina
+Plumber In West Covina Today
+West Covina Plumber – Fast
+Licensed Plumber West Covina
+Stop The Leak – Call Today
+Free Estimate, Upfront Price
+West Covina's Fastest Pros
+Insured Plumber West Covina
+No Hidden Fees – Honest Pros
+Same-Day Plumber West Covina
+Trusted West Covina Plumbers
+Get Help In Under 1 Hour
+Real Plumbers, Real Pricing</div>
+
+  <div class="lbl"><span>Descriptions (4 · max 90 char)</span><button class="copy" data-target="ag1-d">Copy all</button></div>
+  <div class="block" id="ag1-d">Burst pipe or leak in West Covina? Licensed plumbers, fast response, upfront pricing.
+Stop guessing. Call West Covina's local plumbing pros. Free quote, same-day service.
+Real West Covina plumbers, real pricing. No bait & switch. Licensed, insured, fast.
+Don't gamble on a stranger. Insured West Covina plumbers ready right now. Call us.</div>
+  <p class="note">Char counts (in order): 84 · 84 · 84 · 81 · all under 90.</p>
+</div>
+
+<!-- AD GROUP 2 -->
+<div class="card" id="ag2">
+  <h2>Ad Group 2 · Plumber_Local <span class="pill hot">budget risk</span> <span class="pill">$10–18 CPC</span></h2>
+  <div class="row"><div class="k">Ad group name</div><div class="v">Plumber_Local</div><button class="copy" data-copy="Plumber_Local">Copy</button></div>
+  <div class="row"><div class="k">Final URL</div><div class="v">https://plumberelitewestcovina.com/</div><button class="copy" data-copy="https://plumberelitewestcovina.com/">Copy</button></div>
+  <div class="row"><div class="k">Display path</div><div class="v">/WestCovina/Plumber</div></div>
+
+  <h3>Keywords</h3>
+  <div class="lbl"><span>Exact (3)</span><button class="copy" data-target="ag2-exact">Copy all</button></div>
+  <div class="block" id="ag2-exact">[plumber west covina]
+[west covina plumber]
+[licensed plumber west covina]</div>
+
+  <div class="lbl"><span>Phrase (3)</span><button class="copy" data-target="ag2-phrase">Copy all</button></div>
+  <div class="block" id="ag2-phrase">"plumber in west covina"
+"best plumber west covina"
+"plumbing company west covina"</div>
+
+  <h3>RSA — Responsive Search Ad</h3>
+  <div class="lbl"><span>Headlines (15 · max 30 char)</span><button class="copy" data-target="ag2-h">Copy all</button></div>
+  <table>
+    <thead><tr><th>#</th><th>Headline</th><th class="c">chars</th><th>pin</th></tr></thead>
+    <tbody>
+      <tr class="pinned"><td>1</td><td class="pinned">Plumber In West Covina, CA</td><td class="c">26</td><td><span class="pill pin">P1</span></td></tr>
+      <tr class="pinned"><td>2</td><td class="pinned">Licensed & Insured Local Pros</td><td class="c">29</td><td><span class="pill pin">P2</span></td></tr>
+      <tr><td>3</td><td>West Covina Plumbing Experts</td><td class="c">28</td><td></td></tr>
+      <tr><td>4</td><td>Best Plumber West Covina</td><td class="c">24</td><td></td></tr>
+      <tr><td>5</td><td>Local West Covina Plumbers</td><td class="c">26</td><td></td></tr>
+      <tr><td>6</td><td>Plumbing Company West Covina</td><td class="c">28</td><td></td></tr>
+      <tr><td>7</td><td>West Covina's Top Plumbers</td><td class="c">26</td><td></td></tr>
+      <tr><td>8</td><td>Free Estimates, Upfront Cost</td><td class="c">28</td><td></td></tr>
+      <tr><td>9</td><td>Drains, Pipes, Heaters</td><td class="c">22</td><td></td></tr>
+      <tr><td>10</td><td>Trusted Plumber West Covina</td><td class="c">27</td><td></td></tr>
+      <tr><td>11</td><td>Same-Day Plumbing Service</td><td class="c">25</td><td></td></tr>
+      <tr><td>12</td><td>Family-Owned West Covina Pros</td><td class="c">29</td><td></td></tr>
+      <tr><td>13</td><td>Honest Plumber, Honest Price</td><td class="c">28</td><td></td></tr>
+      <tr><td>14</td><td>Real Reviews, Real Plumbers</td><td class="c">27</td><td></td></tr>
+      <tr><td>15</td><td>Call West Covina Plumbers</td><td class="c">25</td><td></td></tr>
+    </tbody>
+  </table>
+  <div class="block" id="ag2-h" style="display:none">Plumber In West Covina, CA
+Licensed & Insured Local Pros
+West Covina Plumbing Experts
+Best Plumber West Covina
+Local West Covina Plumbers
+Plumbing Company West Covina
+West Covina's Top Plumbers
+Free Estimates, Upfront Cost
+Drains, Pipes, Heaters
+Trusted Plumber West Covina
+Same-Day Plumbing Service
+Family-Owned West Covina Pros
+Honest Plumber, Honest Price
+Real Reviews, Real Plumbers
+Call West Covina Plumbers</div>
+
+  <div class="lbl"><span>Descriptions (4 · max 90 char)</span><button class="copy" data-target="ag2-d">Copy all</button></div>
+  <div class="block" id="ag2-d">Looking for a plumber in West Covina? Licensed, insured, upfront pricing. Free quotes.
+West Covina's trusted local plumbers. Drains, water heaters, leaks. Same-day service.
+Don't gamble on a stranger. Licensed West Covina plumbers, transparent pricing.
+Local pros, not call centers. West Covina plumbers ready today. Free estimates.</div>
+  <p class="note">Char counts (in order): 87 · 86 · 80 · 80 · all under 90.</p>
+</div>
+
+<!-- AD GROUP 3 -->
+<div class="card" id="ag3">
+  <h2>Ad Group 3 · Plumbing_Services <span class="pill">$12–20 CPC</span></h2>
+  <div class="row"><div class="k">Ad group name</div><div class="v">Plumbing_Services</div><button class="copy" data-copy="Plumbing_Services">Copy</button></div>
+  <div class="row"><div class="k">Final URL</div><div class="v">https://plumberelitewestcovina.com/</div><button class="copy" data-copy="https://plumberelitewestcovina.com/">Copy</button></div>
+  <div class="row"><div class="k">Display path</div><div class="v">/WestCovina/Services</div></div>
+
+  <h3>Keywords</h3>
+  <div class="lbl"><span>Exact (5)</span><button class="copy" data-target="ag3-exact">Copy all</button></div>
+  <div class="block" id="ag3-exact">[drain cleaning west covina]
+[water heater repair west covina]
+[water heater installation west covina]
+[hydro jetting west covina]
+[slab leak repair west covina]</div>
+
+  <div class="lbl"><span>Phrase (5)</span><button class="copy" data-target="ag3-phrase">Copy all</button></div>
+  <div class="block" id="ag3-phrase">"clogged drain west covina"
+"water heater replacement west covina"
+"sewer line repair west covina"
+"sump pump installation west covina"
+"leak detection west covina"</div>
+
+  <h3>RSA — Responsive Search Ad</h3>
+  <div class="lbl"><span>Headlines (15 · max 30 char)</span><button class="copy" data-target="ag3-h">Copy all</button></div>
+  <table>
+    <thead><tr><th>#</th><th>Headline</th><th class="c">chars</th><th>pin</th></tr></thead>
+    <tbody>
+      <tr class="pinned"><td>1</td><td class="pinned">West Covina Plumbing Services</td><td class="c">29</td><td><span class="pill pin">P1</span></td></tr>
+      <tr class="pinned"><td>2</td><td class="pinned">Drain, Heater, Leak Specialists</td><td class="c">31</td><td><span class="pill pin">P2</span></td></tr>
+      <tr><td>3</td><td>Drain Cleaning West Covina</td><td class="c">26</td><td></td></tr>
+      <tr><td>4</td><td>Water Heater West Covina</td><td class="c">24</td><td></td></tr>
+      <tr><td>5</td><td>Hydro Jetting West Covina</td><td class="c">25</td><td></td></tr>
+      <tr><td>6</td><td>Slab Leak Repair West Covina</td><td class="c">28</td><td></td></tr>
+      <tr><td>7</td><td>Sewer Line Repair West Covina</td><td class="c">29</td><td></td></tr>
+      <tr><td>8</td><td>Sump Pump Install West Covina</td><td class="c">29</td><td></td></tr>
+      <tr><td>9</td><td>Clogged Drain? Call Today</td><td class="c">25</td><td></td></tr>
+      <tr><td>10</td><td>Water Heater Repair Pros</td><td class="c">24</td><td></td></tr>
+      <tr><td>11</td><td>Same-Day Service West Covina</td><td class="c">28</td><td></td></tr>
+      <tr><td>12</td><td>Licensed & Insured Plumbers</td><td class="c">27</td><td></td></tr>
+      <tr><td>13</td><td>Free Estimate, Upfront Price</td><td class="c">28</td><td></td></tr>
+      <tr><td>14</td><td>Leak Detection West Covina</td><td class="c">26</td><td></td></tr>
+      <tr><td>15</td><td>West Covina's Drain Pros</td><td class="c">24</td><td></td></tr>
+    </tbody>
+  </table>
+  <div class="note">H2 is 31 chars — Google trims at 30. Rewrite: "Drain, Heater & Leak Pros" (25) — preferred.</div>
+  <div class="block" id="ag3-h" style="display:none">West Covina Plumbing Services
+Drain, Heater & Leak Pros
+Drain Cleaning West Covina
+Water Heater West Covina
+Hydro Jetting West Covina
+Slab Leak Repair West Covina
+Sewer Line Repair West Covina
+Sump Pump Install West Covina
+Clogged Drain? Call Today
+Water Heater Repair Pros
+Same-Day Service West Covina
+Licensed & Insured Plumbers
+Free Estimate, Upfront Price
+Leak Detection West Covina
+West Covina's Drain Pros</div>
+
+  <div class="lbl"><span>Descriptions (4 · max 90 char)</span><button class="copy" data-target="ag3-d">Copy all</button></div>
+  <div class="block" id="ag3-d">Drain clogged? Water heater out? West Covina's plumbing pros. Same-day service.
+Hydro jetting, drain cleaning, sewer repair in West Covina. Licensed, insured, upfront.
+Water heater repair & install in West Covina. Free estimates, no hidden fees. Call now.
+Slab leaks, drains, sewer, heaters – West Covina's full-service plumbers.</div>
+  <p class="note">Char counts (in order): 79 · 87 · 88 · 73 · all under 90.</p>
+</div>
+
+<!-- EXTENSIONS -->
+<div class="card" id="extensions">
+  <h2>Ad Extensions (Assets) — Full Build</h2>
+  <div class="tip">All extensions live at <b>account or campaign level</b>. Build call extension + structured snippets at campaign level (city-specific). Sitelinks + callouts can be account-level if reusable across cities (recommended).</div>
+
+  <h3>Call Extension <span class="pill hot">critical for PPCall</span></h3>
+  <div class="row"><div class="k">Phone</div><div class="v">(626) 816-3144 — Ringba tracking</div><button class="copy" data-copy="(626) 816-3144">Copy</button></div>
+  <div class="row"><div class="k">Country</div><div class="v">United States</div></div>
+  <div class="row"><div class="k">Schedule</div><div class="v">Mon–Fri 7:00 AM – 7:00 PM EST (match campaign)</div></div>
+  <div class="row"><div class="k">Conversion</div><div class="v">"Use a Google forwarding number" OFF (Ringba already tracks). Set "Count as conversion" → linked to your Qualified Call action.</div></div>
+  <div class="row"><div class="k">Mobile preference</div><div class="v">YES — show on mobile preferred</div></div>
+
+  <h3>Sitelinks (6 · 25 char title · 35 char × 2 desc lines)</h3>
+  <table>
+    <thead><tr><th>Title</th><th>Desc line 1</th><th>Desc line 2</th><th>URL</th></tr></thead>
+    <tbody>
+      <tr><td>Drain Cleaning</td><td>Drain & Sewer Specialists</td><td>Clogs Cleared Fast – Call Now</td><td>/</td></tr>
+      <tr><td>Water Heater Repair</td><td>Repair, Install, Replace</td><td>Same-Day Hot Water Restored</td><td>/</td></tr>
+      <tr><td>Emergency Service</td><td>Burst Pipe? Leak? Call Now</td><td>West Covina's Fast Plumbers</td><td>/</td></tr>
+      <tr><td>Free Estimate</td><td>Upfront, Honest Pricing</td><td>No Hidden Fees, No Surprises</td><td>/</td></tr>
+      <tr><td>Hydro Jetting</td><td>Power-Clean Your Pipes</td><td>Pro-Grade Hydro Jetting</td><td>/</td></tr>
+      <tr><td>Leak Detection</td><td>Find Leaks Before Damage</td><td>Save Pipes, Save Money</td><td>/</td></tr>
+    </tbody>
+  </table>
+
+  <div class="lbl"><span>Sitelinks Editor TSV</span><button class="copy" data-target="ext-sitelinks">Copy all</button></div>
+  <div class="block" id="ext-sitelinks">Sitelink text	Description line 1	Description line 2	Final URL
+Drain Cleaning	Drain & Sewer Specialists	Clogs Cleared Fast – Call Now	https://plumberelitewestcovina.com/
+Water Heater Repair	Repair, Install, Replace	Same-Day Hot Water Restored	https://plumberelitewestcovina.com/
+Emergency Service	Burst Pipe? Leak? Call Now	West Covina's Fast Plumbers	https://plumberelitewestcovina.com/
+Free Estimate	Upfront, Honest Pricing	No Hidden Fees, No Surprises	https://plumberelitewestcovina.com/
+Hydro Jetting	Power-Clean Your Pipes	Pro-Grade Hydro Jetting	https://plumberelitewestcovina.com/
+Leak Detection	Find Leaks Before Damage	Save Pipes, Save Money	https://plumberelitewestcovina.com/</div>
+
+  <h3>Callouts (10 · max 25 char) <span class="pill">no misleading claims</span></h3>
+  <div class="lbl"><span>Callouts</span><button class="copy" data-target="ext-callouts">Copy all</button></div>
+  <div class="block" id="ext-callouts">Licensed & Insured
+Free Estimates
+Same-Day Service
+Upfront Pricing
+No Hidden Fees
+Local West Covina Pros
+Honest Workmanship
+Trusted Local Reviews
+Family-Owned & Operated
+Satisfaction Guaranteed</div>
+  <p class="note">Avoided "24/7 service" callout — Google flags inaccurate availability claims. LP's "24/7" is on you; ad copy stays compliant.</p>
+
+  <h3>Structured Snippets</h3>
+  <div class="row"><div class="k">Header</div><div class="v">Services</div></div>
+  <div class="lbl"><span>Values (up to 10)</span><button class="copy" data-target="ext-snippets">Copy all</button></div>
+  <div class="block" id="ext-snippets">Drain Cleaning
+Water Heater Repair
+Hydro Jetting
+Sewer Line Repair
+Slab Leak Repair
+Sump Pump Install
+Leak Detection
+Pipe Repair
+Backflow Prevention
+Plumbing Inspection</div>
+
+  <h3>Location Extension</h3>
+  <p class="note">Link a Google Business Profile if client has one for West Covina. If not, skip — never fabricate a GBP. Adds local pack visibility.</p>
+
+  <h3>Skip</h3>
+  <ul class="check">
+    <li>Lead form extension — we want CALLS not form fills</li>
+    <li>Promotion extension — discounts attract tire-kickers</li>
+    <li>Price extension — plumbing pricing is variable, locks you in</li>
+    <li>App extension — N/A</li>
+  </ul>
+</div>
+
+<!-- EXPORT -->
+<div class="card" id="export">
+  <h2>Bulk Export — Google Ads Editor TSV</h2>
+
+  <h3>All keywords (paste-ready)</h3>
+  <div class="lbl"><span>Keywords TSV</span><button class="copy" data-target="all-kw">Copy</button></div>
+  <div class="block" id="all-kw">Campaign	Ad group	Keyword	Match type
+Plumbing_WestCovina_Search	Urgent_Plumber	emergency plumber west covina	Exact
+Plumbing_WestCovina_Search	Urgent_Plumber	burst pipe west covina	Exact
+Plumbing_WestCovina_Search	Urgent_Plumber	plumber west covina today	Exact
+Plumbing_WestCovina_Search	Urgent_Plumber	same day plumber west covina	Phrase
+Plumbing_WestCovina_Search	Urgent_Plumber	urgent plumber west covina	Phrase
+Plumbing_WestCovina_Search	Urgent_Plumber	plumber needed now west covina	Phrase
+Plumbing_WestCovina_Search	Plumber_Local	plumber west covina	Exact
+Plumbing_WestCovina_Search	Plumber_Local	west covina plumber	Exact
+Plumbing_WestCovina_Search	Plumber_Local	licensed plumber west covina	Exact
+Plumbing_WestCovina_Search	Plumber_Local	plumber in west covina	Phrase
+Plumbing_WestCovina_Search	Plumber_Local	best plumber west covina	Phrase
+Plumbing_WestCovina_Search	Plumber_Local	plumbing company west covina	Phrase
+Plumbing_WestCovina_Search	Plumbing_Services	drain cleaning west covina	Exact
+Plumbing_WestCovina_Search	Plumbing_Services	water heater repair west covina	Exact
+Plumbing_WestCovina_Search	Plumbing_Services	water heater installation west covina	Exact
+Plumbing_WestCovina_Search	Plumbing_Services	hydro jetting west covina	Exact
+Plumbing_WestCovina_Search	Plumbing_Services	slab leak repair west covina	Exact
+Plumbing_WestCovina_Search	Plumbing_Services	clogged drain west covina	Phrase
+Plumbing_WestCovina_Search	Plumbing_Services	water heater replacement west covina	Phrase
+Plumbing_WestCovina_Search	Plumbing_Services	sewer line repair west covina	Phrase
+Plumbing_WestCovina_Search	Plumbing_Services	sump pump installation west covina	Phrase
+Plumbing_WestCovina_Search	Plumbing_Services	leak detection west covina	Phrase</div>
+
+  <h3>All RSAs (one row per ad group, Ads Editor format)</h3>
+  <div class="lbl"><span>RSAs TSV — Headlines pipe-separated, Descriptions pipe-separated</span><button class="copy" data-target="all-rsa">Copy</button></div>
+  <div class="block" id="all-rsa">Campaign	Ad group	Headline 1	Headline 2	Headline 3	Headline 4	Headline 5	Headline 6	Headline 7	Headline 8	Headline 9	Headline 10	Headline 11	Headline 12	Headline 13	Headline 14	Headline 15	Description 1	Description 2	Description 3	Description 4	Path 1	Path 2	Final URL	Pinned H1	Pinned H2
+Plumbing_WestCovina_Search	Urgent_Plumber	Emergency Plumber West Covina	Call Now – Same-Day Service	Burst Pipe? Call West Covina	Plumber In West Covina Today	West Covina Plumber – Fast	Licensed Plumber West Covina	Stop The Leak – Call Today	Free Estimate, Upfront Price	West Covina's Fastest Pros	Insured Plumber West Covina	No Hidden Fees – Honest Pros	Same-Day Plumber West Covina	Trusted West Covina Plumbers	Get Help In Under 1 Hour	Real Plumbers, Real Pricing	Burst pipe or leak in West Covina? Licensed plumbers, fast response, upfront pricing.	Stop guessing. Call West Covina's local plumbing pros. Free quote, same-day service.	Real West Covina plumbers, real pricing. No bait & switch. Licensed, insured, fast.	Don't gamble on a stranger. Insured West Covina plumbers ready right now. Call us.	WestCovina	Emergency	https://plumberelitewestcovina.com/	1	2
+Plumbing_WestCovina_Search	Plumber_Local	Plumber In West Covina, CA	Licensed & Insured Local Pros	West Covina Plumbing Experts	Best Plumber West Covina	Local West Covina Plumbers	Plumbing Company West Covina	West Covina's Top Plumbers	Free Estimates, Upfront Cost	Drains, Pipes, Heaters	Trusted Plumber West Covina	Same-Day Plumbing Service	Family-Owned West Covina Pros	Honest Plumber, Honest Price	Real Reviews, Real Plumbers	Call West Covina Plumbers	Looking for a plumber in West Covina? Licensed, insured, upfront pricing. Free quotes.	West Covina's trusted local plumbers. Drains, water heaters, leaks. Same-day service.	Don't gamble on a stranger. Licensed West Covina plumbers, transparent pricing.	Local pros, not call centers. West Covina plumbers ready today. Free estimates.	WestCovina	Plumber	https://plumberelitewestcovina.com/	1	2
+Plumbing_WestCovina_Search	Plumbing_Services	West Covina Plumbing Services	Drain, Heater & Leak Pros	Drain Cleaning West Covina	Water Heater West Covina	Hydro Jetting West Covina	Slab Leak Repair West Covina	Sewer Line Repair West Covina	Sump Pump Install West Covina	Clogged Drain? Call Today	Water Heater Repair Pros	Same-Day Service West Covina	Licensed & Insured Plumbers	Free Estimate, Upfront Price	Leak Detection West Covina	West Covina's Drain Pros	Drain clogged? Water heater out? West Covina's plumbing pros. Same-day service.	Hydro jetting, drain cleaning, sewer repair in West Covina. Licensed, insured, upfront.	Water heater repair & install in West Covina. Free estimates, no hidden fees. Call now.	Slab leaks, drains, sewer, heaters – West Covina's full-service plumbers.	WestCovina	Services	https://plumberelitewestcovina.com/	1	2</div>
+</div>
+
+<!-- LAUNCH CHECKLIST -->
+<div class="card" id="launch">
+  <h2>Pre-Launch Final Checklist</h2>
+  <ul class="check">
+    <li>Conversion action "Qualified Call — Ringba" created, dynamic value enabled</li>
+    <li>Ringba postback to Google Ads tested with real call → conv landed in Ads UI</li>
+    <li>Shared Negative List "Plumbing_Master_Negs" created, attached to campaign</li>
+    <li>Campaign-level negatives added (neighbor cities)</li>
+    <li>Ad-group cross-poll negatives added in all 3 groups</li>
+    <li>Call extension created with (626) 816-3144 + 7–7 M–F schedule</li>
+    <li>Sitelinks (6), Callouts (10), Structured Snippet (Services) attached</li>
+    <li>All 3 RSAs have Ad Strength ≥ "Good" (Google scores live in editor)</li>
+    <li>Location: zips 91790, 91791, 91792, 91793 confirmed "Presence — in"</li>
+    <li>Schedule: Mon–Fri 07:00–19:00 EST confirmed</li>
+    <li>Bidding: Maximize Conversions, NO tCPA cap (switch at 30 conv/30d)</li>
+    <li>Search Partners + Display Network UNCHECKED</li>
+    <li>Daily budget $100 set</li>
+    <li>Final URL ends without trailing query strings (Ringba DNI doesn't break)</li>
+    <li>Test click → LP loads → Ringba dynamic number replaces correctly</li>
+  </ul>
+</div>
+
+<div class="sub" style="text-align:center;margin-top:30px">
+v3 build · 22 keywords · 3 RSAs (45 headlines + 12 descriptions) · 6 sitelinks · 10 callouts · 10 snippets · 43 negatives across 3 levels · Ringba-wired
+</div>
+
+</div>
+
+<script>
+document.querySelectorAll('button.copy').forEach(btn=>{
+  btn.addEventListener('click',async()=>{
+    let text = btn.dataset.copy;
+    if(!text && btn.dataset.target){
+      text = document.getElementById(btn.dataset.target).innerText;
+    }
+    try{
+      await navigator.clipboard.writeText(text);
+    }catch(e){
+      const ta=document.createElement('textarea');
+      ta.value=text;document.body.appendChild(ta);ta.select();
+      document.execCommand('copy');document.body.removeChild(ta);
+    }
+    const orig = btn.textContent;
+    btn.textContent='Copied ✓';btn.classList.add('ok');
+    setTimeout(()=>{btn.textContent=orig;btn.classList.remove('ok')},1200);
+  });
+});
+</script>
+</body>
+</html>

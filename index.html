@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ring On Demand — Plumbing Pay-Per-Call</title>
+<style>
+  :root { --bg:#0f1115; --card:#1a1d24; --line:#2a2f3a; --ink:#eef1f6; --mut:#9aa4b2; --grn:#2ecc71; --blu:#4aa3ff; --cold:#5ec8ff; }
+  * { box-sizing:border-box; }
+  body { margin:0 auto; max-width:860px; background:var(--bg); color:var(--ink); font:18px/1.6 -apple-system,Segoe UI,Roboto,Arial,sans-serif; padding:26px; }
+  h1 { font-size:30px; margin:0 0 4px; }
+  h2 { font-size:21px; margin:28px 0 10px; padding-bottom:6px; border-bottom:2px solid var(--line); }
+  .sub { color:var(--mut); margin:0 0 8px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:6px 4px; margin:14px 0; }
+  a.item { display:flex; justify-content:space-between; align-items:center; gap:12px; text-decoration:none; color:var(--ink); padding:13px 18px; border-bottom:1px solid var(--line); }
+  a.item:last-child { border-bottom:0; }
+  a.item:hover { background:rgba(74,163,255,.08); }
+  a.item .t { font-weight:700; }
+  a.item .d { color:var(--mut); font-size:14px; }
+  a.item .arw { color:var(--blu); font-weight:700; }
+  .tag { display:inline-block; font-size:12px; font-weight:700; padding:2px 9px; border-radius:20px; margin-left:8px; background:rgba(46,204,113,.12); color:var(--grn); }
+</style>
+</head>
+<body>
+  <h1>Ring On Demand — Plumbing Pay-Per-Call</h1>
+  <p class="sub">8-city campaign hub. Each city = 1 campaign = 1 domain = 3 ad groups (Urgent / Services / Local).</p>
+
+  <h2>📄 Landing pages</h2>
+  <div class="card">
+    <a class="item" href="site/index.html"><span><span class="t">Per-city keyword research</span><br><span class="d">All 8 cities — keywords, ad groups, RSA copy</span></span><span class="arw">→</span></a>
+    <a class="item" href="site/west-covina.html"><span><span class="t">West Covina — landing page</span><br><span class="d">Live customer-facing page</span></span><span class="arw">→</span></a>
+    <a class="item" href="site/west-covina-ads.html"><span><span class="t">West Covina — ads</span><br><span class="d">Ad variants for West Covina</span></span><span class="arw">→</span></a>
+    <a class="item" href="site/littleton/index.html"><span><span class="t">Littleton site</span> <span class="tag">CO ❄</span><br><span class="d">Cold-climate site (frozen/burst pipe, sump pump)</span></span><span class="arw">→</span></a>
+  </div>
+
+  <h2>🎯 Campaign playbook (implement in Google Ads)</h2>
+  <div class="card">
+    <a class="item" href="https://github.com/opheliaclarke/ringondemand/blob/main/adcopy/README.md"><span><span class="t">README</span><br><span class="d">Overview, the 8 cities, non-negotiable rules</span></span><span class="arw">→</span></a>
+    <a class="item" href="https://github.com/opheliaclarke/ringondemand/blob/main/adcopy/SETUP.md"><span><span class="t">SETUP</span><br><span class="d">Geo targeting, conversion tracking, negatives</span></span><span class="arw">→</span></a>
+    <a class="item" href="https://github.com/opheliaclarke/ringondemand/blob/main/adcopy/BIDS.md"><span><span class="t">BIDS</span><br><span class="d">Max-CPC plan + per-city call-drivers</span></span><span class="arw">→</span></a>
+    <a class="item" href="https://github.com/opheliaclarke/ringondemand/tree/main/adcopy/cities"><span><span class="t">City files (8)</span><br><span class="d">Per-city keyword → ad-group mapping</span></span><span class="arw">→</span></a>
+  </div>
+</body>
+</html>
