@@ -30,9 +30,27 @@ A single **shared negative keyword list**, built once, applied to all 8 city cam
 | `lead` (singular) | "lead pipe replacement" = real job. Only `leads` (marketing) blocked. |
 | `heater` | We bid "water heater". (`heating` IS blocked.) |
 | `licensed`, `near me`, `same day`, `emergency`, `open now`, `24 hour`, `repair`, `install`, `replacement`, `service`, `faucet`, `valve`, `pipe`, `fixture`, `slab`, `leak`, `drain`, `sewer`, `repipe`, `softener`, `tankless`, `water line` | Core services/keywords. |
+| `sewer camera` / `sewer camera inspection` | **Research carve-out:** the generic plumbing advice "block sewer camera" does NOT apply to us — sewer camera inspection is a high-ticket service we sell (Torrance Services AG). Stays UN-blocked. |
+| `water service line repair` | Homeowner-side service line = our billable job. We only block the **public-main / city-responsibility** phrasing (`"water main break"`, `"public water main"`). |
+| `tenant`, `renter` (bare), `high water bill` (bare) | A frantic tenant or bill-spike leak CAN convert. We only block the **who-is-responsible / negligence / leak-forgiveness phrasing**, not the bare words. |
 | any **city name** | Geo-targeting handles location. |
 
 > **Blocked on purpose** (not pay-per-call intent): `free` · `test` · `union` · `grant` · `certification`.
+
+---
+
+## 🛰️ Pay-per-call landmines (added from deep research — adversarially verified)
+Four wrong-payer families that look like plumbing demand but never produce a paid 60s+ call. All added as **phrase** match (surgical):
+1. **Home-warranty intent** — AHS / American Home Shield / Choice / Cinch / Liberty Home Guard etc. These callers file a claim → the warranty company dispatches *its own* contractor for a flat service fee. They never call our tracking number or pay full rate. *(Source: ahs.com plan/FAQ.)*
+2. **Public-main / city-utility responsibility** — "water main break", "public water main", "who is responsible for water service". The city owns the public main, not the homeowner's billable line. *(We keep `water service line repair` — that's ours.)*
+3. **Landlord/tenant fault & high-bill disputes** — "who is responsible for water leak", "tenant negligence", "leak forgiveness", "water bill credit". These are blame/credit-chasing, not booking a repair. *(We do NOT block bare `tenant`/`renter`/`high water bill` — those can convert.)*
+4. **Commodity products & comparison research** — "plumbing parts", "pipe fittings", "pipe wrench", "draino", "faucet purchase", "best water heater", "comparison". Shopping/research, not hiring. *(We deliberately did NOT add `copper pipe`/`pex pipe` — they collide with repipe service intent like "pinhole leak copper pipe repair".)*
+
+> **Refuted by verification (deliberately NOT added):** suburb/geo negatives (no geo blocking), blanket renter/landlord blocking, generic "insurance claim" blocking, and blocking `sewer camera`/`cost` queries. Discipline matters as much as coverage.
+
+## 📐 Operational governance (for whoever manages the account)
+- **Don't add a negative just because a term didn't convert.** Trigger to exclude: spend **> 3× target CPA with 0 conversions over 90 days** for scaling; **4–5× CPA** for high-ticket long-cycle work (slab leak, repipe) — those have long consideration windows and we want to keep the research traffic. *(Sources: Search Engine Land, Optmyzr.)*
+- Single-word roots (`plumbing`, `plumber`) leak into every junk class — keep targeting tight (phrase/exact), let this list catch the spill, and review the Search Terms report weekly.
 
 ---
 
@@ -87,7 +105,6 @@ A single **shared negative keyword list**, built once, applied to all 8 city cam
 "vinegar and baking soda"
 "baking soda"
 "boiling water"
-"drain snake"
 "snake rental"
 "rent a snake"
 "temporary fix"
@@ -196,6 +213,51 @@ A single **shared negative keyword list**, built once, applied to all 8 city cam
 "michael and son"
 "bill howe"
 "servpro"
+"home warranty plumber"
+"home warranty plumbing"
+"home warranty claim"
+"covered by home warranty"
+"is plumbing covered"
+"american home shield"
+"shieldessential"
+"choice home warranty"
+"first american home warranty"
+"select home warranty"
+"old republic home warranty"
+"liberty home guard"
+"cinch home services"
+"fidelity home warranty"
+"2-10 home warranty"
+"water main break"
+"public water main"
+"city water main"
+"who is responsible for water main"
+"who is responsible for water service"
+"who is responsible for"
+"who pays for"
+"landlord vs tenant"
+"tenant negligence"
+"renters insurance water damage"
+"is my landlord responsible"
+"leak adjustment"
+"leak forgiveness"
+"water bill adjustment"
+"forgive water bill"
+"water bill credit"
+"draino"
+"pipe wrench"
+"plumbing supply"
+"plumbing parts"
+"pipe fittings"
+"faucet purchase"
+"toilet purchase"
+"faucet repair kit"
+"drain cleaner product"
+"best water heater"
+"fire sprinkler"
+"rv plumbing"
+"rv water heater"
+"industrial plumbing"
 free
 test
 union
@@ -408,6 +470,8 @@ halloween
 emoji
 gif
 wallpaper
+comparison
+municipal
 franchise
 leads
 marketing
@@ -418,4 +482,5 @@ advertising
 ---
 
 ## ⚠️ Optional — confirm before adding (only if client does NOT do these jobs)
-Add as needed: `remodel` · `remodeling` · `renovation` · `pool` · `septic` · `well drilling` · `new construction`
+Add as needed (research says block service-types you don't offer — but confirm against the real service menu first): `remodel` · `remodeling` · `renovation` · `pool` · `septic` · `well drilling` · `new construction` · `backflow` · `mobile home` · `municipal contract`
+> Already added to the main list (clearly outside a residential SoCal plumber's market): `fire sprinkler`, `rv plumbing`, `industrial plumbing`, `municipal`. Pull them back out if the client actually wants that work.
