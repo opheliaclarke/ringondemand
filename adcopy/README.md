@@ -16,6 +16,21 @@ DKI responsive search ad (RSA) copy + keyword→ad-group mapping for the plumbin
 | [Santa Barbara, CA](cities/santa-barbara.md) | plumberelitesantabarbara.com | _set in call asset_ | Affluent coast → filtration, tankless, repipe |
 | [Garden Grove, CA](cities/garden-grove.md) | plumberelitegardengrove.com | **(714) 790-1741** | High-volume → same-day, affordable bread-and-butter |
 
+## Cold-climate cities (CO / ID / OR) ❄
+Same 3-ad-group structure, but **frozen/burst pipe + sump pump + sewer** angle — **no slab-leak messaging** (basements, not slabs). Portland is the exception: **soft water** → sewer line/root/rain-drainage focus, no softener.
+
+| City | Domain | Angle |
+|------|--------|-------|
+| [Aurora, CO](cities/aurora-co.md) ❄ | plumbereliteaurora.com | Frozen/burst pipe, sump pump, hard water |
+| [Fort Collins, CO](cities/fort-collins-co.md) ❄ | plumberelitefortcollinsco.com | Frozen pipe, Old Town repipe/cast-iron sewer, hard water |
+| [Brighton, CO](cities/brighton-co.md) ❄ | plumberelitebrightonco.com | Frozen pipe, sump pump, hard + well water |
+| [Boise, ID](cities/boise-id.md) ❄ | plumbereliteboise.com | Frozen pipe, North End sewer/repipe, hard water |
+| [Portland, OR](cities/portland-or.md) ☔ | plumbereliteportland.com | **Soft water** → sewer line/root intrusion, rain drainage, trenchless |
+| [Boulder, CO](cities/boulder-co.md) ❄ | plumbereliteboulderco.com | Frozen pipe, premium repipe, hard water |
+| [Loveland, CO](cities/loveland-co.md) ❄ | plumbereliteloveland.com | Frozen pipe, water heater, hard water |
+| [Denver, CO](cities/denver-co.md) ❄ | plumberelitedenver.com | Frozen/burst pipe, sewer/repipe, high-volume |
+| [Colorado Springs, CO](cities/colorado-springs-co.md) ❄ | plumberelitecoloradospringsco.com | Severe-cold frozen pipe, hard water |
+
 ## The 3 ad groups (every city)
 
 1. **Urgent_[City]** — emergency / 24-7 / same-day / burst-pipe (Aurora: + frozen pipe). Highest payout, bid hardest, run 24/7.
