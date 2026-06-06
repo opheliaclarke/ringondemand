@@ -4,8 +4,10 @@ A single **shared negative keyword list**, built once, applied to all 8 city cam
 
 **Strategy:** pay-per-call — we're only paid on *qualified 60s+ calls*. So we ruthlessly block research, DIY, jobs, shopping, "free/cheap" tire-kickers, other trades, and entertainment.
 
-**🔁 Optimization log:**
-- **2026-06-06** (from Jun 5 Search Terms report): added **25** negatives — rival brand names that triggered impressions (George Morlan, Prodrain, Perfect Service, ARS Colorado, Early Bird, Fix-It 24-7, Doctor Fix-It, Wiseway, Coastline, Stewart's, Merry Plumbers, MCE, Clear Choice, Blue Sky, Colorado Best, Corey & Sons) + appliance/DIY shoppers (`atwood`, `bradford white`, `flush/flushing water heater`). **Deliberately KEPT** the "water heater … cost" and "X gallon water heater" terms — a dead water heater is a real same-day call job (tentative intent).
+> ### 🗓️ How this list is maintained (read this)
+> The big block below = the **initial baseline** (already pasted into the account — leave it frozen).
+> Every later optimization gets its **own dated block** under [📌 Dated optimization rounds](#-dated-optimization-rounds) — never edited back into the baseline. On each date: open the dated block, hit **Copy**, paste the whole thing into the same `Plumbing_Master_Negs` list. That way Google Ads always matches a dated block in this file 1:1.
+> **👉 Copy button:** when you view this file on GitHub (logged in), **hover over any code block and click the 📋 icon** in its top-right corner — that copies just that dated block. A standalone big-button page also lives at [`negatives.html`](negatives.html) (download & open in your browser, or we enable GitHub Pages to host it).
 
 ## How to add it (Google Ads) — one copy/paste
 1. **Tools → Shared library → Negative keyword lists → +** → name it `Plumbing_Master_Negs`.
@@ -57,7 +59,8 @@ Four wrong-payer families that look like plumbing demand but never produce a pai
 
 ---
 
-## 📋 MASTER PASTE BLOCK — copy everything below into the list
+## 📋 BASELINE BLOCK — *initial load (frozen — already in the account)*
+*Don't re-edit this. New negatives go in dated blocks further down.* Copy everything below into the list:
 ```
 "how to"
 "how do"
@@ -490,6 +493,16 @@ leads
 marketing
 seo
 advertising
+```
+
+---
+
+## 📌 Dated optimization rounds
+*Each block stands alone. Copy a block → paste into `Plumbing_Master_Negs`. Newest on top. Never edit a past block.*
+
+### 🗓️ 2026-06-06 — from Jun 5 Search Terms report (+25)
+**What & why:** rival brand names that triggered our ads (the searcher wants *that* company, not us) + appliance/DIY shoppers. **Deliberately KEPT** "water heater … cost" and "X gallon water heater" — a dead heater is a real same-day call. Paste this whole block:
+```
 "george morlan"
 "george the rooter"
 "prodrain"
