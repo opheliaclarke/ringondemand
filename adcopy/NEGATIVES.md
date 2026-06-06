@@ -4,6 +4,9 @@ A single **shared negative keyword list**, built once, applied to all 8 city cam
 
 **Strategy:** pay-per-call — we're only paid on *qualified 60s+ calls*. So we ruthlessly block research, DIY, jobs, shopping, "free/cheap" tire-kickers, other trades, and entertainment.
 
+**🔁 Optimization log:**
+- **2026-06-06** (from Jun 5 Search Terms report): added **25** negatives — rival brand names that triggered impressions (George Morlan, Prodrain, Perfect Service, ARS Colorado, Early Bird, Fix-It 24-7, Doctor Fix-It, Wiseway, Coastline, Stewart's, Merry Plumbers, MCE, Clear Choice, Blue Sky, Colorado Best, Corey & Sons) + appliance/DIY shoppers (`atwood`, `bradford white`, `flush/flushing water heater`). **Deliberately KEPT** the "water heater … cost" and "X gallon water heater" terms — a dead water heater is a real same-day call job (tentative intent).
+
 ## How to add it (Google Ads) — one copy/paste
 1. **Tools → Shared library → Negative keyword lists → +** → name it `Plumbing_Master_Negs`.
 2. **Copy the entire MASTER PASTE BLOCK below and paste it in.** Match types are already embedded — nothing else to set.
@@ -487,6 +490,31 @@ leads
 marketing
 seo
 advertising
+"george morlan"
+"george the rooter"
+"prodrain"
+"perfect service plumbing"
+"ars colorado"
+"ars rescue rooter"
+"early bird plumbing"
+"fix it 24"
+"doctor fix it"
+"wiseway"
+"coastline plumbing"
+"stewarts plumbing"
+"stewart's plumbing"
+"merry plumbers"
+"mce plumbing"
+"clear choice plumbing"
+"clear choice plumb"
+"blue sky plumbing"
+"colorado best plumbing"
+"corey and sons"
+"corey & sons"
+atwood
+"bradford white"
+"flushing water heater"
+"flush water heater"
 ```
 
 ---
