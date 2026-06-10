@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RingOnDemand — Who We Are & Who We Compete With</title>
+<style>
+  :root{
+    --bg:#0d1117; --card:#161b22; --card2:#1c232c; --line:#30363d;
+    --text:#e6edf3; --muted:#9da7b3; --accent:#3fb950; --accent2:#58a6ff;
+    --warn:#d29922; --pill:#21262d;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6;padding:0 16px 80px}
+  .wrap{max-width:860px;margin:0 auto}
+  header{padding:48px 0 24px;border-bottom:1px solid var(--line);margin-bottom:32px}
+  h1{font-size:30px;margin:0 0 8px;letter-spacing:-.5px}
+  .sub{color:var(--muted);font-size:17px;margin:0}
+  h2{font-size:21px;margin:40px 0 14px;display:flex;align-items:center;gap:9px}
+  h3{font-size:16px;margin:0 0 4px}
+  p{margin:0 0 14px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 22px;margin:14px 0}
+  .muted{color:var(--muted)}
+  .accent{color:var(--accent)}
+  .accent2{color:var(--accent2)}
+
+  /* layer diagram */
+  .layers{display:flex;flex-direction:column;gap:14px;margin:18px 0}
+  .layer{border-radius:12px;padding:18px 20px;border:1px solid var(--line)}
+  .layer .tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.4px;
+    text-transform:uppercase;padding:3px 10px;border-radius:20px;margin-bottom:8px}
+  .layerA{background:#1a1410;border-color:#3a2a14}
+  .layerA .tag{background:#3a2a14;color:var(--warn)}
+  .layerB{background:#0f1a12;border-color:#1f3a26}
+  .layerB .tag{background:#1f3a26;color:var(--accent)}
+  .layer .ex{color:var(--muted);font-size:14px;margin-top:6px}
+  .you{display:inline-block;background:var(--accent);color:#06210f;font-weight:700;
+    font-size:12px;padding:2px 9px;border-radius:6px;margin-left:8px;vertical-align:middle}
+
+  /* competitor rows */
+  .comp{display:flex;gap:14px;align-items:flex-start;padding:16px 0;border-bottom:1px solid var(--line)}
+  .comp:last-child{border-bottom:none}
+  .num{flex:0 0 32px;height:32px;border-radius:50%;background:var(--pill);
+    display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent2)}
+  .comp .body{flex:1}
+  .comp a{color:var(--accent2);text-decoration:none;font-size:14px;word-break:break-word}
+  .comp a:hover{text-decoration:underline}
+
+  /* share box */
+  .share{background:var(--card2);border:1px solid var(--accent);border-radius:12px;padding:0;overflow:hidden;margin:16px 0}
+  .share .head{display:flex;justify-content:space-between;align-items:center;
+    padding:14px 18px;background:#13241a;border-bottom:1px solid var(--line)}
+  .share .head span{font-weight:700;color:var(--accent)}
+  .copy{background:var(--accent);color:#06210f;border:none;border-radius:7px;
+    padding:7px 14px;font-weight:700;font-size:13px;cursor:pointer}
+  .copy:active{transform:translateY(1px)}
+  .share pre{margin:0;padding:18px;white-space:pre-wrap;font-size:14px;
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--text)}
+
+  ol.plain{padding-left:20px;margin:8px 0}
+  ol.plain li{margin-bottom:8px}
+  .foot{color:var(--muted);font-size:13px;text-align:center;margin-top:40px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>RingOnDemand — Where We Sit in the Plumbing Market</h1>
+    <p class="sub">A one-page explainer: our business model, who we really compete with, and what to share with the Google Ads team.</p>
+  </header>
+
+  <!-- WHO WE ARE -->
+  <h2>🧭 What business are we actually in?</h2>
+  <div class="card">
+    <p><strong>We are NOT a plumbing company.</strong> We don't fix pipes and we don't have crews.</p>
+    <p>We are a <strong class="accent">pay-per-call lead generator (affiliate)</strong>. We run Google Ads on
+    city landing pages → a homeowner with a plumbing problem calls → that call is tracked (Ringba) →
+    we <strong>sell the qualified call</strong> to a contractor or a lead-buying network.
+    We only get paid when a real, qualified call happens.</p>
+  </div>
+
+  <!-- TWO LAYERS -->
+  <h2>⚔️ The competition comes in two layers</h2>
+  <p class="muted">In any plumbing search auction on Google, there are <strong>two different kinds of bidders</strong>.
+  They look the same to Google, but they have opposite business models:</p>
+
+  <div class="layers">
+    <div class="layer layerA">
+      <span class="tag">Layer A — the service brands</span>
+      <h3>Companies that want to <em>do</em> the plumbing job</h3>
+      <p class="muted" style="margin:6px 0 0">National brands with their own trucks, teams and offices across the US.</p>
+      <p class="ex">Roto-Rooter · Mr. Rooter · Benjamin Franklin · ARS/Rescue Rooter · bluefrog</p>
+    </div>
+
+    <div class="layer layerB">
+      <span class="tag">Layer B — the lead aggregators</span>
+      <h3>Companies that want to <em>sell</em> the call <span class="you">← THIS IS US</span></h3>
+      <p class="muted" style="margin:6px 0 0">They buy ad traffic, generate the call/lead, and resell it to contractors. Same model as RingOnDemand.</p>
+      <p class="ex">Service Direct · eLocal · 33 Mile Radius · Networx · Angi Leads (HomeAdvisor)</p>
+    </div>
+  </div>
+
+  <div class="card" style="border-color:#3a2a14;background:#1a1410">
+    <p style="margin:0"><strong class="accent2">Why this matters:</strong> Both layers bid on the same words
+    ("emergency plumber", "drain cleaning"). Everyone in Layer B is buying the <em>same calls to resell them</em>,
+    which is a big reason the first-page bids are so high — and why our keywords show
+    <strong>"Eligible (limited)"</strong>. We're competing against resellers AND national brands for the same clicks.</p>
+  </div>
+
+  <!-- COMPETITORS -->
+  <h2>🎯 Our 5 real competitors (same model as us)</h2>
+  <p class="muted">These are the branded, traceable examples of <strong>our</strong> model — the right benchmark set for Google to analyze:</p>
+  <div class="card">
+    <div class="comp">
+      <div class="num">1</div>
+      <div class="body">
+        <h3>Service Direct</h3>
+        <p class="muted" style="margin:0 0 4px">Pay-per-call marketplace, ~2M phone leads/month. Even runs a "Pay-Per-Call Affiliate Program" — our exact seat.</p>
+        <a href="https://servicedirect.com/plumbing-leads/" target="_blank">servicedirect.com/plumbing-leads</a>
+      </div>
+    </div>
+    <div class="comp">
+      <div class="num">2</div>
+      <div class="body">
+        <h3>eLocal</h3>
+        <p class="muted" style="margin:0 0 4px">Self-titled "Leaders in Pay-Per-Call." Owns LP brands + affiliate network, charges only on valid calls (like our Ringba setup).</p>
+        <a href="https://www.elocal.com/plumbing-leads/" target="_blank">elocal.com/plumbing-leads</a>
+      </div>
+    </div>
+    <div class="comp">
+      <div class="num">3</div>
+      <div class="body">
+        <h3>33 Mile Radius</h3>
+        <p class="muted" style="margin:0 0 4px">Pure pay-per-call lead gen for plumbing/HVAC/restoration. Generates the call, pre-qualifies, sells it exclusively.</p>
+        <a href="https://www.33mileradius.com/plumbing-leads/" target="_blank">33mileradius.com/plumbing-leads</a>
+      </div>
+    </div>
+    <div class="comp">
+      <div class="num">4</div>
+      <div class="body">
+        <h3>Networx</h3>
+        <p class="muted" style="margin:0 0 4px">Ad-driven aggregator; generates plumbing demand and resells to "affiliate contractors."</p>
+        <a href="https://www.networx.com/contractor-leads" target="_blank">networx.com/contractor-leads</a>
+      </div>
+    </div>
+    <div class="comp">
+      <div class="num">5</div>
+      <div class="body">
+        <h3>Angi Leads (HomeAdvisor)</h3>
+        <p class="muted" style="margin:0 0 4px">The giant version of us — huge Google spend, resells each plumbing lead to 3–8 contractors.</p>
+        <a href="https://www.angi.com" target="_blank">angi.com</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHAT TO SHARE -->
+  <h2>📨 What to share with the Google team</h2>
+  <p class="muted">Copy this and send it as-is. It frames our position correctly so they analyze the right thing:</p>
+
+  <div class="share">
+    <div class="head">
+      <span>Message for Google Ads team</span>
+      <button class="copy" onclick="copyShare()">📋 Copy</button>
+    </div>
+    <pre id="shareText">Quick context on our account so the analysis is apples-to-apples:
+
+We are NOT a plumbing service company. We are a pay-per-call lead generator — we run ads on city landing pages, generate inbound calls from homeowners, and sell those qualified calls to contractors / lead networks. We only earn on a qualified call.
+
+So our true competitors are NOT Roto-Rooter / Mr. Rooter / Benjamin Franklin (those are service brands that DO the job). Our competitors are other pay-per-call lead aggregators that monetize exactly like us:
+
+  1. Service Direct  — servicedirect.com/plumbing-leads
+  2. eLocal          — elocal.com/plumbing-leads
+  3. 33 Mile Radius  — 33mileradius.com/plumbing-leads
+  4. Networx         — networx.com/contractor-leads
+  5. Angi Leads / HomeAdvisor — angi.com
+
+Note: many pay-per-call affiliates are "invisible" by design — they run white-label, city-specific landing pages with no master brand (same as our plumberelite[city].com setup), so there often isn't a brand name to point at. The five above are the branded, traceable examples.
+
+What we need help with: our keywords show "Eligible (limited) — below first-page bid." Manual CPCs sit under Google's first-page estimates for these high-competition terms. We've now switched to Maximize Conversions and are in the learning phase. We'd like guidance on getting these keywords fully eligible and driving qualified-call volume at a sustainable cost, given our resell (pay-per-call) economics.</pre>
+  </div>
+
+  <!-- TL;DR -->
+  <h2>✅ In one breath (the TL;DR)</h2>
+  <div class="card">
+    <ol class="plain">
+      <li><strong>We sell calls, we don't fix pipes.</strong> We're a pay-per-call affiliate.</li>
+      <li><strong>The big plumbing brands are NOT our model</strong> — they do the job; we resell the call.</li>
+      <li><strong>Our real competitors</strong> are Service Direct, eLocal, 33 Mile Radius, Networx, Angi Leads.</li>
+      <li><strong>Tell Google to benchmark us against those 5</strong>, and help us clear "Eligible (limited)" so we get qualified-call volume at a price our resell model can afford.</li>
+    </ol>
+  </div>
+
+  <p class="foot">RingOnDemand · internal reference · updated Jun 2026</p>
+</div>
+
+<script>
+function copyShare(){
+  var t = document.getElementById('shareText').innerText;
+  var btn = document.querySelector('.copy');
+  function done(){ btn.textContent='✅ Copied!'; setTimeout(function(){btn.textContent='📋 Copy';},1800); }
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(t).then(done).catch(fallback);
+  } else { fallback(); }
+  function fallback(){
+    var ta=document.createElement('textarea'); ta.value=t; document.body.appendChild(ta);
+    ta.select(); try{document.execCommand('copy');}catch(e){} document.body.removeChild(ta); done();
+  }
+}
+</script>
+</body>
+</html>
