@@ -500,6 +500,39 @@ advertising
 ## 📌 Dated optimization rounds
 *Each block stands alone. Copy a block → paste into `Plumbing_Master_Negs`. Newest on top. Never edit a past block.*
 
+### 🗓️ 2026-06-13 — competitor-brand bleed + leak cleanup (from Jun 11–12 full report)
+**What & why:** the 2-day report showed **~$142 (25% of spend)** went to people searching for a *specific rival company* — they'll never call us. Killing these recovers real money. Surgical phrase/broad (single distinctive brand tokens as broad). NOTE: I did **not** block bare "elite plumbing" — "elite" is in our own brand (`plumberelite…`); only the rival `elite rooter`. Paste this whole block:
+```
+"cloverdale plumbing"
+"black cat plumbing"
+braconier
+"3 mountains plumbing"
+"three mountains plumbing"
+"jt plumbing"
+"gold rush plumbing"
+"patrick plumbing"
+"101 plumbing"
+"apple plumbing"
+wickstrom
+"royal services plumbing"
+"elite rooter"
+"aaa plumbing"
+"aaa today"
+"sunset plumbing"
+"keep pushing plumbing"
+"high 5 plumbing"
+"high five plumbing"
+"plumbline"
+"plumb line services"
+"tipping hat"
+"zoom drain"
+"systems plumbing"
+"bubbles plumbing"
+"a1 plumbing"
+"d f plumbing"
+"df plumbing"
+```
+
 ### 🗓️ 2026-06-11 — kill pool-equipment suggestions (+1 broad)
 **What & why:** Google's "add these keywords" panel suggested "heater fix/repairs near me" and "pump service and repair" — but their top search terms were all **pool** heater / **pool** pump. Pool equipment is a different trade, never a qualified plumbing call. One broad `pool` negative kills both the pool-heater AND pool-pump junk across all campaigns (skipped "repair well" — near-zero well-water demand in coastal Santa Barbara). We did NOT add Google's suggested keywords. Paste this whole block:
 ```
