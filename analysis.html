@@ -60,9 +60,9 @@
   </div>
 
   <h2 id="recon">1. Google ↔ Ringba daily reconciliation</h2>
-  <p class="sub">Google campaigns only began serving Jun 15. Ringba logs <em>all</em> plumbing calls — many from non-Google sources — so treat call counts as upper bounds, not pure Google attribution.</p>
+  <p class="sub">Google campaigns only began serving Jun 15. <strong>The "log records" column is NOT real calls</strong> — Ringba logs every routing leg separately (call → agent → transfer → IVR zip entry), plus duplicates, spam/bot calls, and calls on numbers outside the tracked set. The reliable metric is Ringba's <strong>converted</strong> column (qualified, billable calls) — which matched Google exactly on Jun 15–16.</p>
   <table>
-    <thead><tr><th>Date</th><th>G. spend</th><th>G. clicks</th><th>G. conv</th><th>Ringba calls</th><th>connected</th><th>60s+</th><th>R. conv</th></tr></thead>
+    <thead><tr><th>Date</th><th>G. spend</th><th>G. clicks</th><th>G. conv</th><th>log records</th><th>connected</th><th>60s+</th><th>R. conv</th></tr></thead>
     <tbody>
       <tr><td>Jun 13</td><td>—</td><td>—</td><td>—</td><td>32</td><td>15</td><td>8</td><td>1</td></tr>
       <tr><td>Jun 14</td><td>—</td><td>—</td><td>—</td><td>29</td><td>15</td><td>10</td><td>1</td></tr>
@@ -101,22 +101,22 @@
   <p class="sub">These are normal queries that should cost $20–50. At ~$196/click on a $100 budget, the budget buys 1–2 clicks/day instead of 4–8 — fewer chances at a call. The $500/day cap is also <strong>not enforced</strong>: budgets sum to $403 but Max-Conversions' 2× daily rule already pushed Jun 18 to $521 mid-day.</p>
 
   <h2 id="track">4. The tracking gap (why this matters most)</h2>
-  <div class="ok">Ringba shows the campaigns <strong>are</strong> generating qualified calls (6–15 calls of 60s+ per day). Google's conversion column sees almost none of it after Jun 16.</div>
-  <p>Because Google can't see the conversions, <strong>Maximize Conversions is optimizing blind</strong> — which is exactly why it overbids. Fixing attribution is the root cause, not a side issue:</p>
+  <div class="ok">Ringba shows the campaigns <strong>are</strong> converting qualified calls (Jun 17 &amp; 18 = 2/day) that Google's conversion column isn't crediting after Jun 16.</div>
+  <p>Because Google can't see those conversions, <strong>Maximize Conversions is optimizing blind</strong> — part of why it overbids. The attribution pipeline is owned by Leo's Ringba team and is being worked on; tracking notes for the record:</p>
   <ul>
-    <li><strong>gclid → Ringba handoff is failing</strong> on some calls (your "blank, no-gclid" call). If the landing page's dynamic number insertion doesn't capture &amp; pass gclid, Ringba can't upload that conversion back to Google.</li>
-    <li><strong>Denver</strong> shows "Eligible (Misconfigured): website missing a Google tag."</li>
-    <li>Calls placed to the number shown directly in the ad / on the site are inherently untrackable — accepted, but those are separate from the click→call gap above.</li>
+    <li><strong>gclid → Ringba handoff</strong> drops on some calls (the "blank, no-gclid" call). Without gclid in the dynamic number, Ringba can't upload that conversion back to Google. <span class="tag">Leo's team</span></li>
+    <li><strong>Denver "missing Google tag"</strong> — resolved (transient glitch; tag verified working).</li>
+    <li>Calls placed to the number shown directly in the ad / on the site are inherently untrackable — accepted.</li>
   </ul>
 
   <h2 id="fix">5. What to change — revised</h2>
-  <div class="ok"><strong>You pushed back on dropping Maximize Conversions — and you're right.</strong> It's what started producing calls, and crashing to $20–40 manual bids would lose the high-intent auctions. So: keep it. Fix it surgically instead.</div>
-  <h3>Priority 1 — Fix conversion tracking first</h3>
-  <p>Get Google seeing the ~2 qualified calls/day Ringba already logs. Verify every landing page captures <code>gclid</code> and passes it into the Ringba dynamic number; confirm Ringba's Google offline-conversion upload is firing; fix Denver's missing Google tag. Once Google sees real conversions, smart bidding rationalizes on its own.</p>
+  <div class="ok"><strong>Current stance: hold and observe.</strong> Maximize Conversions stays (it's what started producing calls), budgets stay put, and Jun 18 already shows 2 calls vs 0 the day before — early signs of improvement. The items below are standing options, not changes to rush.</div>
+  <h3>Priority 1 — Conversion tracking (owned by Leo's Ringba team)</h3>
+  <p>The biggest lever is getting Google to see the qualified calls Ringba already logs (~2/day). The gclid → Ringba → Google offline-upload pipeline sits with Leo's team and is being worked on; nothing actionable on our side right now. Once Google sees real conversions, smart bidding rationalizes on its own.</p>
   <h3>Priority 2 — Add a Target CPA to Maximize Conversions</h3>
   <p>Set a <strong>Target CPA around $100–130</strong> on the existing strategy. This keeps conversion-based bidding on the high-intent terms but tells Google not to chase a $196 click (which implies a CPA far above target). It's the cap that stops the bleed without killing reach. If volume throttles too hard after ~1 week, raise the target.</p>
-  <h3>Priority 3 — Make the $500/day cap real</h3>
-  <p>Per-campaign budgets don't cap the total, and Max-Conversions can spend 2× on any day. Options:</p>
+  <h3>Priority 3 — Budget (holding steady, by decision)</h3>
+  <p>Budgets are being left untouched while the campaigns settle — no changes for now. Kept here only as reference for when/if revisited: per-campaign budgets don't cap the total, and Max-Conversions can spend 2× on any day. If a true cap is ever wanted:</p>
   <ul>
     <li><strong>One shared budget of $500/day</strong> across all 7 campaigns (Tools → Shared library → Budgets → +). Caps the <em>monthly average</em> at ~$500/day (~$15.2k/mo); single days can still flex to ~2×, averaging out.</li>
     <li><strong>For a hard daily ceiling</strong> (no day over $500): set the shared budget to <strong>$250/day</strong> — the 2× rule then tops out at ~$500. Lower volume, but a true cap.</li>
@@ -126,16 +126,13 @@
   <p>Set the proven call-drivers (e.g. <em>plumbers near me</em>, <em>plumber [city]</em>) to <strong>phrase/exact</strong> so the budget isn't spent on loose broad matches at top dollar.</p>
 
   <h2 id="negs">6. Negative keywords to add</h2>
-  <p class="sub">High-confidence DIY / parts / price-research terms from the search-term report (phrase match — won't block emergency intent). <strong>Competitor brand names are deliberately excluded</strong> — 2 of the 6 conversions came from competitor-brand searches, so blocking them would cost calls.</p>
+  <p class="sub">Conservative phrase-match list — <strong>price-research and part numbers only</strong>. Verified against 7 weeks of data: <strong>no water-heater term has ever converted</strong>, but water-heater <em>leak/replacement/repair</em> queries are real emergency jobs, so those are NOT blocked. <code>"insinkerator"</code> and bare <code>"40 gallon water heater"</code> were dropped — they could catch a genuine repair call. Competitor brand names also excluded (2 of 6 conversions came from competitor searches).</p>
   <div class="copybox"><button class="copybtn" onclick="copyNeg(this)">Copy</button><span id="neglist">"water heater replacement cost"
 "water heater installation cost"
 "garbage disposal repair cost"
 "disposal repair cost"
-"insinkerator"
-"40 gallon water heater"
-"cost of 40 gallon water heater"
 "gc6aa"</span></div>
-  <p class="sub">Optional / watch (lower confidence, may include real jobs): <code>"unclog sink drain"</code>, <code>"the sewer spy"</code>.</p>
+  <p class="sub">Optional DIY-maintenance adds (pure self-service, never a paid call): <code>"flushing water heater"</code>, <code>"draining water heater"</code>, <code>"descale water heater"</code>.</p>
 
   <h2 id="ref">7. Reference</h2>
   <div class="card">
