@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Plumber Elite — Campaign Analysis (Jun 13–18, 2026)</title>
+<style>
+  :root{--bg:#0d1117;--panel:#161b22;--line:#26303b;--ink:#e6edf3;--mut:#9aa7b4;--acc:#4dd0a7;--warn:#ff6b6b;--amb:#ffb454;--blue:#58a6ff}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.6 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+  .wrap{max-width:960px;margin:0 auto;padding:32px 20px 80px}
+  h1{font-size:26px;margin:0 0 4px}h2{font-size:20px;margin:38px 0 12px;padding-top:10px;border-top:1px solid var(--line)}
+  h3{font-size:16px;margin:22px 0 8px;color:var(--acc)}
+  .sub{color:var(--mut);margin:0 0 8px}
+  a{color:var(--blue)}
+  .toc{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin:18px 0}
+  .toc a{display:inline-block;margin:3px 14px 3px 0;text-decoration:none}
+  table{width:100%;border-collapse:collapse;margin:10px 0;font-size:14px}
+  th,td{padding:8px 10px;text-align:right;border-bottom:1px solid var(--line)}
+  th:first-child,td:first-child{text-align:left}
+  thead th{color:var(--mut);font-weight:600;border-bottom:2px solid var(--line)}
+  .bad{color:var(--warn);font-weight:600}.good{color:var(--acc);font-weight:600}.amb{color:var(--amb)}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:14px 0}
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:16px 0}
+  .kpi{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px}
+  .kpi b{display:block;font-size:24px}.kpi span{color:var(--mut);font-size:13px}
+  ul{margin:8px 0 8px 18px;padding:0}li{margin:5px 0}
+  .copybox{position:relative;background:#0a0e13;border:1px solid var(--line);border-radius:8px;padding:14px 14px;margin:10px 0;white-space:pre-wrap;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;color:#cdd6e0}
+  .copybtn{position:absolute;top:10px;right:10px;background:var(--acc);color:#06231a;border:0;border-radius:6px;padding:6px 12px;font-weight:700;cursor:pointer;font-size:12px}
+  .copybtn.done{background:var(--blue);color:#04121f}
+  .tag{display:inline-block;background:#1f2a36;color:var(--mut);border-radius:5px;padding:1px 7px;font-size:12px;margin-left:6px}
+  .flag{border-left:3px solid var(--warn);padding-left:12px;margin:10px 0}
+  .ok{border-left:3px solid var(--acc);padding-left:12px;margin:10px 0}
+  code{background:#1f2a36;padding:1px 5px;border-radius:4px;font-size:13px}
+  footer{color:var(--mut);font-size:12px;margin-top:40px;border-top:1px solid var(--line);padding-top:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Plumber Elite — Campaign Analysis</h1>
+  <p class="sub">Plumber Elite (Google Ads) + Ringba "Ring on demand" &middot; window June 13–18, 2026 &middot; pulled live via API</p>
+
+  <div class="kpis">
+    <div class="kpi"><b>$4,910</b><span>Google spend (Jun 15–18)</span></div>
+    <div class="kpi"><b class="bad">6</b><span>Google-tracked conversions</span></div>
+    <div class="kpi"><b class="good">~11</b><span>Ringba converted calls</span></div>
+    <div class="kpi"><b class="bad">$60–$200</b><span>cost per click</span></div>
+  </div>
+
+  <div class="toc">
+    <strong>Contents</strong><br>
+    <a href="#recon">1. Google ↔ Ringba reconciliation</a>
+    <a href="#changes">2. What changed after Jun 13</a>
+    <a href="#bids">3. The bidding problem</a>
+    <a href="#track">4. The tracking gap</a>
+    <a href="#fix">5. What to change (revised)</a>
+    <a href="#negs">6. Negative keywords</a>
+    <a href="#ref">7. Reference</a>
+  </div>
+
+  <h2 id="recon">1. Google ↔ Ringba daily reconciliation</h2>
+  <p class="sub">Google campaigns only began serving Jun 15. Ringba logs <em>all</em> plumbing calls — many from non-Google sources — so treat call counts as upper bounds, not pure Google attribution.</p>
+  <table>
+    <thead><tr><th>Date</th><th>G. spend</th><th>G. clicks</th><th>G. conv</th><th>Ringba calls</th><th>connected</th><th>60s+</th><th>R. conv</th></tr></thead>
+    <tbody>
+      <tr><td>Jun 13</td><td>—</td><td>—</td><td>—</td><td>32</td><td>15</td><td>8</td><td>1</td></tr>
+      <tr><td>Jun 14</td><td>—</td><td>—</td><td>—</td><td>29</td><td>15</td><td>10</td><td>1</td></tr>
+      <tr><td>Jun 15</td><td class="bad">$1,983</td><td>18</td><td>4</td><td>51</td><td>34</td><td>15</td><td>4</td></tr>
+      <tr><td>Jun 16</td><td class="bad">$1,938</td><td>17</td><td>2</td><td>46</td><td>29</td><td>11</td><td>2</td></tr>
+      <tr><td>Jun 17</td><td>$468</td><td>9</td><td class="bad">0</td><td>37</td><td>22</td><td>6</td><td class="amb">2</td></tr>
+      <tr><td>Jun 18*</td><td>$521</td><td>6</td><td class="bad">0</td><td>28</td><td>18</td><td>4</td><td class="amb">2</td></tr>
+    </tbody>
+  </table>
+  <p class="sub">*Jun 18 partial (mid-day). Google conv <strong>matched</strong> Ringba exactly on Jun 15 (4) and Jun 16 (2) — attribution worked. It then <strong class="amb">broke</strong>: Ringba converted 2 on Jun 17 and 2 on Jun 18, but Google recorded 0 both days (import lag / missing gclid).</p>
+
+  <h2 id="changes">2. What changed after Jun 13</h2>
+  <p class="sub">From the account's own change history (<code>change_event</code>), all by <code>ads@gcalit.org</code>:</p>
+  <ul>
+    <li><strong>Jun 16, 4:23–4:24 PM</strong> — paused <strong>Aurora</strong> &amp; <strong>Colorado Springs</strong>.</li>
+    <li><strong>Jun 16, 4:27–4:30 PM</strong> — cut budgets on the 7 keepers and on the to-be-paused set.</li>
+    <li><strong>Jun 16, 4:58 PM</strong> — paused <strong>Garden Grove, Pasadena, Torrance, Loveland, Fort Collins, Brighton, Fullerton, Mission Viejo</strong>.</li>
+    <li>Jun 14 &amp; 18 — minor keyword edits in Portland.</li>
+  </ul>
+  <p class="sub">Result: from ~17 campaigns spending ~$1,940/day down to <strong>7 enabled campaigns, budgets summing $403/day</strong> (Littleton $100, Denver $80, Santa Barbara $50, Portland $50, Boise $48, Boulder $45, West Covina $30). All on <strong>Maximize Conversions</strong>.</p>
+  <div class="flag">⚠️ Half the paused campaigns had actually produced calls — of 6 Google-tracked conversions, 3 came from now-paused Aurora, Colorado Springs &amp; Garden Grove.</div>
+
+  <h2 id="bids">3. The bidding problem</h2>
+  <p>Maximize Conversions, with only ~6 conversions of history, has no signal — so it spends up to 2× a campaign's daily budget to buy a <strong>single click</strong>. Top search terms in the window:</p>
+  <table>
+    <thead><tr><th>Search term</th><th>Clicks</th><th>Cost</th><th>Per click</th></tr></thead>
+    <tbody>
+      <tr><td>plumbers denver</td><td>1</td><td>$199.26</td><td class="bad">$199</td></tr>
+      <tr><td>plumbers colorado springs</td><td>1</td><td>$197.59</td><td class="bad">$198</td></tr>
+      <tr><td>plumber littleton <span class="tag">converted</span></td><td>1</td><td>$196.23</td><td class="bad">$196</td></tr>
+      <tr><td>plumbers near me</td><td>1</td><td>$195.52</td><td class="bad">$196</td></tr>
+      <tr><td>plumbing company near me</td><td>1</td><td>$166.95</td><td class="bad">$167</td></tr>
+      <tr><td>insinkerator disposal repair cost <span class="tag">DIY</span></td><td>2</td><td>$189.90</td><td>$95</td></tr>
+    </tbody>
+  </table>
+  <p class="sub">These are normal queries that should cost $20–50. At ~$196/click on a $100 budget, the budget buys 1–2 clicks/day instead of 4–8 — fewer chances at a call. The $500/day cap is also <strong>not enforced</strong>: budgets sum to $403 but Max-Conversions' 2× daily rule already pushed Jun 18 to $521 mid-day.</p>
+
+  <h2 id="track">4. The tracking gap (why this matters most)</h2>
+  <div class="ok">Ringba shows the campaigns <strong>are</strong> generating qualified calls (6–15 calls of 60s+ per day). Google's conversion column sees almost none of it after Jun 16.</div>
+  <p>Because Google can't see the conversions, <strong>Maximize Conversions is optimizing blind</strong> — which is exactly why it overbids. Fixing attribution is the root cause, not a side issue:</p>
+  <ul>
+    <li><strong>gclid → Ringba handoff is failing</strong> on some calls (your "blank, no-gclid" call). If the landing page's dynamic number insertion doesn't capture &amp; pass gclid, Ringba can't upload that conversion back to Google.</li>
+    <li><strong>Denver</strong> shows "Eligible (Misconfigured): website missing a Google tag."</li>
+    <li>Calls placed to the number shown directly in the ad / on the site are inherently untrackable — accepted, but those are separate from the click→call gap above.</li>
+  </ul>
+
+  <h2 id="fix">5. What to change — revised</h2>
+  <div class="ok"><strong>You pushed back on dropping Maximize Conversions — and you're right.</strong> It's what started producing calls, and crashing to $20–40 manual bids would lose the high-intent auctions. So: keep it. Fix it surgically instead.</div>
+  <h3>Priority 1 — Fix conversion tracking first</h3>
+  <p>Get Google seeing the ~2 qualified calls/day Ringba already logs. Verify every landing page captures <code>gclid</code> and passes it into the Ringba dynamic number; confirm Ringba's Google offline-conversion upload is firing; fix Denver's missing Google tag. Once Google sees real conversions, smart bidding rationalizes on its own.</p>
+  <h3>Priority 2 — Add a Target CPA to Maximize Conversions</h3>
+  <p>Set a <strong>Target CPA around $100–130</strong> on the existing strategy. This keeps conversion-based bidding on the high-intent terms but tells Google not to chase a $196 click (which implies a CPA far above target). It's the cap that stops the bleed without killing reach. If volume throttles too hard after ~1 week, raise the target.</p>
+  <h3>Priority 3 — Make the $500/day cap real</h3>
+  <p>Per-campaign budgets don't cap the total, and Max-Conversions can spend 2× on any day. Options:</p>
+  <ul>
+    <li><strong>One shared budget of $500/day</strong> across all 7 campaigns (Tools → Shared library → Budgets → +). Caps the <em>monthly average</em> at ~$500/day (~$15.2k/mo); single days can still flex to ~2×, averaging out.</li>
+    <li><strong>For a hard daily ceiling</strong> (no day over $500): set the shared budget to <strong>$250/day</strong> — the 2× rule then tops out at ~$500. Lower volume, but a true cap.</li>
+    <li>Trade-off: a shared budget lets Google shift spend to the best performers but removes per-city control.</li>
+  </ul>
+  <h3>Priority 4 — Tighten match types</h3>
+  <p>Set the proven call-drivers (e.g. <em>plumbers near me</em>, <em>plumber [city]</em>) to <strong>phrase/exact</strong> so the budget isn't spent on loose broad matches at top dollar.</p>
+
+  <h2 id="negs">6. Negative keywords to add</h2>
+  <p class="sub">High-confidence DIY / parts / price-research terms from the search-term report (phrase match — won't block emergency intent). <strong>Competitor brand names are deliberately excluded</strong> — 2 of the 6 conversions came from competitor-brand searches, so blocking them would cost calls.</p>
+  <div class="copybox"><button class="copybtn" onclick="copyNeg(this)">Copy</button><span id="neglist">"water heater replacement cost"
+"water heater installation cost"
+"garbage disposal repair cost"
+"disposal repair cost"
+"insinkerator"
+"40 gallon water heater"
+"cost of 40 gallon water heater"
+"gc6aa"</span></div>
+  <p class="sub">Optional / watch (lower confidence, may include real jobs): <code>"unclog sink drain"</code>, <code>"the sewer spy"</code>.</p>
+
+  <h2 id="ref">7. Reference</h2>
+  <div class="card">
+    <strong>API access (live, read)</strong>
+    <ul>
+      <li>Google Ads — Plumber Elite account under the GCALIT MCC, API v21. <span class="tag">ID stored privately</span></li>
+      <li>Ringba — "Ring on demand" account. <span class="tag">ID stored privately</span></li>
+      <li>Pull tools: <code>gads/rest.py</code> (Google), <code>gads/ringba.py</code> (Ringba daily tally).</li>
+    </ul>
+  </div>
+
+  <footer>Generated from live Google Ads + Ringba API data, June 18 2026. Figures are point-in-time; Jun 18 is partial.</footer>
+</div>
+<script>
+function copyNeg(btn){
+  var text=document.getElementById('neglist').innerText.trim();
+  function done(){btn.textContent='Copied!';btn.classList.add('done');setTimeout(function(){btn.textContent='Copy';btn.classList.remove('done')},1600);}
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+    navigator.clipboard.writeText(text).then(done,function(){fallback(text,done)});
+  }else{fallback(text,done);}
+}
+function fallback(text,cb){
+  var ta=document.createElement('textarea');ta.value=text;ta.style.position='fixed';ta.style.opacity='0';
+  document.body.appendChild(ta);ta.focus();ta.select();
+  try{document.execCommand('copy');cb();}catch(e){}
+  document.body.removeChild(ta);
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+# Never commit live credentials or pulled data
+google-ads.yaml
+creds.json
+*.refresh_token
+out/
+*.csv
+__pycache__/
+*.pyc
+
+ringba_creds.json

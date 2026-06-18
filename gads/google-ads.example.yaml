@@ -1,0 +1,7 @@
+# Copy to google-ads.yaml and fill in. NEVER commit the real file (see .gitignore).
+developer_token: INSERT_DEVELOPER_TOKEN          # MCC > Tools > API Center (needs Basic Access)
+client_id: INSERT_OAUTH_CLIENT_ID                # Cloud Console > Credentials > OAuth Desktop client
+client_secret: INSERT_OAUTH_CLIENT_SECRET
+refresh_token: INSERT_REFRESH_TOKEN              # produced by auth.py
+login_customer_id: INSERT_MCC_ID_NO_DASHES       # your Manager (MCC) account id, digits only
+use_proto_plus: true
