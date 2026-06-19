@@ -50,6 +50,7 @@
 
   <div class="toc">
     <strong>Contents</strong><br>
+    <a href="#action"><strong>★ Action plan — do now</strong></a>
     <a href="#recon">1. Google ↔ Ringba reconciliation</a>
     <a href="#changes">2. What changed after Jun 13</a>
     <a href="#bids">3. The bidding problem</a>
@@ -57,6 +58,37 @@
     <a href="#fix">5. What to change (revised)</a>
     <a href="#negs">6. Negative keywords</a>
     <a href="#ref">7. Reference</a>
+  </div>
+
+  <h2 id="action">★ Action plan — what to do now</h2>
+  <p class="sub">Updated Jun 19. Goal = <strong>more calls</strong>, ordered by impact. (Read-only analysis; changes made manually in the account.)</p>
+
+  <div class="card">
+    <h3 style="margin-top:0">Do first — fix the reach problem (biggest lever)</h3>
+    <p><strong>50–75% of searches never see our ad.</strong> The budget-choked cities (Littleton, Denver, Portland, Boise) spend the whole day's budget on 1–2 ~$196 clicks, then go dark. Those clicks aren't pure waste — Littleton's $196 click <strong>converted</strong> Jun 18 — but being invisible the other ~67% of the time means missing the <em>other</em> calls. Two ways to widen reach at the same spend:</p>
+    <ul>
+      <li><strong>A — Cap the CPC:</strong> add a <strong>Target CPA (~$120)</strong> to Maximize Conversions so one click can't drain the day → budget spreads across more searches → more calls. <span class="tag">thin data — watch week 1</span></li>
+      <li><strong>B — Feed the proven winners:</strong> shift budget from the idle rank-choked cities (West Covina &amp; Boulder spent ~$0) to the budget-choked converters (Littleton, Denver) — staying inside the $500 cap. Their expensive clicks convert, so more budget captures more of the demand we're currently missing.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-top:0">Free wins (low risk)</h3>
+    <ul>
+      <li><strong>Lift Ad Rank</strong> on Santa Barbara / West Covina / Boulder — they have budget left but lose <strong>50–60% to rank</strong>, not budget. Add a Call asset + sitelinks + callouts + structured snippets + 10–15 RSA headlines (raises rank for free).</li>
+      <li><strong>Negate</strong> the expensive non-converting competitor brands (exact match): <code>[carroll plumbing santa barbara]</code>, <code>[denver peak plumbing]</code>, <code>[french plumbing]</code>.</li>
+      <li><strong>Add</strong> the 5 price/DIY negatives (§6 below).</li>
+      <li><strong>Tighten geo:</strong> set location to <strong>"Presence"</strong> (people physically in the city), not "presence or interest" — <code>plumbers in los angeles</code> is leaking in.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-top:0">Watch — don't act yet (only ~7 calls of data)</h3>
+    <ul>
+      <li><strong>Demographics:</strong> converters are <strong>55–64 &amp; 65+</strong> (homeowners) + undetermined. A small <strong>+10–15% bid bump on 55–64 &amp; 65+</strong> is safe; don't <em>exclude</em> anyone — "undetermined" is a third of traffic and converts.</li>
+      <li><strong>Dayparting:</strong> calls cluster <strong>7–9 AM</strong> — confirm over a full week before scheduling (emergencies happen 24/7).</li>
+      <li><strong>Device:</strong> mobile &amp; desktop both convert — leave as-is.</li>
+    </ul>
   </div>
 
   <h2 id="recon">1. Google ↔ Ringba daily reconciliation</h2>
@@ -69,10 +101,10 @@
       <tr><td>Jun 15</td><td class="bad">$1,983</td><td>18</td><td>4</td><td>51</td><td>34</td><td>15</td><td>4</td></tr>
       <tr><td>Jun 16</td><td class="bad">$1,938</td><td>17</td><td>2</td><td>46</td><td>29</td><td>11</td><td>2</td></tr>
       <tr><td>Jun 17</td><td>$468</td><td>9</td><td class="bad">0</td><td>37</td><td>22</td><td>6</td><td class="amb">2</td></tr>
-      <tr><td>Jun 18*</td><td>$521</td><td>6</td><td class="bad">0</td><td>28</td><td>18</td><td>4</td><td class="amb">2</td></tr>
+      <tr><td>Jun 18</td><td>$521</td><td>6</td><td class="good">1</td><td>39</td><td>24</td><td>4</td><td class="amb">2</td></tr>
     </tbody>
   </table>
-  <p class="sub">*Jun 18 partial (mid-day). Google conv <strong>matched</strong> Ringba exactly on Jun 15 (4) and Jun 16 (2) — attribution worked. It then <strong class="amb">broke</strong>: Ringba converted 2 on Jun 17 and 2 on Jun 18, but Google recorded 0 both days (import lag / missing gclid).</p>
+  <p class="sub">Google conv <strong>matched</strong> Ringba on Jun 15–16. Jun 18 = <strong>2 real calls</strong>: Littleton (gclid tracked → uploaded to Google, the $196 click that <em>did</em> convert) + Boulder (caller dialed the number directly, no gclid → untrackable). So the expensive clicks aren't pure waste — the gap is the calls we miss while invisible (see Action plan).</p>
 
   <h2 id="changes">2. What changed after Jun 13</h2>
   <p class="sub">From the account's own change history (<code>change_event</code>), all by <code>ads@gcalit.org</code>:</p>
