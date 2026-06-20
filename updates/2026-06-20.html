@@ -1,0 +1,70 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2026-06-20 — Keywords added + Jun-19 diagnostic</title>
+<style>
+  :root{--bg:#0d1117;--panel:#161b22;--line:#26303b;--ink:#e6edf3;--mut:#9aa7b4;--acc:#4dd0a7;--blue:#58a6ff;--warn:#ff6b6b;--gold:#e3b341}
+  *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 -apple-system,Segoe UI,Roboto,Arial,sans-serif}
+  .wrap{max-width:860px;margin:0 auto;padding:28px 18px 70px}
+  h1{font-size:22px;margin:0 0 2px}h2{font-size:17px;margin:26px 0 6px;color:var(--acc)}
+  .sub{color:var(--mut);margin:2px 0 6px;font-size:13.5px}
+  a{color:var(--blue)}
+  table{border-collapse:collapse;width:100%;margin:8px 0;font-size:13px}
+  th,td{border:1px solid var(--line);padding:6px 9px;text-align:left}
+  th{background:#1b2330;color:var(--mut);font-weight:600}
+  .copybox{position:relative;background:#0a0e13;border:1px solid var(--line);border-radius:8px;padding:12px 12px;margin:8px 0;white-space:pre-wrap;font-family:ui-monospace,Menlo,monospace;font-size:12.5px;color:#cdd6e0}
+  .copybtn{position:absolute;top:8px;right:8px;background:var(--acc);color:#06231a;border:0;border-radius:6px;padding:5px 11px;font-weight:700;cursor:pointer;font-size:12px}
+  .copybtn.done{background:var(--blue);color:#04121f}
+  .ct{display:block;margin-right:64px}
+  .done{color:var(--acc);font-weight:700}.todo{color:var(--gold);font-weight:700}
+  .warn{border-left:3px solid var(--warn);padding-left:10px;color:#ffd0d0}
+  code{background:#1f2a36;padding:1px 5px;border-radius:4px;font-size:12.5px}
+  ul{margin:6px 0 6px 0;padding-left:20px}li{margin:3px 0}
+</style></head><body><div class="wrap">
+
+<h1>Update — 2026-06-20</h1>
+<p class="sub">Live data pulled from the account (Plumber Elite, 9571863699). <a href="../analysis.html">← main dashboard</a></p>
+
+<h2>✅ Done today (pushed to the account)</h2>
+<p class="sub">Added the 2 net-new long-tail keywords from the Jun-19 list — <strong>EXACT</strong> match (your call, not phrase), into each city's <code>*_Plumbing_Services</code> ad group. 7 enabled cities × 2 = <strong>14 keywords, all ENABLED, verified live.</strong></p>
+<table>
+<tr><th>Keyword (EXACT)</th><th>Ad group</th><th>Cities</th><th>Intent</th></tr>
+<tr><td>leak detection near me</td><td>&lt;City&gt;_Plumbing_Services</td><td>all 7 enabled</td><td>High — local hire</td></tr>
+<tr><td>main water line repair</td><td>&lt;City&gt;_Plumbing_Services</td><td>all 7 enabled</td><td>High — big-ticket repair</td></tr>
+</table>
+<p class="sub">Cities: Littleton · Denver · Boulder · Boise · Portland · Santa Barbara · West Covina. No overlap — existing <code>main water line leak repair</code> (phrase) needs the word "leak" so it never matched, and <code>slab leak detection</code> doesn't cover bare "leak detection." Neither is DIY/info; both are buyer-intent service calls.</p>
+
+<h2>✅ Verified already live (no action needed)</h2>
+<p class="sub">All 105 negatives from the Jun-19 page are confirmed in the shared list <code>Shared_Plumbing_Negative</code> (1,394 members, linked to every campaign):</p>
+<ul>
+<li><span class="done">65/65</span> competitor brand negatives — EXACT ✓</li>
+<li><span class="done">35/35</span> out-of-area city negatives — PHRASE ✓</li>
+<li><span class="done">5/5</span> DIY how-to negatives — PHRASE ✓</li>
+</ul>
+
+<h2 class="warn">⚠️ Jun-19 diagnostic — why $488 / 0 calls</h2>
+<p class="sub">Spend $487.88 · 6 clicks · <strong>0 conversions.</strong> The two terms that actually drew paid clicks were competitor brands that the negatives now block — they slipped through because the clicks landed <em>before</em> the negatives took effect:</p>
+<table>
+<tr><th>Search term</th><th>City</th><th>Cost</th><th>Status now</th></tr>
+<tr><td>psi plumbing colorado</td><td>Denver</td><td>$110</td><td class="done">blocked (EXACT neg live)</td></tr>
+<tr><td>george morgan plumbing</td><td>Portland</td><td>$64</td><td class="done">blocked (EXACT neg live)</td></tr>
+</table>
+<p class="sub">CPCs are very high (Littleton $160 for 1 click). Remaining ~$313 is reporting lag — yesterday's other clicks haven't populated the search-terms view yet. The tCPA $90 portfolio is the lever holding CPCs down.</p>
+
+<h2 class="todo">🔜 Still to do / watch</h2>
+<ul>
+<li><span class="todo">Re-pull in 24–48h</span> — let yesterday's search-terms view finish populating, then catch any new competitor/junk terms that drew the unattributed ~$313.</li>
+<li><span class="todo">Watch the 2 new EXACT keywords</span> — confirm they pull calls and don't just add cost; if zero traffic in 2 weeks, leave (EXACT, low risk).</li>
+<li><span class="todo">0-conversion days</span> — keep watching call volume vs spend; reconcile against Ringba <code>hasConverted</code> (raw Ringba counts ≠ real calls).</li>
+<li><span class="todo">CPC pressure</span> — high CPCs are bid/impression-share driven, not asset gaps (assets already maxed). No budget change; tCPA $90 stays.</li>
+<li>Nothing else from the Jun-19 page is pending — negatives all live, keywords now added.</li>
+</ul>
+
+<script>
+document.querySelectorAll('.copybtn').forEach(function(b){b.addEventListener('click',function(){
+  var t=b.parentElement.querySelector('.ct').innerText;
+  function ok(){b.classList.add('done');b.textContent='Copied';setTimeout(function(){b.classList.remove('done');b.textContent='Copy';},1400);}
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(ok,function(){fb();});}else{fb();}
+  function fb(){var ta=document.createElement('textarea');ta.value=t;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.focus();ta.select();try{document.execCommand('copy');ok();}catch(e){}document.body.removeChild(ta);}
+});});
+</script>
+</div></body></html>
