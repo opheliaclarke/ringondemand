@@ -1,62 +1,271 @@
 <!doctype html><html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>2026-06-20 — Keywords added + Jun-19 diagnostic</title>
+<title>2026-06-20 — Optimization Worklog &amp; Handoff</title>
 <style>
-  :root{--bg:#0d1117;--panel:#161b22;--line:#26303b;--ink:#e6edf3;--mut:#9aa7b4;--acc:#4dd0a7;--blue:#58a6ff;--warn:#ff6b6b;--gold:#e3b341}
+  :root{--bg:#0d1117;--panel:#161b22;--line:#26303b;--ink:#e6edf3;--mut:#9aa7b4;--acc:#4dd0a7;--blue:#58a6ff;--warn:#ff6b6b;--gold:#e3b341;--negbg:#3a1d1d;--negbd:#ff6b6b;--tgtbg:#13322a;--tgtbd:#4dd0a7}
   *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 -apple-system,Segoe UI,Roboto,Arial,sans-serif}
-  .wrap{max-width:860px;margin:0 auto;padding:28px 18px 70px}
-  h1{font-size:22px;margin:0 0 2px}h2{font-size:17px;margin:26px 0 6px;color:var(--acc)}
-  .sub{color:var(--mut);margin:2px 0 6px;font-size:13.5px}
+  .wrap{max-width:900px;margin:0 auto;padding:28px 18px 80px}
+  h1{font-size:23px;margin:0 0 2px}
+  h2{font-size:18px;margin:30px 0 8px;border-bottom:1px solid var(--line);padding-bottom:5px}
+  .sub{color:var(--mut);margin:2px 0 8px;font-size:13.5px}
   a{color:var(--blue)}
+  code{background:#1f2a36;padding:1px 5px;border-radius:4px;font-size:12.5px}
+
+  .banner{background:#13261d;border:1px solid var(--acc);border-radius:10px;padding:14px 16px;margin:14px 0 6px}
+  .banner b{color:var(--acc)}
+
+  .toc{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:12px 16px;margin:14px 0}
+  .toc a{display:inline-block;margin:3px 14px 3px 0}
+
+  .legend{display:flex;flex-wrap:wrap;gap:10px;margin:10px 0 4px}
+  .lg{font-size:12.5px;color:var(--mut);border:1px solid var(--line);border-radius:6px;padding:6px 10px;background:var(--panel)}
+
+  /* task card */
+  .card{border:1px solid var(--line);border-radius:10px;padding:0;margin:16px 0;overflow:hidden;background:var(--panel)}
+  .card .head{display:flex;align-items:center;flex-wrap:wrap;gap:10px;padding:12px 14px;border-bottom:1px solid var(--line)}
+  .tnum{font-weight:800;color:var(--mut);font-size:13px}
+  .ttitle{font-size:15.5px;font-weight:800;flex:1;min-width:200px}
+  .badge{font-size:11.5px;font-weight:800;padding:3px 9px;border-radius:20px;letter-spacing:.3px}
+  .b-done{background:#10331f;color:var(--acc);border:1px solid var(--acc)}
+  .b-todo{background:#332a10;color:var(--gold);border:1px solid var(--gold)}
+  .card .body{padding:12px 14px}
+  .dest{display:inline-block;font-weight:800;font-size:12.5px;padding:5px 11px;border-radius:6px;margin:0 6px 8px 0}
+  .dest-neg{background:var(--negbg);color:#ffc4c4;border:1px solid var(--negbd)}
+  .dest-tgt{background:var(--tgtbg);color:#bff3e2;border:1px solid var(--tgtbd)}
+  .meta{font-size:13px;color:var(--mut);margin:2px 0 8px}
+  .meta b{color:var(--ink)}
+
+  .copybox{position:relative;background:#0a0e13;border:1px solid var(--line);border-radius:8px;padding:12px;margin:8px 0;white-space:pre-wrap;font-family:ui-monospace,Menlo,monospace;font-size:12.5px;color:#cdd6e0;max-height:240px;overflow:auto}
+  .copybtn{position:absolute;top:8px;right:8px;background:var(--acc);color:#06231a;border:0;border-radius:6px;padding:5px 11px;font-weight:700;cursor:pointer;font-size:12px;z-index:2}
+  .copybtn.done{background:var(--blue);color:#04121f}
+  .ct{display:block;margin-right:64px}
+
   table{border-collapse:collapse;width:100%;margin:8px 0;font-size:13px}
   th,td{border:1px solid var(--line);padding:6px 9px;text-align:left}
   th{background:#1b2330;color:var(--mut);font-weight:600}
-  .copybox{position:relative;background:#0a0e13;border:1px solid var(--line);border-radius:8px;padding:12px 12px;margin:8px 0;white-space:pre-wrap;font-family:ui-monospace,Menlo,monospace;font-size:12.5px;color:#cdd6e0}
-  .copybtn{position:absolute;top:8px;right:8px;background:var(--acc);color:#06231a;border:0;border-radius:6px;padding:5px 11px;font-weight:700;cursor:pointer;font-size:12px}
-  .copybtn.done{background:var(--blue);color:#04121f}
-  .ct{display:block;margin-right:64px}
-  .done{color:var(--acc);font-weight:700}.todo{color:var(--gold);font-weight:700}
+  ul{margin:6px 0;padding-left:20px}li{margin:3px 0}
   .warn{border-left:3px solid var(--warn);padding-left:10px;color:#ffd0d0}
-  code{background:#1f2a36;padding:1px 5px;border-radius:4px;font-size:12.5px}
-  ul{margin:6px 0 6px 0;padding-left:20px}li{margin:3px 0}
 </style></head><body><div class="wrap">
 
-<h1>Update — 2026-06-20</h1>
-<p class="sub">Live data pulled from the account (Plumber Elite, 9571863699). <a href="../analysis.html">← main dashboard</a></p>
+<h1>RingOnDemand — Optimization Worklog &amp; Handoff</h1>
+<p class="sub"><b>2026-06-20</b> · Account: <b>Plumber Elite (9571863699)</b> · <a href="../analysis.html">← main dashboard</a></p>
 
-<h2>✅ Done today (pushed to the account)</h2>
-<p class="sub">Added the 2 net-new long-tail keywords from the Jun-19 list — <strong>EXACT</strong> match (your call, not phrase), into each city's <code>*_Plumbing_Services</code> ad group. 7 enabled cities × 2 = <strong>14 keywords, all ENABLED, verified live.</strong></p>
-<table>
-<tr><th>Keyword (EXACT)</th><th>Ad group</th><th>Cities</th><th>Intent</th></tr>
-<tr><td>leak detection near me</td><td>&lt;City&gt;_Plumbing_Services</td><td>all 7 enabled</td><td>High — local hire</td></tr>
-<tr><td>main water line repair</td><td>&lt;City&gt;_Plumbing_Services</td><td>all 7 enabled</td><td>High — big-ticket repair</td></tr>
-</table>
-<p class="sub">Cities: Littleton · Denver · Boulder · Boise · Portland · Santa Barbara · West Covina. No overlap — existing <code>main water line leak repair</code> (phrase) needs the word "leak" so it never matched, and <code>slab leak detection</code> doesn't cover bare "leak detection." Neither is DIY/info; both are buyer-intent service calls.</p>
+<div class="banner">
+<b>STATUS: ALL TASKS BELOW ARE DONE ✓</b> — verified by a live account pull on 2026-06-20.
+Nothing currently needs to be copied/pasted. This page is the record of what was changed and where, plus a watch-list of things to monitor (no edits required).
+</div>
 
-<h2>✅ Verified already live (no action needed)</h2>
-<p class="sub">All 105 negatives from the Jun-19 page are confirmed in the shared list <code>Shared_Plumbing_Negative</code> (1,394 members, linked to every campaign):</p>
-<ul>
-<li><span class="done">65/65</span> competitor brand negatives — EXACT ✓</li>
-<li><span class="done">35/35</span> out-of-area city negatives — PHRASE ✓</li>
-<li><span class="done">5/5</span> DIY how-to negatives — PHRASE ✓</li>
-</ul>
+<div class="legend">
+  <span class="lg"><b style="color:#ffc4c4">→ NEGATIVE LIST</b> = paste into the shared negative list <code>Shared_Plumbing_Negative</code></span>
+  <span class="lg"><b style="color:#bff3e2">→ TARGET LIST</b> = add as a keyword inside an ad group</span>
+  <span class="lg"><code>[term]</code> = EXACT &nbsp;·&nbsp; <code>"term"</code> = PHRASE</span>
+</div>
 
-<h2 class="warn">⚠️ Jun-19 diagnostic — why $488 / 0 calls</h2>
-<p class="sub">Spend $487.88 · 6 clicks · <strong>0 conversions.</strong> The two terms that actually drew paid clicks were competitor brands that the negatives now block — they slipped through because the clicks landed <em>before</em> the negatives took effect:</p>
+<div class="toc">
+<b>Jump to:</b>
+<a href="#t1">Task 1 — Competitor names</a>
+<a href="#t2">Task 2 — Out-of-area cities</a>
+<a href="#t3">Task 3 — DIY how-to</a>
+<a href="#t4">Task 4 — New keywords</a>
+<a href="#diag">Jun-19 diagnostic</a>
+<a href="#watch">Watch-list</a>
+</div>
+
+<!-- ===================== TASK 1 ===================== -->
+<div class="card" id="t1">
+  <div class="head">
+    <span class="tnum">TASK 1</span>
+    <span class="ttitle">Block 65 competitor / brand names</span>
+    <span class="badge b-done">DONE ✓ (65/65 live)</span>
+  </div>
+  <div class="body">
+    <span class="dest dest-neg">→ NEGATIVE LIST</span>
+    <span class="dest dest-neg">EXACT match</span>
+    <div class="meta">Destination: shared negative list <b>Shared_Plumbing_Negative</b> (already linked to every campaign). Brackets in the box already mean EXACT — paste as-is.</div>
+    <div class="copybox"><button class="copybtn">Copy</button><span class="ct">[psi plumbing colorado]
+[detemple plumbing]
+[ktp plumbing]
+[yvn plumbing]
+[top dog plumbing boise]
+[trojan plumbing idaho]
+[mikes plumbing colorado springs]
+[michael wright plumbing]
+[jerry the plumber santa barbara]
+[jerry's plumbing santa maria]
+[sals plumbing torrance]
+[precision plumbing boulder]
+[precision plumbing colorado springs]
+[precision plumbing denver]
+[ips plumbing fort collins]
+[royal flush plumbing]
+[thrasher plumbing salem oregon]
+[three mountains home services]
+[debest plumbing boise]
+[johnson and sons plumbing boise]
+[palmer backflow boise]
+[olsen plumbing colorado springs]
+[branched out plumbing]
+[george morgan plumbing]
+[the sewer spy]
+[evergreen plumbing salem]
+[priority plumbing boise]
+[allen plumbing fort collins]
+[ars of colorado]
+[copperhead plumbing denver]
+[dema plumbing colorado]
+[zeroed in plumbing]
+[qualified plumbing masters littleton]
+[tnt plumbing lompoc]
+[apex plumbing denver]
+[cady plumbing denver]
+[legacy plumbing arvada]
+[sewer lines only denver]
+[georges plumbing pasadena]
+[moe plumbing glendale]
+[jake the snake plumbing denver]
+[bliss plumbing longmont]
+[meyers plumbing boulder]
+[arrowhead plumbing fort collins]
+[drain doctor fort collins]
+[alchemy plumbing portland]
+[john c flood plumbing]
+[lefty's plumbing salem oregon]
+[peterson plumbing eugene oregon]
+[aladdin plumbing mission viejo]
+[5280 denver plumbing]
+[denver sewer pros]
+[jim flores plumbing santa barbara]
+[max selzer plumbing santa barbara]
+[jc plumbing thousand oaks]
+[mighty plumbing denver]
+[crown plumbing portland]
+[reynolds sewers portland]
+[goodson plumbing boise]
+[evans plumbing hailey idaho]
+[a better plumber denver]
+[dr fixit denver]
+[tiger plumbing colorado springs]
+[beach cities plumbing redondo beach]
+[petes plumbing long beach]</span></div>
+  </div>
+</div>
+
+<!-- ===================== TASK 2 ===================== -->
+<div class="card" id="t2">
+  <div class="head">
+    <span class="tnum">TASK 2</span>
+    <span class="ttitle">Block 35 out-of-area cities</span>
+    <span class="badge b-done">DONE ✓ (35/35 live)</span>
+  </div>
+  <div class="body">
+    <span class="dest dest-neg">→ NEGATIVE LIST</span>
+    <span class="dest dest-neg">PHRASE match</span>
+    <div class="meta">Destination: shared negative list <b>Shared_Plumbing_Negative</b>. Cities we do NOT target. Quotes mean PHRASE — paste as-is.</div>
+    <div class="copybox"><button class="copybtn">Copy</button><span class="ct">"milwaukie"
+"salem oregon"
+"eugene"
+"beaverton"
+"nampa"
+"meridian"
+"caldwell"
+"hailey"
+"astoria"
+"medford"
+"washougal"
+"lincoln city"
+"granby"
+"grand junction"
+"steamboat springs"
+"summit county"
+"woodland park"
+"longmont"
+"arvada"
+"lakewood"
+"westminster"
+"santa maria"
+"lompoc"
+"lake isabella"
+"gardena"
+"inglewood"
+"san pedro"
+"costa mesa"
+"tustin"
+"la habra"
+"thousand oaks"
+"chatsworth"
+"rancho cucamonga"
+"redondo beach"
+"long beach"</span></div>
+  </div>
+</div>
+
+<!-- ===================== TASK 3 ===================== -->
+<div class="card" id="t3">
+  <div class="head">
+    <span class="tnum">TASK 3</span>
+    <span class="ttitle">Block 5 DIY how-to searches</span>
+    <span class="badge b-done">DONE ✓ (5/5 live)</span>
+  </div>
+  <div class="body">
+    <span class="dest dest-neg">→ NEGATIVE LIST</span>
+    <span class="dest dest-neg">PHRASE match</span>
+    <div class="meta">Destination: shared negative list <b>Shared_Plumbing_Negative</b>. Pure self-service only. <b>Cost/price searches were deliberately NOT blocked</b> — those callers stay targeted.</div>
+    <div class="copybox"><button class="copybtn">Copy</button><span class="ct">"flushing a water heater"
+"flushing a hot water heater"
+"descale water heater"
+"sediment flush"
+"drain hot water heater"</span></div>
+  </div>
+</div>
+
+<!-- ===================== TASK 4 ===================== -->
+<div class="card" id="t4">
+  <div class="head">
+    <span class="tnum">TASK 4</span>
+    <span class="ttitle">Add 2 new keywords (high-intent service calls)</span>
+    <span class="badge b-done">DONE ✓ (14/14 live: 2 kw × 7 cities)</span>
+  </div>
+  <div class="body">
+    <span class="dest dest-tgt">→ TARGET LIST (keywords)</span>
+    <span class="dest dest-tgt">EXACT match</span>
+    <div class="meta">Destination ad group: <b>&lt;City&gt;_Plumbing_Services</b> in <b>each of the 7 ENABLED cities</b> (Littleton, Denver, Boulder, Boise, Portland, Santa Barbara, West Covina). NOT added to paused cities — by design.</div>
+    <div class="copybox"><button class="copybtn">Copy</button><span class="ct">[leak detection near me]
+[main water line repair]</span></div>
+    <table>
+      <tr><th>Keyword</th><th>Why it's good</th><th>Overlap check</th></tr>
+      <tr><td>leak detection near me</td><td>High intent, local hire — not DIY/info</td><td>None — <code>slab leak detection</code> doesn't cover bare "leak detection"</td></tr>
+      <tr><td>main water line repair</td><td>High intent, big-ticket repair job</td><td>None — existing <code>main water line leak repair</code> (phrase) needs the word "leak"</td></tr>
+    </table>
+    <table>
+      <tr><th>City</th><th>Ad group</th><th>leak detection near me</th><th>main water line repair</th></tr>
+      <tr><td>Littleton</td><td>Littleton_Plumbing_Services</td><td>EXACT ✓</td><td>EXACT ✓</td></tr>
+      <tr><td>Denver</td><td>Denver_Plumbing_Services</td><td>EXACT ✓</td><td>EXACT ✓</td></tr>
+      <tr><td>Boulder</td><td>Boulder_Plumbing_Services</td><td>EXACT ✓</td><td>EXACT ✓</td></tr>
+      <tr><td>Boise</td><td>Boise_Plumbing_Services</td><td>EXACT ✓</td><td>EXACT ✓</td></tr>
+      <tr><td>Portland</td><td>Plumbing_Portland_Services</td><td>EXACT ✓</td><td>EXACT ✓</td></tr>
+      <tr><td>Santa Barbara</td><td>Santa Barbara_Plumbing_Services</td><td>EXACT ✓</td><td>EXACT ✓</td></tr>
+      <tr><td>West Covina</td><td>Plumbing_Services</td><td>EXACT ✓</td><td>EXACT ✓</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- ===================== DIAGNOSTIC ===================== -->
+<h2 id="diag" class="warn">⚠️ Jun-19 diagnostic — why $488 / 0 calls</h2>
+<p class="sub">Spend <b>$487.88</b> · 6 clicks · <b>0 conversions.</b> The two terms that drew paid clicks were competitor brands — they slipped through because the clicks landed <b>before</b> the negatives took effect. They are now blocked (Task 1).</p>
 <table>
 <tr><th>Search term</th><th>City</th><th>Cost</th><th>Status now</th></tr>
-<tr><td>psi plumbing colorado</td><td>Denver</td><td>$110</td><td class="done">blocked (EXACT neg live)</td></tr>
-<tr><td>george morgan plumbing</td><td>Portland</td><td>$64</td><td class="done">blocked (EXACT neg live)</td></tr>
+<tr><td>psi plumbing colorado</td><td>Denver</td><td>$110</td><td>blocked ✓ (EXACT neg live)</td></tr>
+<tr><td>george morgan plumbing</td><td>Portland</td><td>$64</td><td>blocked ✓ (EXACT neg live)</td></tr>
 </table>
-<p class="sub">CPCs are very high (Littleton $160 for 1 click). Remaining ~$313 is reporting lag — yesterday's other clicks haven't populated the search-terms view yet. The tCPA $90 portfolio is the lever holding CPCs down.</p>
+<p class="sub">CPCs are high (Littleton $160 for 1 click). The remaining ~$313 is reporting lag — yesterday's other clicks hadn't populated the search-terms view yet. The <b>tCPA $90 portfolio</b> is the lever holding CPCs down.</p>
 
-<h2 class="todo">🔜 Still to do / watch</h2>
+<!-- ===================== WATCH ===================== -->
+<h2 id="watch">🔭 Watch-list (monitor only — no copy/paste)</h2>
 <ul>
-<li><span class="todo">Re-pull in 24–48h</span> — let yesterday's search-terms view finish populating, then catch any new competitor/junk terms that drew the unattributed ~$313.</li>
-<li><span class="todo">Watch the 2 new EXACT keywords</span> — confirm they pull calls and don't just add cost; if zero traffic in 2 weeks, leave (EXACT, low risk).</li>
-<li><span class="todo">0-conversion days</span> — keep watching call volume vs spend; reconcile against Ringba <code>hasConverted</code> (raw Ringba counts ≠ real calls).</li>
-<li><span class="todo">CPC pressure</span> — high CPCs are bid/impression-share driven, not asset gaps (assets already maxed). No budget change; tCPA $90 stays.</li>
-<li>Nothing else from the Jun-19 page is pending — negatives all live, keywords now added.</li>
+<li><b>Re-pull search terms in 24–48h</b> — let Jun-19 finish populating, then catch any new junk/competitor terms behind the unattributed ~$313.</li>
+<li><b>Watch the 2 new keywords</b> — confirm they pull calls, not just cost. If zero traffic in 2 weeks, leave them (EXACT, low risk).</li>
+<li><b>0-conversion days</b> — reconcile call volume vs spend against Ringba <code>hasConverted</code> (raw Ringba counts ≠ real calls).</li>
+<li><b>CPC pressure</b> — high CPCs are bid / impression-share driven, not asset gaps (assets already maxed). No budget change; tCPA $90 stays.</li>
 </ul>
 
 <script>
