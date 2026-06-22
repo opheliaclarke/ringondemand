@@ -1,0 +1,151 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2026-06-22 — Why calls are low &amp; the fix plan</title>
+<style>
+  :root{--bg:#0d1117;--panel:#161b22;--line:#26303b;--ink:#e6edf3;--mut:#9aa7b4;--acc:#4dd0a7;--blue:#58a6ff;--warn:#ff6b6b;--gold:#e3b341}
+  *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 -apple-system,Segoe UI,Roboto,Arial,sans-serif}
+  .wrap{max-width:920px;margin:0 auto;padding:28px 18px 90px}
+  h1{font-size:24px;margin:0 0 2px}
+  h2{font-size:19px;margin:32px 0 8px;border-bottom:1px solid var(--line);padding-bottom:5px}
+  h3{font-size:15.5px;margin:18px 0 4px;color:var(--acc)}
+  .sub{color:var(--mut);margin:2px 0 8px;font-size:13.5px}
+  a{color:var(--blue)}
+  code{background:#1f2a36;padding:1px 5px;border-radius:4px;font-size:12.5px}
+  b.r{color:var(--warn)}b.g{color:var(--acc)}b.y{color:var(--gold)}
+
+  .verdict{background:#2a1414;border:1px solid var(--warn);border-radius:10px;padding:16px 18px;margin:14px 0}
+  .verdict h2{border:0;margin:0 0 6px;color:#ffd0d0;font-size:18px}
+  .key{background:#13261d;border:1px solid var(--acc);border-radius:10px;padding:14px 16px;margin:14px 0}
+  .key b{color:var(--acc)}
+
+  table{border-collapse:collapse;width:100%;margin:8px 0;font-size:12.8px}
+  th,td{border:1px solid var(--line);padding:6px 9px;text-align:left}
+  th{background:#1b2330;color:var(--mut);font-weight:600}
+  td.bad{color:#ff8a8a;font-weight:700}td.ok{color:var(--acc);font-weight:700}td.warn{color:var(--gold);font-weight:700}
+
+  .chain{counter-reset:s;list-style:none;padding:0;margin:8px 0}
+  .chain li{position:relative;padding:8px 12px 8px 42px;margin:6px 0;background:var(--panel);border:1px solid var(--line);border-radius:8px}
+  .chain li::before{counter-increment:s;content:counter(s);position:absolute;left:10px;top:8px;width:22px;height:22px;border-radius:50%;background:var(--warn);color:#2a1414;font-weight:800;text-align:center;line-height:22px;font-size:12px}
+
+  .card{border:1px solid var(--line);border-radius:10px;margin:14px 0;overflow:hidden;background:var(--panel)}
+  .card .head{display:flex;align-items:center;flex-wrap:wrap;gap:10px;padding:12px 14px;border-bottom:1px solid var(--line)}
+  .tier{font-weight:800;font-size:12px;padding:3px 10px;border-radius:20px;background:#10331f;color:var(--acc);border:1px solid var(--acc)}
+  .tier.t0{background:#3a1d1d;color:#ffc4c4;border-color:var(--warn)}
+  .ttitle{font-size:15.5px;font-weight:800;flex:1;min-width:200px}
+  .owner{font-size:11.5px;font-weight:700;padding:3px 9px;border-radius:20px;background:#1b2330;color:var(--mut);border:1px solid var(--line)}
+  .card .body{padding:12px 14px}
+  .card .body ul{margin:6px 0;padding-left:20px}.card .body li{margin:4px 0}
+  ul{margin:6px 0;padding-left:20px}li{margin:3px 0}
+</style></head><body><div class="wrap">
+
+<h1>Why we're not getting calls — and the plan to fix it</h1>
+<p class="sub"><b>2026-06-22</b> · Account: <b>Plumber Elite (9571863699)</b> · Live API pull, last 14 days (Jun 8–21) · <a href="../analysis.html">← main dashboard</a></p>
+
+<!-- VERDICT -->
+<div class="verdict">
+<h2>⛔ The "limited by budget" story is wrong — and that's good news</h2>
+<p style="margin:0">Every campaign spends only <b class="r">62–85% of its daily budget</b> (West Covina: <b class="r">0%</b>). They <b>can't even spend what they already have.</b> The bottleneck is <b class="r">bid suppression → rank</b>, not budget — we're losing <b class="r">53–83% of impressions to Ad Rank</b>, vs mostly &lt;15% to budget. <b>Raising budgets right now would burn more money for the same ~0 reported calls.</b> The real fix is cheaper and bigger: turn the conversion feedback loop back on.</p>
+</div>
+
+<!-- KEY NUMBER -->
+<div class="key">
+<b>The one number that explains everything:</b> Ringba recorded <b>68 qualified (60s+) calls</b> in 14 days (~146/month). Google's call-import conversion action <code>RB-plumbing</code> imported <b class="g">ZERO</b> of them. Google Smart Bidding is optimizing on <b>4 conversions</b> when <b>~68 real qualified calls already happened.</b> The calls ARE coming — Google just can't see them, so it refuses to bid to get more.
+</div>
+
+<h2>📊 The numbers (Jun 8–21)</h2>
+<table>
+<tr><th>City</th><th>Spend</th><th>Budget used</th><th>Impr. share</th><th>Lost to BUDGET</th><th>Lost to RANK</th><th>Avg CPC</th><th>Google conv</th></tr>
+<tr><td>Denver</td><td>$886</td><td>79%</td><td>13.7%</td><td class="warn">32.6%</td><td class="bad">53.7%</td><td class="bad">$68</td><td class="bad">0</td></tr>
+<tr><td>Littleton</td><td>$875</td><td>62%</td><td>18.0%</td><td>13.7%</td><td class="bad">68.3%</td><td class="bad">$146</td><td>2</td></tr>
+<tr><td>Boise</td><td>$569</td><td>85%</td><td>25.5%</td><td>14.9%</td><td class="bad">59.6%</td><td>$57</td><td>1</td></tr>
+<tr><td>Santa Barbara</td><td>$498</td><td>71%</td><td>37.9%</td><td>3.6%</td><td class="bad">58.5%</td><td>$62</td><td>1</td></tr>
+<tr><td>Portland</td><td>$498</td><td>71%</td><td>16.5%</td><td>0.6%</td><td class="bad">82.9%</td><td>$50</td><td class="bad">0</td></tr>
+<tr><td>Boulder</td><td>$476</td><td>76%</td><td>41.9%</td><td>4.4%</td><td class="bad">53.7%</td><td class="bad">$119</td><td class="bad">0</td></tr>
+<tr><td>West Covina</td><td class="bad">$0</td><td class="bad">0%</td><td>33.9%</td><td>0.0%</td><td class="bad">66.1%</td><td>—</td><td class="bad">0</td></tr>
+<tr><th>TOTAL</th><th>$3,802</th><th>~73%</th><th>—</th><th>low</th><th class="bad">high</th><th>~$75</th><th class="bad">4</th></tr>
+</table>
+<p class="sub">14-day spend <b>$3,802</b> · Google-reported conversions <b>4</b> · reported cost/conv <b class="r">$950</b>. Ringba over the same window: <b>17 hasConverted</b>, <b>68 qualified 60s+ calls</b>. Real cost per qualified call ≈ <b>$56</b> — which is workable. The reported number is fiction because the feed is broken.</p>
+
+<h2>🔗 Root-cause chain</h2>
+<ol class="chain">
+<li><b>Conversion feed is broken.</b> <code>RB-plumbing</code> (call import) = 0 in 14 days. Only ~7 sparse GCLID uploads got through.</li>
+<li><b>Smart Bidding is starved</b> — and <b>tCPA $90 is mathematically impossible</b> when a single click costs $68–146. You'd need &gt;1 call per click.</li>
+<li><b>So the algorithm suppresses bids</b> to "protect" the $90 target.</li>
+<li><b>Suppressed bids lose the auction</b> → 53–83% of impressions lost to Ad Rank.</li>
+<li><b>Tiny impression volume</b> → few clicks → few calls Google can even attribute.</li>
+<li><b>Fewer conversions seen</b> → bidding gets more conservative → the spiral tightens.</li>
+</ol>
+<p class="sub">Note: the <b>tCPA $90 target went live Jun 19</b> — qualified-call volume dropped right after (14→1→3 calls Jun 18→19→20). It's actively choking delivery.</p>
+
+<h2>🛠️ The fix — in priority order</h2>
+
+<div class="card">
+  <div class="head"><span class="tier t0">TIER 0 · DO FIRST</span><span class="ttitle">Repair the call-conversion import</span><span class="owner">Owner: Leo's Ringba team</span></div>
+  <div class="body">
+   <ul>
+   <li><code>RB-plumbing</code> (UPLOAD_CALLS) has imported <b class="r">0 calls in 14 days</b>. Get the Ringba → Google offline-conversion postback fixed so <b>every 60s+ qualified call fires</b>.</li>
+   <li>Target signal: <b>30+ conversions / 30 days</b> minimum for Smart Bidding. We already generate ~146 qualified/mo — this is purely a plumbing fix, not a traffic problem.</li>
+   <li><b>Nothing else below works until this is done.</b> This is the master switch.</li>
+   </ul>
+  </div>
+</div>
+
+<div class="card">
+  <div class="head"><span class="tier">TIER 1</span><span class="ttitle">Loosen the bid strategy so we can actually win auctions</span><span class="owner">Owner: us (Google Ads)</span></div>
+  <div class="body">
+   <ul>
+   <li>Drop the impossible $90 target. Switch the portfolio to <b>Maximize Conversions (no target)</b>, or raise tCPA to <b>$150–200</b> as a temporary realistic ceiling.</li>
+   <li>Re-introduce a tighter tCPA <b>only after</b> 30+ real conversions/mo are importing (Tier 0).</li>
+   <li>Expect CPCs to look higher short-term — that's us re-entering auctions we were locked out of. Cost/qualified-call is what matters, not CPC.</li>
+   </ul>
+  </div>
+</div>
+
+<div class="card">
+  <div class="head"><span class="tier">TIER 2</span><span class="ttitle">Consolidate campaigns to pool conversion data</span><span class="owner">Owner: us · biggest unlock</span></div>
+  <div class="body">
+   <ul>
+   <li>7 campaigns × ~1 conversion / 14 days each will <b>never</b> give Smart Bidding enough signal to learn.</li>
+   <li>Merge into <b>1–2 campaigns</b> (cities become location targets, or two regional groups: <b>Colorado cluster</b> + <b>West-Coast cluster</b>). Conversions pool → faster learning → lower CPA → more calls.</li>
+   <li>This is the structural fix that turns the account around once Tier 0/1 are in place.</li>
+   </ul>
+  </div>
+</div>
+
+<div class="card">
+  <div class="head"><span class="tier">TIER 3</span><span class="ttitle">Attack Quality Score / CPC</span><span class="owner">Owner: us</span></div>
+  <div class="body">
+   <ul>
+   <li>$119–146 CPCs in Littleton/Boulder = suppressed bid <b>plus</b> likely low Quality Score. Tighten keyword → ad → landing-page relevance; make sure each ad names the <b>service + city</b>.</li>
+   <li>Check landing-page experience (speed, mobile, click-to-call above the fold). As QS rises, CPC falls and rank recovers for free.</li>
+   </ul>
+  </div>
+</div>
+
+<div class="card">
+  <div class="head"><span class="tier">TIER 4</span><span class="ttitle">Budget = reallocate, do NOT inflate</span><span class="owner">Owner: us</span></div>
+  <div class="body">
+   <ul>
+   <li><b>Pause or rebuild West Covina</b> — $30/day allocated, $0 spent, 0 clicks, 146 impressions in 14 days. It's dead weight; reclaim the budget.</li>
+   <li><b>Do NOT raise Denver</b> — it's the only one losing real IS to budget (33%) but it spent $886 for <b>0 conversions</b>. Fix its conversions before feeding it more.</li>
+   <li>After the feed is fixed, shift budget toward proven converters (Littleton, Boise, Santa Barbara).</li>
+   </ul>
+  </div>
+</div>
+
+<h2>💬 What to tell Leo</h2>
+<div class="key">
+<p style="margin:0 0 6px">"The calls are already happening — about <b>146 qualified calls a month</b>. The account underperforms because that call data <b>never gets back into Google</b>, so the algorithm won't bid to get more, and a too-aggressive CPA target is throttling us on top of that. We've diagnosed it to the exact broken conversion action. Fix the feedback loop + loosen the target and volume scales — <b>that's the optimization.</b>"</p>
+</div>
+
+<h2>✅ This week — execution checklist</h2>
+<table>
+<tr><th>#</th><th>Action</th><th>Owner</th><th>Status</th></tr>
+<tr><td>1</td><td>Fix RB-plumbing call import (postback every 60s+ call)</td><td>Leo / Ringba</td><td class="warn">TO DO — blocking</td></tr>
+<tr><td>2</td><td>Switch portfolio to Max Conversions (no target) OR tCPA $150–200</td><td>Us</td><td class="warn">Awaiting your OK</td></tr>
+<tr><td>3</td><td>Pause West Covina, reclaim $30/day</td><td>Us</td><td class="warn">Awaiting your OK</td></tr>
+<tr><td>4</td><td>Plan campaign consolidation (CO + West-Coast clusters)</td><td>Us</td><td class="warn">Next</td></tr>
+<tr><td>5</td><td>QS/landing-page tightening pass</td><td>Us</td><td class="warn">Next</td></tr>
+</table>
+
+</div></body></html>
