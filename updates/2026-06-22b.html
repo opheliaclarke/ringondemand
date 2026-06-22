@@ -1,0 +1,59 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2026-06-22 — Strategy shift: 3 cities, Maximize Clicks</title>
+<style>
+  :root{--bg:#0d1117;--panel:#161b22;--line:#26303b;--ink:#e6edf3;--mut:#9aa7b4;--acc:#4dd0a7;--blue:#58a6ff;--warn:#ff6b6b;--gold:#e3b341}
+  *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 -apple-system,Segoe UI,Roboto,Arial,sans-serif}
+  .wrap{max-width:760px;margin:0 auto;padding:30px 20px 80px}
+  h1{font-size:23px;margin:0 0 2px}
+  h2{font-size:18px;margin:28px 0 8px;color:var(--acc)}
+  .sub{color:var(--mut);margin:2px 0 10px;font-size:14px}
+  a{color:var(--blue)}
+  .why{background:#13261d;border:1px solid var(--acc);border-radius:10px;padding:14px 16px;margin:14px 0;font-size:15px}
+  table{border-collapse:collapse;width:100%;margin:10px 0;font-size:14px}
+  th,td{border:1px solid var(--line);padding:8px 10px;text-align:left}
+  th{background:#1b2330;color:var(--mut);font-weight:600}
+  td.on{color:var(--acc);font-weight:700}td.off{color:#ff8a8a;font-weight:700}
+  ul{margin:8px 0;padding-left:22px}li{margin:6px 0}
+  .big{font-size:18px;font-weight:800}
+</style></head><body><div class="wrap">
+
+<h1>Strategy shift — live now</h1>
+<p class="sub"><b>2026-06-22</b> · Account: Plumber Elite (9571863699) · <a href="../analysis.html">← dashboard</a></p>
+
+<div class="why">
+<b>Why we changed:</b> in click-to-call plumbing, people dial straight from the ad — neither our number pool nor Google can reliably track those calls. So conversion-based bidding (tCPA) was flying blind and choking delivery. We've stopped chasing untrackable data and switched to a model that just buys the most calls per dollar, focused only on the cities that ring.
+</div>
+
+<h2>✅ What's live now</h2>
+<table>
+<tr><th>City</th><th>Status</th><th>Bidding</th><th>Daily budget</th><th>Max per click</th></tr>
+<tr><td>Littleton</td><td class="on">RUNNING</td><td>Maximize Clicks</td><td>$180</td><td>$30</td></tr>
+<tr><td>Boise</td><td class="on">RUNNING</td><td>Maximize Clicks</td><td>$170</td><td>$30</td></tr>
+<tr><td>Santa Barbara</td><td class="on">RUNNING</td><td>Maximize Clicks</td><td>$150</td><td>$30</td></tr>
+<tr><td>West Covina, Boulder, Denver, Portland</td><td class="off">PAUSED</td><td>—</td><td>$0</td><td>—</td></tr>
+</table>
+<p class="sub">Total spend cap = <span class="big">$500/day</span> (Leo's budget), now all on the 3 converting cities.</p>
+
+<h2>🔧 The 3 changes we made</h2>
+<ul>
+<li><b>Paused 4 cities</b> — West Covina (was dead, $0 spent), Boulder, Denver, Portland (no tracked calls / too expensive).</li>
+<li><b>Switched bidding</b> from "Target CPA $90" → <b>Maximize Clicks</b> with a <b>$30 cap per click</b> (stops $100+ click waste, no longer needs conversion tracking).</li>
+<li><b>Re-allocated the budget</b> onto the 3 cities that actually ring: Littleton $180, Boise $170, Santa Barbara $150.</li>
+</ul>
+
+<h2>📞 How we judge it (important)</h2>
+<ul>
+<li><b>Only calls on our own numbers list count.</b> Ignore every other call in Ringba — they are not ours and do not count toward performance.</li>
+<li>Watch over the next 1–2 weeks: are the 3 cities getting <b>more calls on our numbers</b> for the same $500/day?</li>
+<li>If a city dries up → pause it and move its budget to the others. If one is on fire → give it more.</li>
+</ul>
+
+<h2>➡️ Next</h2>
+<ul>
+<li>Let it run and gather a clean 1–2 week read.</li>
+<li>Then tune budgets between the 3 based on which numbers ring most.</li>
+<li>Only after it's stable do we consider re-opening a paused city.</li>
+</ul>
+
+</div></body></html>
