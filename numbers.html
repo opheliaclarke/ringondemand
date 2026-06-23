@@ -1,0 +1,58 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RingOnDemand — Our Tracking Numbers by City</title>
+<style>
+ :root{--bg:#0d1117;--panel:#161b22;--line:#26303b;--ink:#e6edf3;--mut:#9aa7b4;--acc:#4dd0a7;--blue:#58a6ff;--warn:#ff6b6b;--gold:#e3b341}
+ *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 -apple-system,Segoe UI,Roboto,Arial,sans-serif}
+ .wrap{max-width:920px;margin:0 auto;padding:28px 18px 80px}
+ h1{font-size:23px;margin:0 0 2px}h2{font-size:18px;margin:26px 0 8px;color:var(--acc)}h3{font-size:15px;margin:16px 0 4px;color:var(--gold)}
+ .sub{color:var(--mut);font-size:13.5px;margin:2px 0 8px}a{color:var(--blue)}
+ table{border-collapse:collapse;width:100%;margin:10px 0;font-size:13px}
+ th,td{border:1px solid var(--line);padding:7px 9px;text-align:left;vertical-align:top}
+ th{background:#1b2330;color:var(--mut)}
+ .num{font-family:ui-monospace,Menlo,monospace;color:#cfe9df}.loc{color:var(--mut);font-size:12px}
+ .live{background:#10331f;color:var(--acc);border:1px solid var(--acc);border-radius:10px;padding:1px 7px;font-size:11px;font-weight:700}
+ .ded{color:var(--acc);font-weight:700}.shar{color:var(--gold);font-weight:700}
+ .web{background:#13243a;color:var(--blue);border:1px solid #2b4a6b;border-radius:8px;padding:0 5px;font-size:10.5px}
+ .none{color:#ff9a9a;font-size:12px}
+ .note{background:#2a1414;border:1px solid var(--warn);border-radius:9px;padding:12px 14px;margin:12px 0;font-size:13.5px}
+ .key{background:#13261d;border:1px solid var(--acc);border-radius:9px;padding:12px 14px;margin:12px 0;font-size:13.5px}
+ .copybox{position:relative;background:#0a0e13;border:1px solid var(--line);border-radius:8px;padding:11px;margin:6px 0;white-space:pre-wrap;font-family:ui-monospace,Menlo,monospace;font-size:12.5px;color:#cdd6e0}
+ .copybtn{position:absolute;top:7px;right:7px;background:var(--acc);color:#06231a;border:0;border-radius:6px;padding:4px 10px;font-weight:700;cursor:pointer;font-size:12px}
+ .copybtn.done{background:var(--blue);color:#04121f}.ct{display:block;margin-right:60px}
+</style></head><body><div class="wrap">
+<h1>Our Tracking Numbers by City</h1>
+<p class="sub">Pulled live from Ringba (account "Ring on demand") on 2026-06-23 · <a href="analysis.html">← dashboard</a></p>
+
+<div class="key"><b>How to tally:</b> Ringba's incoming-call log shows the <b>dialed number</b> (the <code>number</code> column, e.g. <code>+18055143555</code>). Match that against the numbers below to know which city the call belongs to. <b>web</b> = number is live on a city website (DNI pool).</div>
+
+<div class="note"><b>Important — read this before counting:</b> Ringba does NOT have a separate number for every one of our 17 cities. Only <b>7 cities have their own dedicated number(s)</b>. The rest share a <b>state pool</b> (one «Colorado» pool for Littleton/Boulder/Loveland/Brighton/Aurora, one «California» pool for West Covina/Torrance/Garden Grove/Fullerton/Mission Viejo). Calls to a shared pool <b>cannot be split back to a single city</b> — so for those cities (incl. LIVE Littleton & West Covina) a clean per-city tally is not possible with the current setup. If you want per-city numbers for them, Leo's Ringba team needs to assign dedicated DNI numbers.</div>
+
+<h2>The 17 cities</h2>
+<table><tr><th>City</th><th>State</th><th>Ringba coverage</th><th>Dedicated number(s) &nbsp; e164 + local</th></tr>
+<tr><td>Denver</td><td>CO</td><td><span class="ded">Dedicated</span></td><td><span class="num">+17206698663</span> <span class="loc">(720) 669-8663</span> <span class="web">web</span><br><span class="num">+17207159824</span> <span class="loc">(720) 715-9824</span> <span class="web">web</span><br><span class="num">+17207358219</span> <span class="loc">(720) 735-8219</span><br><span class="num">+17207530752</span> <span class="loc">(720) 753-0752</span> <span class="web">web</span><br><span class="num">+17207640048</span> <span class="loc">(720) 764-0048</span> <span class="web">web</span><br><span class="num">+17207905749</span> <span class="loc">(720) 790-5749</span> <span class="web">web</span><br><span class="num">+17207910280</span> <span class="loc">(720) 791-0280</span><br><span class="num">+17207910434</span> <span class="loc">(720) 791-0434</span><br><span class="num">+17207940814</span> <span class="loc">(720) 794-0814</span> <span class="web">web</span><br><span class="num">+17209640911</span> <span class="loc">(720) 964-0911</span></td></tr><tr><td>Littleton <span class="live">LIVE</span></td><td>CO</td><td><span class="shar">Shared «Colorado» pool</span></td><td><span class="none">no dedicated number — calls ring on the shared <b>Colorado</b> pool below; cannot be split out by city</span></td></tr><tr><td>Boulder</td><td>CO</td><td><span class="shar">Shared «Colorado» pool</span></td><td><span class="none">no dedicated number — calls ring on the shared <b>Colorado</b> pool below; cannot be split out by city</span></td></tr><tr><td>Loveland</td><td>CO</td><td><span class="shar">Shared «Colorado» pool</span></td><td><span class="none">no dedicated number — calls ring on the shared <b>Colorado</b> pool below; cannot be split out by city</span></td></tr><tr><td>Brighton</td><td>CO</td><td><span class="shar">Shared «Colorado» pool</span></td><td><span class="none">no dedicated number — calls ring on the shared <b>Colorado</b> pool below; cannot be split out by city</span></td></tr><tr><td>Aurora</td><td>CO</td><td><span class="shar">Shared «Colorado» pool</span></td><td><span class="none">no dedicated number — calls ring on the shared <b>Colorado</b> pool below; cannot be split out by city</span></td></tr><tr><td>Colorado Springs</td><td>CO</td><td><span class="ded">Dedicated</span></td><td><span class="num">+17192159841</span> <span class="loc">(719) 215-9841</span> <span class="web">web</span></td></tr><tr><td>Fort Collins</td><td>CO</td><td><span class="ded">Dedicated</span></td><td><span class="num">+19705796038</span> <span class="loc">(970) 579-6038</span> <span class="web">web</span></td></tr><tr><td>Boise <span class="live">LIVE</span></td><td>ID</td><td><span class="ded">Dedicated</span></td><td><span class="num">+12083695784</span> <span class="loc">(208) 369-5784</span> <span class="web">web</span><br><span class="num">+12088231118</span> <span class="loc">(208) 823-1118</span></td></tr><tr><td>Portland</td><td>OR</td><td><span class="ded">Dedicated</span></td><td><span class="num">+15034835509</span> <span class="loc">(503) 483-5509</span> <span class="web">web</span><br><span class="num">+19713998363</span> <span class="loc">(971) 399-8363</span><br><span class="num">+19716128014</span> <span class="loc">(971) 612-8014</span></td></tr><tr><td>Santa Barbara <span class="live">LIVE</span></td><td>CA</td><td><span class="ded">Dedicated</span></td><td><span class="num">+18055143555</span> <span class="loc">(805) 514-3555</span> <span class="web">web</span></td></tr><tr><td>Pasadena</td><td>CA</td><td><span class="ded">Dedicated</span></td><td><span class="num">+16265013777</span> <span class="loc">(626) 501-3777</span> <span class="web">web</span><br><span class="num">+16266408527</span> <span class="loc">(626) 640-8527</span> <span class="web">web</span><br><span class="num">+16267782134</span> <span class="loc">(626) 778-2134</span> <span class="web">web</span><br><span class="num">+16267782375</span> <span class="loc">(626) 778-2375</span> <span class="web">web</span><br><span class="num">+16268163144</span> <span class="loc">(626) 816-3144</span> <span class="web">web</span><br><span class="num">+16268280725</span> <span class="loc">(626) 828-0725</span> <span class="web">web</span></td></tr><tr><td>West Covina <span class="live">LIVE</span></td><td>CA</td><td><span class="shar">Shared «California» pool</span></td><td><span class="none">no dedicated number — calls ring on the shared <b>California</b> pool below; cannot be split out by city</span></td></tr><tr><td>Torrance</td><td>CA</td><td><span class="shar">Shared «California» pool</span></td><td><span class="none">no dedicated number — calls ring on the shared <b>California</b> pool below; cannot be split out by city</span></td></tr><tr><td>Garden Grove</td><td>CA</td><td><span class="shar">Shared «California» pool</span></td><td><span class="none">no dedicated number — calls ring on the shared <b>California</b> pool below; cannot be split out by city</span></td></tr><tr><td>Fullerton</td><td>CA</td><td><span class="shar">Shared «California» pool</span></td><td><span class="none">no dedicated number — calls ring on the shared <b>California</b> pool below; cannot be split out by city</span></td></tr><tr><td>Mission Viejo</td><td>CA</td><td><span class="shar">Shared «California» pool</span></td><td><span class="none">no dedicated number — calls ring on the shared <b>California</b> pool below; cannot be split out by city</span></td></tr>
+</table>
+
+<h2>Shared state pools (used by the cities marked “shared” above)</h2>
+<h3>Shared «Colorado» pool — 6 numbers</h3><div class="copybox"><button class="copybtn">Copy</button><span class="ct">+13039553303  (303) 955-3303
++17206158099  (720) 615-8099
++17207129747  (720) 712-9747
++17208328148  (720) 832-8148
++19704381287  (970) 438-1287
++19706653619  (970) 665-3619</span></div>
+<p class="sub">Covers our CO cities without a dedicated number: Littleton, Boulder, Loveland, Brighton, Aurora (Denver / Colorado Springs / Fort Collins have their own above).</p>
+<h3>Shared «California» pool — 3 numbers</h3><div class="copybox"><button class="copybtn">Copy</button><span class="ct">+18188066052  (818) 806-6052
++18188066846  (818) 806-6846
++18188066998  (818) 806-6998</span></div>
+<p class="sub">Covers our CA cities without a dedicated number: West Covina, Torrance, Garden Grove, Fullerton, Mission Viejo (Pasadena / Santa Barbara have their own above).</p>
+
+<p class="sub" style="margin-top:18px">Total numbers attributable to our cities/pools: <b>33</b>. Numbers tagged to other markets in Leo's national plumbing account are excluded.</p>
+<script>
+document.querySelectorAll('.copybtn').forEach(function(b){b.addEventListener('click',function(){
+ var t=b.parentElement.querySelector('.ct').innerText;
+ function ok(){b.classList.add('done');b.textContent='Copied';setTimeout(function(){b.classList.remove('done');b.textContent='Copy';},1400);}
+ if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(ok,function(){fb();});}else{fb();}
+ function fb(){var ta=document.createElement('textarea');ta.value=t;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.focus();ta.select();try{document.execCommand('copy');ok();}catch(e){}document.body.removeChild(ta);}
+});});
+</script>
+</div></body></html>
