@@ -1,0 +1,11 @@
+# Never commit credentials or pulled data (defense-in-depth; gads/.gitignore also covers these)
+**/creds.json
+**/ringba_creds.json
+**/google-ads.yaml
+**/*.refresh_token
+**/*secret*.json
+**/.env
+out/
+*.csv
+__pycache__/
+*.pyc
