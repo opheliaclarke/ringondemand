@@ -1,0 +1,57 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2026-06-29 — Today's check: spend vs real calls + the gclid question</title>
+<style>
+  :root{--bg:#0d1117;--panel:#161b22;--line:#26303b;--ink:#e6edf3;--mut:#9aa7b4;--acc:#4dd0a7;--blue:#58a6ff;--warn:#ff6b6b;--gold:#e3b341}
+  *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 -apple-system,Segoe UI,Roboto,Arial,sans-serif}
+  .wrap{max-width:860px;margin:0 auto;padding:28px 18px 80px}
+  h1{font-size:22px;margin:0 0 2px}h2{font-size:17px;margin:26px 0 6px;color:var(--acc)}
+  .sub{color:var(--mut);margin:2px 0 6px;font-size:13.5px}a{color:var(--blue)}code{background:#1f2a36;padding:1px 5px;border-radius:4px;font-size:12.5px}
+  table{border-collapse:collapse;width:100%;margin:8px 0;font-size:13px}
+  th,td{border:1px solid var(--line);padding:6px 9px;text-align:center}th{background:#1b2330;color:var(--mut)}td.l{text-align:left}
+  td.bad{color:#ff8a8a;font-weight:700}td.ok{color:var(--acc);font-weight:700}td.warn{color:#e3b341;font-weight:700}
+  .rec{background:#2a2410;border:1px solid var(--gold);border-radius:9px;padding:13px 15px;margin:12px 0}
+  .rec b{color:var(--gold)}
+  .ro{background:#13261d;border:1px solid var(--acc);border-radius:8px;padding:10px 13px;margin:10px 0;font-size:13px}
+  .big{font-size:15px}
+</style></head><body><div class="wrap">
+
+<h1>Update — 2026-06-29 · Today's check</h1>
+<p class="sub">Read-only pull, both sides cross-checked by an independent verifier. <a href="../analysis.html">← dashboard</a></p>
+
+<h2>1 · Ad spend today (4 live cities)</h2>
+<table>
+<tr><th>City</th><th>Impr.</th><th>Clicks</th><th>Spend</th><th>Avg CPC</th><th>Google conv.</th></tr>
+<tr><td class="l">Denver</td><td>163</td><td>6</td><td>$286.69</td><td>$47.78</td><td>0</td></tr>
+<tr><td class="l">Boise</td><td>75</td><td>3</td><td>$154.73</td><td>$51.58</td><td>0</td></tr>
+<tr><td class="l">Littleton</td><td>62</td><td>2</td><td>$124.76</td><td>$62.38</td><td>0</td></tr>
+<tr><td class="l">Santa Barbara</td><td>43</td><td>3</td><td>$88.67</td><td>$29.56</td><td>0</td></tr>
+<tr><th>TOTAL</th><th>343</th><th>14</th><th>$654.85</th><th>~$46.8</th><th>0</th></tr>
+</table>
+<p class="sub">CPCs are in line with the caps set Jun 26 (Denver $60, Littleton/Boise $55, SB $30). Google shows 0 conversions because <b>call conversions don't tie back</b> here — that's expected, not a problem with the ads.</p>
+
+<h2>2 · Real calls today — ignore the noise</h2>
+<p class="sub">Ringba lists <b>33</b> "plumbing" calls today, but <b>28 of them dialed numbers that aren't ours</b> — they're other buyers' traffic in the shared Ringba campaign. Counting only <b>our</b> live-city tracking numbers:</p>
+<table>
+<tr><th>Live geo</th><th>Spend</th><th>Real calls</th><th>Connected</th><th>≥60s qualified</th></tr>
+<tr><td class="l">Denver / Colorado (303 + 720)</td><td>$411.45</td><td class="ok">5</td><td>2</td><td class="warn">0</td></tr>
+<tr><td class="l">Boise (208)</td><td>$154.73</td><td class="bad">0</td><td>0</td><td>0</td></tr>
+<tr><td class="l">Santa Barbara (805)</td><td>$88.67</td><td class="bad">0</td><td>0</td><td>0</td></tr>
+<tr><th>TOTAL (ours)</th><th>$654.85</th><th>5</th><th>2</th><th>0</th></tr>
+</table>
+<p class="sub">Every real call today came from <b>Colorado</b>. Boise and Santa Barbara spent <b>$243</b> between them for <b>zero</b> calls. And none of the 5 CO calls reached the 60-second qualified mark yet.</p>
+
+<h2>3 · The gclid question — you're right</h2>
+<div class="ro big">You saw <b>1 call with a gclid</b> — confirmed, exactly 1 (a Denver <code>720</code> number). But that is <b>not</b> the real call count. The other 4 Colorado calls dialed our tracking number <b>directly with no gclid</b> — people see the ad, note the number, and call. That's the normal pay-per-call gap and the whole reason call conversions can't be tracked in Google. <b>Real live-city calls today = 5, not 1.</b></div>
+<p class="sub">Side note: that 1 gclid call landed on <code>720-784-0871</code>, which <b>isn't in our documented numbers list</b> — so our list looks slightly stale/incomplete. Today I attributed by <b>area code</b> (CO / Boise / SB) instead, which is more reliable. Worth refreshing the dedicated-number list from Ringba so nothing real gets dropped.</p>
+
+<h2>Bottom line</h2>
+<ul>
+<li><b>$654.85 spent, 14 clicks, 5 real calls — all Colorado.</b> CO is carrying the whole campaign.</li>
+<li><b>Boise + Santa Barbara: $243, zero calls.</b> If that holds another day or two they're burning money.</li>
+<li><b>0 of 5 calls hit 60s</b> — no qualified/billable conversion yet today (day not over).</li>
+<li>Ignore the "33 calls" headline in Ringba — 28 of those aren't ours.</li>
+</ul>
+<div class="ro"><b>Note:</b> Google Ads access stays read-only — nothing was changed. This is a status read only.</div>
+
+</div></body></html>
