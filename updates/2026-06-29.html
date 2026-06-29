@@ -44,18 +44,19 @@
 <h2>3 · Google ↔ Ringba — the two screenshots reconcile exactly</h2>
 <table>
 <tr><th>What Google Ads shows</th><th>What Ringba shows on our number</th><th>Outcome</th></tr>
-<tr><td class="l"><b>Littleton — 3 phone calls</b> (call-button taps on the ad)</td><td class="l">3 calls to <code>303-955-3303</code>, same caller <code>+1 303-929-5736</code>, <b>all 0:00 — connected to NOBODY</b></td><td class="bad">DROPPED — never reached a plumber</td></tr>
-<tr><td class="l">Denver — 0 call-asset calls (website call, so Google can't count it)</td><td class="l">gclid call to <code>720-784-0871</code> → <code>plumberelitedenver.com</code>, term <i>"main sewer line repair"</i>, <b>connected 33s</b></td><td class="warn">TOO SHORT — under 60s, didn't bill</td></tr>
-<tr><td class="l">Denver — (website call)</td><td class="l">call to <code>720-832-8148</code>, <b>connected 9s</b></td><td class="warn">TOO SHORT — caller hung up</td></tr>
+<tr><td class="l"><b>Littleton — 3 phone calls</b> (call-button taps on the ad)</td><td class="l">3 calls to <code>303-955-3303</code>, same caller <code>+1 303-929-5736</code>, <b>all 0:00</b></td><td class="bad">BLOCKED by Ringba STIR/SHAKEN filter — never reached the IVR</td></tr>
+<tr><td class="l">Denver — 0 call-asset calls (website call, so Google can't count it)</td><td class="l">gclid call to <code>720-784-0871</code> → <code>plumberelitedenver.com</code>, term <i>"main sewer line repair"</i>, <b>connected 33s</b></td><td class="bad">KILLED by the agent — "answering service"</td></tr>
+<tr><td class="l">Denver — (website call)</td><td class="l">call to <code>720-832-8148</code>, caller <code>+1 801-478-6257</code> (Utah), <b>9s</b></td><td class="warn">Hung up at the IVR zip-code prompt</td></tr>
 </table>
-<p class="sub"><b>You're right on both:</b> the gclid call IS Denver (the landing page is <code>plumberelitedenver.com</code> and the Google campaign id on the call = Denver's). And Littleton genuinely shows 3 phone calls in Google. The <code>720-784-0871</code> number just wasn't in our static list — it's a real Denver DNI number; nothing was mis-attributed.</p>
+<p class="sub"><b>You're right on both:</b> the gclid call IS Denver (landing page <code>plumberelitedenver.com</code>, Google campaign id on the call = Denver's), and Littleton genuinely shows 3 phone calls in Google. <b>Correction to my earlier note:</b> the 3 Littleton calls were <b>not</b> a routing/dead-air failure — they were <b>blocked by Ringba's STIR/SHAKEN spam filter</b> (same local caller, blocked 3×). A local number redialing 3× looks more like a real frustrated caller wrongly filtered than a robocaller — worth having Leo review the filter sensitivity.</p>
 
-<h2>4 · WHY 0 converted — this is the real reason</h2>
-<div class="ro big">It is <b>not</b> that the ads produced no calls. They produced <b>3 real callers</b> today. None converted because the calls die <b>at the answering stage, not the ad stage</b>:
-<br>• <b>Littleton's 3 calls connected to dead air</b> — the customer tapped "call" 3 times and the plumber's line (Call Tools Agent 1) never picked up. 0 seconds, 3 times. That is a <b>routing / answer failure on the buyer's side</b> (Leo's Ringba → Call Tools), and it cost us a motivated paid lead.
-<br>• <b>Denver's 2 calls were answered but ended in 33s and 9s</b> — a billable/qualified call needs <b>60+ seconds</b>. The sewer-line caller (a high-value job) hung up at 33s.
-<br>• <b>Volume is low for the spend</b> — at $48–62 per click, $655 bought only 14 clicks → 3 callers.</div>
-<p class="sub">So the leak is <b>answer-rate + call length</b>, which is largely the buyer's call-handling setup — plus the raw volume being too thin to justify today's spend.</p>
+<h2>4 · WHY 0 converted — the recordings tell the whole story</h2>
+<div class="ro big">The ads produced <b>3 real callers</b>. Not one converted — and <b>every loss is downstream of the ad</b>, in Leo's call-handling funnel:
+<br><br>• <b>The Denver sewer-repair call (33s) — killed by the agent.</b> Transcript: caller asks <i>"do you do trenchless sewer repair?"</i> → agent gives a canned <i>"I'll connect you with a local plumber, let me take your zip code"</i> → caller asks <i>"are you just an answering service?"</i> → agent says <b>"Yeah"</b> → caller hangs up. A high-ticket trenchless-sewer job, lost because the agent outed itself as an answering service.
+<br><br>• <b>The 2nd Denver call (9s) — lost at the IVR.</b> Transcript is only the automated greeting: <i>"…connect you with the closest contractor. Please enter your 5-digit zip code."</i> The caller (a Utah number) hung up at the zip-code gate before reaching anyone. The IVR friction itself drops calls.
+<br><br>• <b>Littleton's 3 calls — blocked by STIR/SHAKEN</b> before they ever rang.
+<br><br>• <b>Volume is also thin</b> — at $48–62/click, $655 bought 14 clicks → 3 callers.</div>
+<p class="sub"><b>Bottom line: the targeting is delivering real high-intent calls (a trenchless sewer job!). They die in the buyer's funnel</b> — spam filter, IVR gate, and an agent that admits it's an answering service. Pausing cities fixes none of this.</p>
 
 <h2>5 · Spend context — today is a spike</h2>
 <p class="sub">Daily spend since the Jun-26 restart: Jun 24 <b>$88</b> · Jun 25 <b>$29</b> · Jun 26 <b>$252</b> · Jun 27–28 <b>$0</b> · <b>Jun 29 today $655</b>. Today is the biggest day since the restart — the raised caps (Denver $60, Littleton/Boise $55, set Jun 26) plus a higher-traffic day let Denver alone spend $287. This is fully controllable and can be pulled back immediately.</p>
@@ -63,10 +64,10 @@
 <h2>Bottom line + what I'm doing</h2>
 <ul>
 <li><b>$654.85, 14 clicks, 3 real callers — all Colorado.</b> Boise + Santa Barbara: $243 for <b>zero</b> calls.</li>
-<li><b>The calls aren't converting because they aren't being answered / are too short</b> — a buyer-side call-handling problem, not a targeting problem. Littleton dropped 3 paid calls to dead air.</li>
-<li><b>Action 1 — escalate to Leo now:</b> <code>303-955-3303</code> dropped 3 paid calls today; his Ringba→Call Tools routing for that number must be fixed.</li>
-<li><b>Action 2 — pull the bleed:</b> recommend pausing Boise + Santa Barbara and lowering the CO caps until routing is fixed — no sense paying $60/click to feed dead air. (Needs your go-ahead; access is read-only.)</li>
-<li><b>Action 3 — pull the 2 Denver recordings</b> to confirm whether the agent answered or it was hold/voicemail.</li>
+<li><b>0 converted is a buyer-side funnel problem, not targeting</b> — STIR/SHAKEN block (×3), an IVR zip-code gate that drops callers, and an agent that told a live sewer-repair customer it's an "answering service."</li>
+<li><b>Action 1 — escalate to Leo (the real fixes):</b> (a) the agent script outing itself as an answering service is killing high-intent calls; (b) the IVR zip gate adds friction — emergency plumbing callers want a human; (c) review STIR/SHAKEN sensitivity, which blocked 3 local Littleton calls.</li>
+<li><b>Action 2 — control spend, don't kill the cities:</b> Boise + SB get a fair short trial, but lower the daily ceiling so we're not at $655/day while the funnel is leaking. Keep Santa Barbara (1 conv in last 7d); Boise on a short leash.</li>
+<li><b>Action 3 — recordings pulled + transcribed</b> (done — see section 4).</li>
 </ul>
 <div class="ro"><b>Note:</b> Google Ads access stays read-only — nothing was changed. Status read only.</div>
 
