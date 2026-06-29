@@ -31,15 +31,15 @@
 <p class="sub">CPCs are in line with the caps set Jun 26 (Denver $60, Littleton/Boise $55, SB $30). Google shows 0 conversions because <b>call conversions don't tie back</b> here — that's expected, not a problem with the ads.</p>
 
 <h2>2 · Real calls today — ignore the noise</h2>
-<p class="sub">Ringba lists <b>33</b> "plumbing" calls today, but <b>28 of them dialed numbers that aren't ours</b> — they're other buyers' traffic in the shared Ringba campaign. Counting only <b>our</b> live-city tracking numbers:</p>
+<p class="sub">Ringba lists <b>33</b> "plumbing" calls today, but <b>28 of them dialed numbers that aren't ours</b> — they're other buyers' traffic in the shared Ringba campaign. Counting only <b>our</b> live-city tracking numbers (and de-duping redials):</p>
 <table>
-<tr><th>Live geo</th><th>Spend</th><th>Real calls</th><th>Connected</th><th>≥60s qualified</th></tr>
-<tr><td class="l">Denver / Colorado (303 + 720)</td><td>$411.45</td><td class="ok">5</td><td>2</td><td class="warn">0</td></tr>
-<tr><td class="l">Boise (208)</td><td>$154.73</td><td class="bad">0</td><td>0</td><td>0</td></tr>
-<tr><td class="l">Santa Barbara (805)</td><td>$88.67</td><td class="bad">0</td><td>0</td><td>0</td></tr>
-<tr><th>TOTAL (ours)</th><th>$654.85</th><th>5</th><th>2</th><th>0</th></tr>
+<tr><th>Live geo</th><th>Spend</th><th>Call legs</th><th>Unique callers</th><th>Connected</th><th>≥60s qualified</th></tr>
+<tr><td class="l">Denver / Colorado (303 + 720)</td><td>$411.45</td><td>5</td><td class="ok">3</td><td>2</td><td class="warn">0</td></tr>
+<tr><td class="l">Boise (208)</td><td>$154.73</td><td>0</td><td class="bad">0</td><td>0</td><td>0</td></tr>
+<tr><td class="l">Santa Barbara (805)</td><td>$88.67</td><td>0</td><td class="bad">0</td><td>0</td><td>0</td></tr>
+<tr><th>TOTAL (ours)</th><th>$654.85</th><th>5</th><th>3</th><th>2</th><th>0</th></tr>
 </table>
-<p class="sub">Every real call today came from <b>Colorado</b>. Boise and Santa Barbara spent <b>$243</b> between them for <b>zero</b> calls. And none of the 5 CO calls reached the 60-second qualified mark yet.</p>
+<p class="sub">Every real call today came from <b>Colorado</b>. The "5 legs" is really <b>3 unique callers</b> — one Colorado caller redialed <code>303-955-3303</code> three times and <b>never connected</b>. Only <b>2 calls actually connected</b> (9 seconds and 33 seconds), and <b>neither reached the 60-second qualified mark</b>. Boise and Santa Barbara spent <b>$243</b> between them for <b>zero</b> calls.</p>
 
 <h2>3 · The gclid question — you're right</h2>
 <div class="ro big">You saw <b>1 call with a gclid</b> — confirmed, exactly 1 (a Denver <code>720</code> number). But that is <b>not</b> the real call count. The other 4 Colorado calls dialed our tracking number <b>directly with no gclid</b> — people see the ad, note the number, and call. That's the normal pay-per-call gap and the whole reason call conversions can't be tracked in Google. <b>Real live-city calls today = 5, not 1.</b></div>
@@ -47,9 +47,9 @@
 
 <h2>Bottom line</h2>
 <ul>
-<li><b>$654.85 spent, 14 clicks, 5 real calls — all Colorado.</b> CO is carrying the whole campaign.</li>
+<li><b>$654.85 spent, 14 clicks — 3 unique real callers, all Colorado.</b> CO is carrying the whole campaign.</li>
 <li><b>Boise + Santa Barbara: $243, zero calls.</b> If that holds another day or two they're burning money.</li>
-<li><b>0 of 5 calls hit 60s</b> — no qualified/billable conversion yet today (day not over).</li>
+<li><b>Only 2 calls connected (9s + 33s), 0 hit 60s</b> — no qualified/billable conversion yet today (day not over).</li>
 <li>Ignore the "33 calls" headline in Ringba — 28 of those aren't ours.</li>
 </ul>
 <div class="ro"><b>Note:</b> Google Ads access stays read-only — nothing was changed. This is a status read only.</div>
