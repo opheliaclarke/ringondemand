@@ -1,57 +1,73 @@
 <!doctype html><html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>2026-07-03 — Two-week call audit: why so few calls</title>
+<title>2026-07-03 — Two-week call audit</title>
 <style>
   :root{--bg:#0d1117;--panel:#161b22;--line:#26303b;--ink:#e6edf3;--mut:#9aa7b4;--acc:#4dd0a7;--blue:#58a6ff;--warn:#ff6b6b;--gold:#e3b341}
   *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 -apple-system,Segoe UI,Roboto,Arial,sans-serif}
-  .wrap{max-width:920px;margin:0 auto;padding:28px 18px 80px}
-  h1{font-size:22px;margin:0 0 2px}h2{font-size:17px;margin:26px 0 6px;color:var(--acc)}
-  .sub{color:var(--mut);margin:2px 0 6px;font-size:13.5px}a{color:var(--blue)}code{background:#1f2a36;padding:1px 5px;border-radius:4px;font-size:12.5px}
-  table{border-collapse:collapse;width:100%;margin:8px 0;font-size:13px}
-  th,td{border:1px solid var(--line);padding:6px 9px;text-align:center}th{background:#1b2330;color:var(--mut)}td.l{text-align:left}
+  .wrap{max-width:900px;margin:0 auto;padding:28px 18px 80px}
+  h1{font-size:22px;margin:0 0 2px}h2{font-size:17px;margin:28px 0 6px;color:var(--acc)}
+  .sub{color:var(--mut);margin:2px 0 6px;font-size:13.5px}a{color:var(--blue)}
+  /* screenshot-ready table card */
+  .card{background:#0f141b;border:1px solid var(--line);border-radius:12px;padding:16px 16px 10px;margin:10px 0}
+  .cap{font-size:15px;font-weight:700;margin:0 0 2px}.capsub{color:var(--mut);font-size:12.5px;margin:0 0 10px}
+  table{border-collapse:collapse;width:100%;font-size:13px}
+  th,td{border:1px solid var(--line);padding:7px 9px;text-align:center}th{background:#1b2330;color:#c9d3de}td.l{text-align:left}
   td.bad{color:#ff8a8a;font-weight:700}td.ok{color:var(--acc);font-weight:700}td.warn{color:#e3b341;font-weight:700}
-  tr.wknd td{background:#10151c;color:#6b7683}tr.off td{background:#141a12;color:#8f9a86}
+  tr.off td{background:#12171e;color:#6b7683}
   tr.tot th,tr.tot td{background:#1b2330;font-weight:700}
-  .rec{background:#2a2410;border:1px solid var(--gold);border-radius:9px;padding:13px 15px;margin:12px 0}.rec b{color:var(--gold)}
-  .ro{background:#13261d;border:1px solid var(--acc);border-radius:8px;padding:10px 13px;margin:10px 0;font-size:13.5px}
-  .big{font-size:15px}
+  .legend{color:var(--mut);font-size:12px;margin:8px 2px 0}
+  /* copy box */
+  .copybox{position:relative;background:#0a0e13;border:1px solid var(--line);border-radius:10px;padding:14px;margin:10px 0;font-size:13.5px;line-height:1.6;color:#dbe3ec}
+  .copybtn{position:absolute;top:10px;right:10px;background:var(--acc);color:#06231a;border:0;border-radius:6px;padding:6px 13px;font-weight:700;cursor:pointer;font-size:12px}
+  .copybtn.done{background:var(--blue);color:#04121f}.ct{display:block;margin-right:70px}
+  ul{margin:6px 0 0;padding-left:20px}li{margin:5px 0}
+  .ro{background:#13261d;border:1px solid var(--acc);border-radius:8px;padding:10px 13px;margin:12px 0;font-size:13px}
 </style></head><body><div class="wrap">
 
 <h1>Two-week call audit — 2026-07-03</h1>
-<p class="sub">Last week + this week. Both sides independently verified. Campaigns are now <b>PAUSED</b> (deposit not received). <a href="../analysis.html">← dashboard</a></p>
+<p class="sub">Campaign is <b>PAUSED</b>. Both sides independently verified. <a href="../analysis.html">← dashboard</a></p>
 
-<h2>Day-by-day — spend vs. real calls on our numbers</h2>
-<p class="sub">Weekdays are the spine (campaign never ran weekends). Weekend + paused days are shaded — <b>calls that landed on our numbers on those days are still counted</b> (they're organic Google-Business-Profile calls, not ad-driven). "Valid" = connected, de-duplicated, not on the block list. "Qualified" = 60+ seconds. "Ad-confirmed" = carried a Google click id (gclid).</p>
+<div class="card">
+<p class="cap">RingOnDemand · Plumbing — daily ad spend vs. real calls</p>
+<p class="capsub">Jun 22 – Jul 3, 2026 · cities live: Denver, Littleton, Boise, Santa Barbara</p>
 <table>
-<tr><th>Date</th><th>Day</th><th>Ad spend</th><th>Clicks</th><th>Valid calls<br>(our #s)</th><th>Qualified<br>60s+</th><th>Ad-confirmed<br>(gclid)</th><th>What happened</th></tr>
-<tr><td>Jun 22</td><td>Mon</td><td>$0</td><td>0</td><td>2</td><td>0</td><td>0</td><td class="l">no ads — organic only</td></tr>
-<tr><td>Jun 23</td><td>Tue</td><td>$0</td><td>0</td><td>2</td><td class="ok">1</td><td>0</td><td class="l">no ads — the 1 qualified call was organic</td></tr>
+<tr><th>Date</th><th>Day</th><th>Ad spend</th><th>Clicks</th><th>Calls on<br>our numbers</th><th>Qualified<br>60s+</th><th>Ad-linked<br>(gclid)</th><th>Note</th></tr>
+<tr class="off"><td>Jun 22</td><td>Mon</td><td>$0</td><td>0</td><td>2</td><td>0</td><td>0</td><td class="l">no ads — organic</td></tr>
+<tr class="off"><td>Jun 23</td><td>Tue</td><td>$0</td><td>0</td><td>2</td><td class="ok">1</td><td>0</td><td class="l">no ads — organic</td></tr>
 <tr><td>Jun 24</td><td>Wed</td><td>$88.34</td><td>3</td><td>2</td><td>0</td><td>0</td><td class="l">—</td></tr>
 <tr><td>Jun 25</td><td>Thu</td><td>$28.64</td><td>1</td><td>3</td><td class="ok">1</td><td>0</td><td class="l">—</td></tr>
-<tr><td>Jun 26</td><td>Fri</td><td>$252.32</td><td>7</td><td>2</td><td>0</td><td class="warn">1</td><td class="l">gclid call = Santa Barbara, 48s (just under)</td></tr>
-<tr class="wknd"><td>Jun 27</td><td>Sat</td><td>—</td><td>—</td><td>0</td><td>0</td><td>0</td><td class="l">weekend — off, no calls</td></tr>
-<tr class="wknd"><td>Jun 28</td><td>Sun</td><td>—</td><td>—</td><td>0</td><td>0</td><td>0</td><td class="l">weekend — off, no calls</td></tr>
-<tr><td>Jun 29</td><td>Mon</td><td class="bad">$861.02</td><td>18</td><td>2</td><td class="bad">0</td><td class="warn">1</td><td class="l">biggest spend day → 0 qualified. gclid call = Denver 33s (agent said "answering service"); 3 Littleton calls STIR-blocked</td></tr>
-<tr><td>Jun 30</td><td>Tue</td><td>$323.97</td><td>7</td><td>2</td><td class="ok">2</td><td class="warn">1</td><td class="l"><b>best day:</b> Boise <b>155s</b> (ad-confirmed) + Denver <b>223s</b></td></tr>
-<tr><td>Jul 01</td><td>Wed</td><td>$126.51</td><td>3</td><td class="bad">0</td><td>0</td><td>0</td><td class="l">spent $127 → 0 valid calls (2 blocked)</td></tr>
-<tr class="off"><td>Jul 02</td><td>Thu</td><td>—</td><td>—</td><td>1</td><td>0</td><td>0</td><td class="l">paused — 1 organic call</td></tr>
-<tr class="off"><td>Jul 03</td><td>Fri</td><td>—</td><td>—</td><td>0</td><td>0</td><td>0</td><td class="l">paused (today)</td></tr>
-<tr class="tot"><th colspan="2">TOTAL</th><th>$1,680.80</th><th>39</th><th>16</th><th>4</th><th>3</th><td class="l">1 conversion recorded in Google</td></tr>
+<tr><td>Jun 26</td><td>Fri</td><td>$252.32</td><td>7</td><td>2</td><td>0</td><td class="warn">1</td><td class="l">Santa Barbara, 48s</td></tr>
+<tr class="off"><td>Jun 27</td><td>Sat</td><td>—</td><td>—</td><td>0</td><td>0</td><td>0</td><td class="l">weekend — off</td></tr>
+<tr class="off"><td>Jun 28</td><td>Sun</td><td>—</td><td>—</td><td>0</td><td>0</td><td>0</td><td class="l">weekend — off</td></tr>
+<tr><td>Jun 29</td><td>Mon</td><td class="bad">$861.02</td><td>18</td><td>2</td><td class="bad">0</td><td class="warn">1</td><td class="l">biggest spend → 0 qualified</td></tr>
+<tr><td>Jun 30</td><td>Tue</td><td>$323.97</td><td>7</td><td>2</td><td class="ok">2</td><td class="warn">1</td><td class="l">best day: 155s + 223s</td></tr>
+<tr><td>Jul 01</td><td>Wed</td><td>$126.51</td><td>3</td><td class="bad">0</td><td>0</td><td>0</td><td class="l">$127 → 0 calls</td></tr>
+<tr class="off"><td>Jul 02</td><td>Thu</td><td>paused</td><td>—</td><td>1</td><td>0</td><td>0</td><td class="l">organic</td></tr>
+<tr class="off"><td>Jul 03</td><td>Fri</td><td>paused</td><td>—</td><td>0</td><td>0</td><td>0</td><td class="l">today</td></tr>
+<tr class="tot"><th colspan="2">TOTAL</th><th>$1,680.80</th><th>39</th><th>16</th><th>4</th><th>3</th><td class="l">1 conv. in Google</td></tr>
 </table>
+<p class="legend"><b>Calls on our numbers</b> = connected calls on our tracking lines (duplicates &amp; spam removed). <b>Qualified</b> = held 60+ seconds. <b>Ad-linked</b> = carried a Google click ID (proven ad-driven). Shaded rows = no ads ran that day.</p>
+</div>
 
-<h2>What the fuck is happening — 4 things at once</h2>
-<div class="ro big"><b>1. Google is bidding BLIND.</b> Only <b>1</b> call ever imported as a conversion in Google (the RB-plumbing call feed is broken). So Google can't optimize toward calls — it just spends the budget at whatever CPC the auction demands. That's how <b>Jun 29 burned $861 in one day for zero qualified calls</b>.</div>
-<div class="ro big"><b>2. The economics are underwater.</b> ~<b>$1,680 spent → 3 ad-confirmed calls / 3 qualified calls on ad-days</b> = roughly <b>$560 per good call</b>. Emergency-plumbing CPCs are $48–62, so a big budget buys very few clicks, and only a fraction become qualified calls.</div>
-<div class="ro big"><b>3. The buyer's funnel kills the good ones.</b> We proved the traffic is real — a <b>155s Boise</b> call and a <b>223s Denver</b> call connected and held on Jun 30. But the same week: an agent told a Denver sewer-repair caller it's an <b>"answering service"</b> (33s, lost); an IVR zip-code gate dropped a caller at 9s; and STIR/SHAKEN <b>blocked 3 Littleton calls</b> before they rang. Those are all on Leo's Call-Tools/Ringba side.</div>
-<div class="ro big"><b>4. Organic muddies the read.</b> On <b>$0-spend days</b> (Jun 22, 23, Jul 2) calls still landed on our numbers — those are organic Google-Business-Profile calls, <b>not</b> from our ads. So the raw "calls on our numbers" overstates what the ads actually produced.</div>
+<h2>Message for Leo — copy &amp; send</h2>
+<div class="copybox"><button class="copybtn">Copy</button><span class="ct">Hi Leo — we audited the plumbing campaign over the last two weeks. The ads are producing real, high-intent calls: for example a 155-second call in Boise and a 223-second call in Denver where customers stayed on the line, plus a Denver caller asking specifically for trenchless main sewer line repair, which is a high-ticket job. The issue is that most of these calls are being lost on the call-handling side, not on our end. In one recording the agent told the sewer-repair caller they were "just an answering service" and the customer hung up. Another caller dropped off at the automated menu while being asked to enter a zip code before reaching a person. And three calls from a local Colorado number were blocked outright by the STIR/SHAKEN spam filter. Separately, the Ringba call-conversion feed into Google has not been reporting, so Google has been bidding blind — we're going to take over conversion tracking on our side from now on so that is no longer a dependency. Before we relaunch, we'd need your team to tighten the agent script so they don't describe themselves as an answering service, drop or shorten the zip-code menu step so emergency callers reach a person faster, and review the STIR/SHAKEN filter so legitimate local calls aren't blocked. Once that is in place and the next deposit is settled, we'll switch everything back on.</span></div>
 
-<h2>Bottom line</h2>
+<h2>Why so few calls — the short version</h2>
 <ul>
-<li><b>It's not "no calls" — it's very few QUALIFIED calls, and Google can't see them.</b> 16 connected calls in two weeks, only 4 held 60s+, only 3 tied back to an ad click.</li>
-<li><b>$1,680 for 3 good calls is unsustainable</b> — and $861 of it went out in a single blind-bidding day.</li>
-<li><b>The two things that must be fixed before spending again:</b> (a) repair the Google call-conversion feed so bidding isn't blind; (b) fix Leo's call handling (agent script, IVR gate, STIR filter) so the calls we do buy don't die on pickup.</li>
-<li>With the deposit unpaid and the campaign paused, we've stopped a bleeding account — not lost a winning one.</li>
+<li><b>Google was bidding blind.</b> Only 1 call ever reached Google as a conversion (Ringba's feed is broken), so it just spent budget — that's how Jun 29 hit $861 for 0 qualified calls. <b>We now track conversions ourselves.</b></li>
+<li><b>The good calls die on pickup.</b> Real 155s and 223s calls prove the traffic works — but the agent "answering service" line, the zip-code menu, and the spam filter kill the rest. All on Leo's side.</li>
+<li><b>The math:</b> ~$1,680 spent → 3 qualified/ad-linked calls ≈ <b>$560 per good call.</b> Not sustainable as-is.</li>
+<li><b>Pausing stopped a bleeding account</b> — it didn't lose a winning one.</li>
 </ul>
 <div class="ro"><b>Note:</b> Google Ads access is read-only — nothing was changed. Data audit only.</div>
 
-</div></body></html>
+</div>
+<script>
+document.querySelectorAll('.copybtn').forEach(function(b){b.addEventListener('click',function(){
+ var t=b.parentElement.querySelector('.ct').innerText;
+ function ok(){b.classList.add('done');b.textContent='Copied';setTimeout(function(){b.classList.remove('done');b.textContent='Copy';},1400);}
+ if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(ok,function(){fb();});}else{fb();}
+ function fb(){var ta=document.createElement('textarea');ta.value=t;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.focus();ta.select();try{document.execCommand('copy');ok();}catch(e){}document.body.removeChild(ta);}
+});});
+</script>
+</body></html>
