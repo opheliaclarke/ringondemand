@@ -1,0 +1,54 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2026-07-08 — status while paused</title>
+<style>
+  :root{--bg:#0d1117;--panel:#161b22;--line:#26303b;--ink:#e6edf3;--mut:#9aa7b4;--acc:#4dd0a7;--blue:#58a6ff;--warn:#ff6b6b;--gold:#e3b341}
+  *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 -apple-system,Segoe UI,Roboto,Arial,sans-serif}
+  .wrap{max-width:900px;margin:0 auto;padding:28px 18px 80px}
+  h1{font-size:22px;margin:0 0 2px}h2{font-size:17px;margin:28px 0 6px;color:var(--acc)}
+  .sub{color:var(--mut);margin:2px 0 6px;font-size:13.5px}a{color:var(--blue)}
+  .card{background:#0f141b;border:1px solid var(--line);border-radius:12px;padding:16px 16px 10px;margin:10px 0}
+  .cap{font-size:15px;font-weight:700;margin:0 0 2px}.capsub{color:var(--mut);font-size:12.5px;margin:0 0 10px}
+  table{border-collapse:collapse;width:100%;font-size:13px}
+  th,td{border:1px solid var(--line);padding:7px 9px;text-align:center}th{background:#1b2330;color:#c9d3de}td.l{text-align:left}
+  td.bad{color:#ff8a8a;font-weight:700}td.ok{color:var(--acc);font-weight:700}td.warn{color:#e3b341;font-weight:700}
+  tr.off td{background:#12171e;color:#6b7683}
+  tr.tot th,tr.tot td{background:#1b2330;font-weight:700}
+  .legend{color:var(--mut);font-size:12px;margin:8px 2px 0}
+  ul{margin:6px 0 0;padding-left:20px}li{margin:5px 0}
+  .ro{background:#13261d;border:1px solid var(--acc);border-radius:8px;padding:10px 13px;margin:12px 0;font-size:13px}
+  .alert{background:#2a1620;border:1px solid var(--warn);border-radius:8px;padding:10px 13px;margin:12px 0;font-size:13px}
+</style></head><body><div class="wrap">
+
+<h1>Status while paused — 2026-07-08</h1>
+<p class="sub">Campaigns remain <b>PAUSED</b> (since Jul 2). Monitoring only — no changes made. <a href="../analysis.html">← dashboard</a></p>
+
+<div class="card">
+<p class="cap">Calls on our tracking numbers — Jul 2 to Jul 8 (ads off all week)</p>
+<p class="capsub">Duplicates &amp; block-listed callers removed · dates in UTC</p>
+<table>
+<tr><th>Date</th><th>Day</th><th>Valid calls</th><th>Qualified 60s+</th><th>Ad-linked (gclid)</th><th>Note</th></tr>
+<tr><td>Jul 02</td><td>Thu</td><td>18</td><td>0</td><td>0</td><td class="l">15 of 18 = Pasadena robocall wave</td></tr>
+<tr><td>Jul 03</td><td>Fri</td><td>11</td><td>0</td><td>0</td><td class="l">9 of 11 = Pasadena robocall wave</td></tr>
+<tr class="off"><td>Jul 04</td><td>Sat</td><td>0</td><td>0</td><td>0</td><td class="l">—</td></tr>
+<tr class="off"><td>Jul 05</td><td>Sun</td><td>0</td><td>0</td><td>0</td><td class="l">—</td></tr>
+<tr><td>Jul 06</td><td>Mon</td><td>20</td><td class="ok">1</td><td>0</td><td class="l">the 1 real lead: 101s call, «California» pool number</td></tr>
+<tr><td>Jul 07</td><td>Tue</td><td>16</td><td>0</td><td>0</td><td class="l">all 16 = Pasadena robocall wave</td></tr>
+<tr class="off"><td>Jul 08</td><td>Wed</td><td>0</td><td>0</td><td>0</td><td class="l">today (so far)</td></tr>
+<tr class="tot"><th colspan="2">TOTAL</th><th>65</th><th>1</th><th>0</th><td class="l">zero ad-driven calls — matches paused state</td></tr>
+</table>
+<p class="legend"><b>Valid calls</b> = connected calls on our numbers after removing duplicates and block-listed callers. <b>Qualified</b> = held 60+ seconds. <b>Ad-linked</b> = carried a Google click ID.</p>
+</div>
+
+<div class="alert"><b>Pasadena number is being hit by an automated spam wave — not customers.</b> 54 of the 65 calls this week landed on one Pasadena number (626-816-3144), from 33 different 626-area caller IDs, all with the same robotic fingerprint: a 2–4 second hang-up followed by a ~35 second voicemail-length call. Pasadena ads have been off since mid-June, so this costs nothing on the ad side and is excluded from all performance judgment. If it keeps up, the Ringba team can enable spam blocking on that number.</div>
+
+<h2>What actually happened this week</h2>
+<ul>
+<li><b>No ad-driven calls at all</b> — every call this week was organic (Google Business Profile) or spam. That is exactly what a fully paused account should look like.</li>
+<li><b>One genuine lead:</b> Jul 6, a caller held for 101 seconds on a shared «California» pool number. Shared-pool numbers can't be split back to a single city (West Covina / Torrance / Garden Grove / Fullerton / Mission Viejo).</li>
+<li><b>Everything else</b> was short (&lt;40s) organic or spam traffic across Denver, Colorado-pool, Boise and Portland numbers — nothing qualified.</li>
+</ul>
+
+<div class="ro"><b>Note:</b> monitoring pull only — nothing was changed in Google Ads or Ringba. Relaunch still waits on the deposit + the call-handling fixes listed in the <a href="2026-07-03.html">Jul 3 audit</a>.</div>
+
+</div></body></html>
